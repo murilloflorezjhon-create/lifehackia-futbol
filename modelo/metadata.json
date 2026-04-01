@@ -1,0 +1,20 @@
+{
+  "features": [
+    "local_goles_favor_prom",
+    "local_goles_contra_prom",
+    "local_puntos_prom",
+    "local_partidos_historial",
+    "visit_goles_favor_prom",
+    "visit_goles_contra_prom",
+    "visit_puntos_prom",
+    "visit_partidos_historial",
+    "h2h_victorias_local",
+    "h2h_total_partidos"
+  ],
+  "clases": [
+    "EMPATE",
+    "LOCAL",
+    "VISITANTE"
+  ],
+  "version": "1.0.0"
+}

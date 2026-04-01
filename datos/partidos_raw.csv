@@ -1,0 +1,1067 @@
+partido_id,fecha,liga,jornada,equipo_local,equipo_visitante,goles_local,goles_visitante,resultado
+438482,2023-08-11,PD,1,UD Almería,Rayo Vallecano de Madrid,0,2,VISITANTE
+438479,2023-08-11,PD,1,Sevilla FC,Valencia CF,1,2,VISITANTE
+438481,2023-08-12,PD,1,Real Sociedad de Fútbol,Girona FC,1,1,EMPATE
+438483,2023-08-12,PD,1,UD Las Palmas,RCD Mallorca,1,1,EMPATE
+438474,2023-08-12,PD,1,Athletic Club,Real Madrid CF,0,2,VISITANTE
+438476,2023-08-13,PD,1,RC Celta de Vigo,CA Osasuna,0,2,VISITANTE
+438480,2023-08-13,PD,1,Villarreal CF,Real Betis Balompié,1,2,VISITANTE
+438478,2023-08-13,PD,1,Getafe CF,FC Barcelona,0,0,EMPATE
+438477,2023-08-14,PD,1,Cádiz CF,Deportivo Alavés,1,0,LOCAL
+438475,2023-08-14,PD,1,Club Atlético de Madrid,Granada CF,3,1,LOCAL
+438491,2023-08-18,PD,2,RCD Mallorca,Villarreal CF,0,1,VISITANTE
+438490,2023-08-18,PD,2,Valencia CF,UD Las Palmas,1,0,LOCAL
+438492,2023-08-19,PD,2,Real Sociedad de Fútbol,RC Celta de Vigo,1,1,EMPATE
+438493,2023-08-19,PD,2,UD Almería,Real Madrid CF,1,3,VISITANTE
+438485,2023-08-19,PD,2,CA Osasuna,Athletic Club,0,2,VISITANTE
+438488,2023-08-20,PD,2,Girona FC,Getafe CF,3,0,LOCAL
+438487,2023-08-20,PD,2,FC Barcelona,Cádiz CF,2,0,LOCAL
+438484,2023-08-20,PD,2,Real Betis Balompié,Club Atlético de Madrid,0,0,EMPATE
+438486,2023-08-21,PD,2,Deportivo Alavés,Sevilla FC,4,3,LOCAL
+438489,2023-08-21,PD,2,Granada CF,Rayo Vallecano de Madrid,0,2,VISITANTE
+438503,2023-08-25,PD,3,UD Las Palmas,Real Sociedad de Fútbol,0,0,EMPATE
+438495,2023-08-25,PD,3,RC Celta de Vigo,Real Madrid CF,0,1,VISITANTE
+438496,2023-08-26,PD,3,Cádiz CF,UD Almería,1,1,EMPATE
+438498,2023-08-26,PD,3,Granada CF,RCD Mallorca,3,2,LOCAL
+438499,2023-08-26,PD,3,Sevilla FC,Girona FC,1,2,VISITANTE
+438501,2023-08-27,PD,3,Villarreal CF,FC Barcelona,3,4,VISITANTE
+438500,2023-08-27,PD,3,Valencia CF,CA Osasuna,1,2,VISITANTE
+438494,2023-08-27,PD,3,Athletic Club,Real Betis Balompié,4,2,LOCAL
+438497,2023-08-28,PD,3,Getafe CF,Deportivo Alavés,1,0,LOCAL
+438502,2023-08-28,PD,3,Rayo Vallecano de Madrid,Club Atlético de Madrid,0,7,VISITANTE
+438508,2023-09-01,PD,4,Cádiz CF,Villarreal CF,3,1,LOCAL
+438513,2023-09-01,PD,4,UD Almería,RC Celta de Vigo,2,3,VISITANTE
+438512,2023-09-02,PD,4,Real Sociedad de Fútbol,Granada CF,5,3,LOCAL
+438511,2023-09-02,PD,4,Real Madrid CF,Getafe CF,2,1,LOCAL
+438507,2023-09-02,PD,4,Deportivo Alavés,Valencia CF,1,0,LOCAL
+438505,2023-09-02,PD,4,Real Betis Balompié,Rayo Vallecano de Madrid,1,0,LOCAL
+438509,2023-09-03,PD,4,Girona FC,UD Las Palmas,1,0,LOCAL
+438510,2023-09-03,PD,4,RCD Mallorca,Athletic Club,0,0,EMPATE
+438506,2023-09-03,PD,4,CA Osasuna,FC Barcelona,1,2,VISITANTE
+438522,2023-09-15,PD,5,Rayo Vallecano de Madrid,Deportivo Alavés,2,0,LOCAL
+438514,2023-09-16,PD,5,Athletic Club,Cádiz CF,3,0,LOCAL
+438520,2023-09-16,PD,5,Valencia CF,Club Atlético de Madrid,3,0,LOCAL
+438515,2023-09-16,PD,5,RC Celta de Vigo,RCD Mallorca,0,1,VISITANTE
+438516,2023-09-16,PD,5,FC Barcelona,Real Betis Balompié,5,0,LOCAL
+438517,2023-09-17,PD,5,Getafe CF,CA Osasuna,3,2,LOCAL
+438521,2023-09-17,PD,5,Villarreal CF,UD Almería,2,1,LOCAL
+438519,2023-09-17,PD,5,Sevilla FC,UD Las Palmas,1,0,LOCAL
+438523,2023-09-17,PD,5,Real Madrid CF,Real Sociedad de Fútbol,2,1,LOCAL
+438518,2023-09-18,PD,5,Granada CF,Girona FC,2,4,VISITANTE
+438527,2023-09-22,PD,6,Deportivo Alavés,Athletic Club,0,2,VISITANTE
+438529,2023-09-23,PD,6,Girona FC,RCD Mallorca,5,3,LOCAL
+438526,2023-09-23,PD,6,CA Osasuna,Sevilla FC,0,0,EMPATE
+438528,2023-09-23,PD,6,FC Barcelona,RC Celta de Vigo,3,2,LOCAL
+438532,2023-09-23,PD,6,UD Almería,Valencia CF,2,2,EMPATE
+438531,2023-09-24,PD,6,Real Sociedad de Fútbol,Getafe CF,4,3,LOCAL
+438530,2023-09-24,PD,6,Rayo Vallecano de Madrid,Villarreal CF,1,1,EMPATE
+438533,2023-09-24,PD,6,UD Las Palmas,Granada CF,1,0,LOCAL
+438525,2023-09-24,PD,6,Real Betis Balompié,Cádiz CF,1,1,EMPATE
+438524,2023-09-24,PD,6,Club Atlético de Madrid,Real Madrid CF,3,1,LOCAL
+438539,2023-09-26,PD,7,Sevilla FC,UD Almería,5,1,LOCAL
+438542,2023-09-26,PD,7,RCD Mallorca,FC Barcelona,2,2,EMPATE
+438534,2023-09-27,PD,7,Athletic Club,Getafe CF,2,2,EMPATE
+438541,2023-09-27,PD,7,Villarreal CF,Girona FC,1,2,VISITANTE
+438543,2023-09-27,PD,7,Real Madrid CF,UD Las Palmas,2,0,LOCAL
+438537,2023-09-27,PD,7,Cádiz CF,Rayo Vallecano de Madrid,0,0,EMPATE
+438540,2023-09-27,PD,7,Valencia CF,Real Sociedad de Fútbol,0,1,VISITANTE
+438536,2023-09-28,PD,7,RC Celta de Vigo,Deportivo Alavés,1,1,EMPATE
+438538,2023-09-28,PD,7,Granada CF,Real Betis Balompié,1,1,EMPATE
+438535,2023-09-28,PD,7,CA Osasuna,Club Atlético de Madrid,0,2,VISITANTE
+438547,2023-09-29,PD,8,FC Barcelona,Sevilla FC,1,0,LOCAL
+438548,2023-09-30,PD,8,Getafe CF,Villarreal CF,0,0,EMPATE
+438550,2023-09-30,PD,8,Rayo Vallecano de Madrid,RCD Mallorca,2,2,EMPATE
+438549,2023-09-30,PD,8,Girona FC,Real Madrid CF,0,3,VISITANTE
+438551,2023-09-30,PD,8,Real Sociedad de Fútbol,Athletic Club,3,0,LOCAL
+438552,2023-10-01,PD,8,UD Almería,Granada CF,3,3,EMPATE
+438546,2023-10-01,PD,8,Deportivo Alavés,CA Osasuna,0,2,VISITANTE
+438544,2023-10-01,PD,8,Club Atlético de Madrid,Cádiz CF,3,2,LOCAL
+438545,2023-10-01,PD,8,Real Betis Balompié,Valencia CF,3,0,LOCAL
+438553,2023-10-02,PD,8,UD Las Palmas,RC Celta de Vigo,2,1,LOCAL
+438554,2023-10-06,PD,9,Athletic Club,UD Almería,3,0,LOCAL
+438558,2023-10-07,PD,9,Cádiz CF,Girona FC,0,1,VISITANTE
+438563,2023-10-07,PD,9,Real Madrid CF,CA Osasuna,4,0,LOCAL
+438562,2023-10-07,PD,9,RCD Mallorca,Valencia CF,1,1,EMPATE
+438560,2023-10-07,PD,9,Sevilla FC,Rayo Vallecano de Madrid,2,2,EMPATE
+438561,2023-10-08,PD,9,Villarreal CF,UD Las Palmas,1,2,VISITANTE
+438555,2023-10-08,PD,9,Club Atlético de Madrid,Real Sociedad de Fútbol,2,1,LOCAL
+438556,2023-10-08,PD,9,RC Celta de Vigo,Getafe CF,2,2,EMPATE
+438557,2023-10-08,PD,9,Deportivo Alavés,Real Betis Balompié,1,1,EMPATE
+438559,2023-10-08,PD,9,Granada CF,FC Barcelona,2,2,EMPATE
+438564,2023-10-20,PD,10,CA Osasuna,Granada CF,2,0,LOCAL
+438572,2023-10-21,PD,10,Real Sociedad de Fútbol,RCD Mallorca,1,0,LOCAL
+438567,2023-10-21,PD,10,Getafe CF,Real Betis Balompié,1,1,EMPATE
+438569,2023-10-21,PD,10,Sevilla FC,Real Madrid CF,1,1,EMPATE
+438565,2023-10-21,PD,10,RC Celta de Vigo,Club Atlético de Madrid,0,3,VISITANTE
+438573,2023-10-22,PD,10,UD Las Palmas,Rayo Vallecano de Madrid,0,1,VISITANTE
+438568,2023-10-22,PD,10,Girona FC,UD Almería,5,2,LOCAL
+438571,2023-10-22,PD,10,Villarreal CF,Deportivo Alavés,1,1,EMPATE
+438566,2023-10-22,PD,10,FC Barcelona,Athletic Club,1,0,LOCAL
+438570,2023-10-23,PD,10,Valencia CF,Cádiz CF,2,0,LOCAL
+438579,2023-10-27,PD,11,Girona FC,RC Celta de Vigo,1,0,LOCAL
+438583,2023-10-28,PD,11,UD Almería,UD Las Palmas,1,2,VISITANTE
+438577,2023-10-28,PD,11,FC Barcelona,Real Madrid CF,1,2,VISITANTE
+438582,2023-10-28,PD,11,RCD Mallorca,Getafe CF,0,0,EMPATE
+438578,2023-10-28,PD,11,Cádiz CF,Sevilla FC,2,2,EMPATE
+438576,2023-10-29,PD,11,Real Betis Balompié,CA Osasuna,2,1,LOCAL
+438581,2023-10-29,PD,11,Rayo Vallecano de Madrid,Real Sociedad de Fútbol,2,2,EMPATE
+438574,2023-10-29,PD,11,Athletic Club,Valencia CF,2,2,EMPATE
+438575,2023-10-29,PD,11,Club Atlético de Madrid,Deportivo Alavés,2,1,LOCAL
+438580,2023-10-30,PD,11,Granada CF,Villarreal CF,2,3,VISITANTE
+438593,2023-11-03,PD,12,UD Las Palmas,Club Atlético de Madrid,2,1,LOCAL
+438585,2023-11-04,PD,12,CA Osasuna,Girona FC,2,4,VISITANTE
+438584,2023-11-04,PD,12,Real Betis Balompié,RCD Mallorca,2,0,LOCAL
+438586,2023-11-04,PD,12,RC Celta de Vigo,Sevilla FC,1,1,EMPATE
+438592,2023-11-04,PD,12,Real Sociedad de Fútbol,FC Barcelona,0,1,VISITANTE
+438587,2023-11-05,PD,12,Deportivo Alavés,UD Almería,1,0,LOCAL
+438589,2023-11-05,PD,12,Valencia CF,Granada CF,1,0,LOCAL
+438590,2023-11-05,PD,12,Villarreal CF,Athletic Club,2,3,VISITANTE
+438591,2023-11-05,PD,12,Real Madrid CF,Rayo Vallecano de Madrid,0,0,EMPATE
+438588,2023-11-06,PD,12,Getafe CF,Cádiz CF,1,0,LOCAL
+438594,2023-11-10,PD,13,Athletic Club,RC Celta de Vigo,4,3,LOCAL
+438600,2023-11-11,PD,13,Rayo Vallecano de Madrid,Girona FC,1,2,VISITANTE
+438603,2023-11-11,PD,13,UD Almería,Real Sociedad de Fútbol,1,3,VISITANTE
+438596,2023-11-11,PD,13,CA Osasuna,UD Las Palmas,1,1,EMPATE
+438598,2023-11-11,PD,13,Granada CF,Getafe CF,1,1,EMPATE
+438602,2023-11-11,PD,13,Real Madrid CF,Valencia CF,5,1,LOCAL
+438597,2023-11-12,PD,13,FC Barcelona,Deportivo Alavés,2,1,LOCAL
+438599,2023-11-12,PD,13,Sevilla FC,Real Betis Balompié,1,1,EMPATE
+438595,2023-11-12,PD,13,Club Atlético de Madrid,Villarreal CF,3,1,LOCAL
+438606,2023-11-24,PD,14,Deportivo Alavés,Granada CF,3,1,LOCAL
+438612,2023-11-25,PD,14,Rayo Vallecano de Madrid,FC Barcelona,1,1,EMPATE
+438610,2023-11-25,PD,14,Valencia CF,RC Celta de Vigo,0,0,EMPATE
+438608,2023-11-25,PD,14,Getafe CF,UD Almería,2,1,LOCAL
+438604,2023-11-25,PD,14,Club Atlético de Madrid,RCD Mallorca,1,0,LOCAL
+438611,2023-11-26,PD,14,Villarreal CF,CA Osasuna,3,1,LOCAL
+438613,2023-11-26,PD,14,Real Sociedad de Fútbol,Sevilla FC,2,1,LOCAL
+438607,2023-11-26,PD,14,Cádiz CF,Real Madrid CF,0,3,VISITANTE
+438605,2023-11-26,PD,14,Real Betis Balompié,UD Las Palmas,1,0,LOCAL
+438609,2023-11-27,PD,14,Girona FC,Athletic Club,1,1,EMPATE
+438601,2023-11-29,PD,13,RCD Mallorca,Cádiz CF,1,1,EMPATE
+438623,2023-12-01,PD,15,UD Las Palmas,Getafe CF,2,0,LOCAL
+438618,2023-12-02,PD,15,Girona FC,Valencia CF,2,1,LOCAL
+438614,2023-12-02,PD,15,Athletic Club,Rayo Vallecano de Madrid,4,0,LOCAL
+438621,2023-12-02,PD,15,Real Madrid CF,Granada CF,2,0,LOCAL
+438615,2023-12-02,PD,15,CA Osasuna,Real Sociedad de Fútbol,1,1,EMPATE
+438620,2023-12-03,PD,15,RCD Mallorca,Deportivo Alavés,0,0,EMPATE
+438622,2023-12-03,PD,15,UD Almería,Real Betis Balompié,0,0,EMPATE
+438619,2023-12-03,PD,15,Sevilla FC,Villarreal CF,1,1,EMPATE
+438617,2023-12-03,PD,15,FC Barcelona,Club Atlético de Madrid,1,0,LOCAL
+438616,2023-12-04,PD,15,RC Celta de Vigo,Cádiz CF,1,1,EMPATE
+438629,2023-12-08,PD,16,Getafe CF,Valencia CF,1,0,LOCAL
+438626,2023-12-09,PD,16,Deportivo Alavés,UD Las Palmas,0,1,VISITANTE
+438625,2023-12-09,PD,16,Real Betis Balompié,Real Madrid CF,1,1,EMPATE
+438631,2023-12-09,PD,16,Villarreal CF,Real Sociedad de Fútbol,0,3,VISITANTE
+438633,2023-12-09,PD,16,RCD Mallorca,Sevilla FC,1,0,LOCAL
+438624,2023-12-10,PD,16,Club Atlético de Madrid,UD Almería,2,1,LOCAL
+438628,2023-12-10,PD,16,Cádiz CF,CA Osasuna,1,1,EMPATE
+438627,2023-12-10,PD,16,FC Barcelona,Girona FC,2,4,VISITANTE
+438630,2023-12-11,PD,16,Granada CF,Athletic Club,1,1,EMPATE
+438632,2023-12-11,PD,16,Rayo Vallecano de Madrid,RC Celta de Vigo,0,0,EMPATE
+438635,2023-12-15,PD,17,CA Osasuna,Rayo Vallecano de Madrid,1,0,LOCAL
+438636,2023-12-16,PD,17,RC Celta de Vigo,Granada CF,1,0,LOCAL
+438634,2023-12-16,PD,17,Athletic Club,Club Atlético de Madrid,2,0,LOCAL
+438638,2023-12-16,PD,17,Sevilla FC,Getafe CF,0,3,VISITANTE
+438639,2023-12-16,PD,17,Valencia CF,FC Barcelona,1,1,EMPATE
+438642,2023-12-17,PD,17,UD Almería,RCD Mallorca,0,0,EMPATE
+438641,2023-12-17,PD,17,Real Sociedad de Fútbol,Real Betis Balompié,0,0,EMPATE
+438643,2023-12-17,PD,17,UD Las Palmas,Cádiz CF,1,1,EMPATE
+438640,2023-12-17,PD,17,Real Madrid CF,Villarreal CF,4,1,LOCAL
+438637,2023-12-18,PD,17,Girona FC,Deportivo Alavés,3,0,LOCAL
+438652,2023-12-19,PD,18,Rayo Vallecano de Madrid,Valencia CF,0,1,VISITANTE
+438645,2023-12-19,PD,18,Club Atlético de Madrid,Getafe CF,3,3,EMPATE
+438650,2023-12-19,PD,18,Granada CF,Sevilla FC,0,3,VISITANTE
+438648,2023-12-20,PD,18,FC Barcelona,UD Almería,3,2,LOCAL
+438644,2023-12-20,PD,18,Athletic Club,UD Las Palmas,1,0,LOCAL
+438651,2023-12-20,PD,18,Villarreal CF,RC Celta de Vigo,3,2,LOCAL
+438646,2023-12-21,PD,18,Real Betis Balompié,Girona FC,1,1,EMPATE
+438649,2023-12-21,PD,18,Cádiz CF,Real Sociedad de Fútbol,0,0,EMPATE
+438647,2023-12-21,PD,18,Deportivo Alavés,Real Madrid CF,0,1,VISITANTE
+438653,2023-12-21,PD,18,RCD Mallorca,CA Osasuna,3,2,LOCAL
+438504,2023-12-23,PD,4,Club Atlético de Madrid,Sevilla FC,1,0,LOCAL
+438656,2024-01-02,PD,19,Getafe CF,Rayo Vallecano de Madrid,0,2,VISITANTE
+438662,2024-01-02,PD,19,Real Sociedad de Fútbol,Deportivo Alavés,1,1,EMPATE
+438660,2024-01-02,PD,19,Valencia CF,Villarreal CF,3,1,LOCAL
+438658,2024-01-03,PD,19,Granada CF,Cádiz CF,2,0,LOCAL
+438655,2024-01-03,PD,19,RC Celta de Vigo,Real Betis Balompié,2,1,LOCAL
+438661,2024-01-03,PD,19,Real Madrid CF,RCD Mallorca,1,0,LOCAL
+438657,2024-01-03,PD,19,Girona FC,Club Atlético de Madrid,4,3,LOCAL
+438654,2024-01-04,PD,19,CA Osasuna,UD Almería,1,0,LOCAL
+438659,2024-01-04,PD,19,Sevilla FC,Athletic Club,0,2,VISITANTE
+438663,2024-01-04,PD,19,UD Las Palmas,FC Barcelona,1,2,VISITANTE
+438670,2024-01-12,PD,20,Sevilla FC,Deportivo Alavés,2,3,VISITANTE
+438673,2024-01-13,PD,20,UD Las Palmas,Villarreal CF,3,0,LOCAL
+438671,2024-01-13,PD,20,RCD Mallorca,RC Celta de Vigo,1,1,EMPATE
+438664,2024-01-13,PD,20,Athletic Club,Real Sociedad de Fútbol,2,1,LOCAL
+438666,2024-01-13,PD,20,Real Betis Balompié,Granada CF,1,0,LOCAL
+438672,2024-01-14,PD,20,UD Almería,Girona FC,0,0,EMPATE
+438668,2024-01-14,PD,20,Cádiz CF,Valencia CF,1,4,VISITANTE
+438677,2024-01-19,PD,21,Deportivo Alavés,Cádiz CF,1,0,LOCAL
+438682,2024-01-20,PD,21,Rayo Vallecano de Madrid,UD Las Palmas,0,2,VISITANTE
+438681,2024-01-20,PD,21,Villarreal CF,RCD Mallorca,1,1,EMPATE
+438680,2024-01-20,PD,21,Valencia CF,Athletic Club,1,0,LOCAL
+438676,2024-01-20,PD,21,RC Celta de Vigo,Real Sociedad de Fútbol,0,1,VISITANTE
+438675,2024-01-21,PD,21,CA Osasuna,Getafe CF,3,2,LOCAL
+438683,2024-01-21,PD,21,Real Madrid CF,UD Almería,3,2,LOCAL
+438674,2024-01-21,PD,21,Real Betis Balompié,FC Barcelona,2,4,VISITANTE
+438678,2024-01-21,PD,21,Girona FC,Sevilla FC,5,1,LOCAL
+438679,2024-01-22,PD,21,Granada CF,Club Atlético de Madrid,0,1,VISITANTE
+438692,2024-01-26,PD,22,UD Almería,Deportivo Alavés,0,3,VISITANTE
+438691,2024-01-27,PD,22,Real Sociedad de Fútbol,Rayo Vallecano de Madrid,0,0,EMPATE
+438693,2024-01-27,PD,22,UD Las Palmas,Real Madrid CF,1,2,VISITANTE
+438686,2024-01-27,PD,22,FC Barcelona,Villarreal CF,3,5,VISITANTE
+438690,2024-01-27,PD,22,RCD Mallorca,Real Betis Balompié,0,1,VISITANTE
+438685,2024-01-28,PD,22,RC Celta de Vigo,Girona FC,0,1,VISITANTE
+438687,2024-01-28,PD,22,Cádiz CF,Athletic Club,0,0,EMPATE
+438689,2024-01-28,PD,22,Sevilla FC,CA Osasuna,1,1,EMPATE
+438684,2024-01-28,PD,22,Club Atlético de Madrid,Valencia CF,2,0,LOCAL
+438688,2024-01-29,PD,22,Getafe CF,Granada CF,2,0,LOCAL
+438667,2024-01-31,PD,20,FC Barcelona,CA Osasuna,1,0,LOCAL
+438665,2024-01-31,PD,20,Club Atlético de Madrid,Rayo Vallecano de Madrid,2,1,LOCAL
+438669,2024-02-01,PD,20,Getafe CF,Real Madrid CF,0,2,VISITANTE
+438694,2024-02-02,PD,23,Athletic Club,RCD Mallorca,4,0,LOCAL
+438700,2024-02-03,PD,23,Valencia CF,UD Almería,2,1,LOCAL
+438699,2024-02-03,PD,23,Granada CF,UD Las Palmas,1,1,EMPATE
+438697,2024-02-03,PD,23,Deportivo Alavés,FC Barcelona,1,3,VISITANTE
+438698,2024-02-03,PD,23,Girona FC,Real Sociedad de Fútbol,0,0,EMPATE
+438701,2024-02-04,PD,23,Villarreal CF,Cádiz CF,0,0,EMPATE
+438696,2024-02-04,PD,23,CA Osasuna,RC Celta de Vigo,0,3,VISITANTE
+438695,2024-02-04,PD,23,Real Betis Balompié,Getafe CF,1,1,EMPATE
+438703,2024-02-04,PD,23,Real Madrid CF,Club Atlético de Madrid,1,1,EMPATE
+438702,2024-02-05,PD,23,Rayo Vallecano de Madrid,Sevilla FC,1,2,VISITANTE
+438706,2024-02-09,PD,24,Cádiz CF,Real Betis Balompié,0,2,VISITANTE
+438704,2024-02-10,PD,24,Deportivo Alavés,Villarreal CF,1,1,EMPATE
+438711,2024-02-10,PD,24,Real Sociedad de Fútbol,CA Osasuna,0,1,VISITANTE
+438710,2024-02-10,PD,24,Real Madrid CF,Girona FC,4,0,LOCAL
+438713,2024-02-10,PD,24,UD Las Palmas,Valencia CF,2,0,LOCAL
+438707,2024-02-11,PD,24,Getafe CF,RC Celta de Vigo,3,2,LOCAL
+438709,2024-02-11,PD,24,RCD Mallorca,Rayo Vallecano de Madrid,2,1,LOCAL
+438708,2024-02-11,PD,24,Sevilla FC,Club Atlético de Madrid,1,0,LOCAL
+438705,2024-02-11,PD,24,FC Barcelona,Granada CF,3,3,EMPATE
+438712,2024-02-12,PD,24,UD Almería,Athletic Club,0,0,EMPATE
+438721,2024-02-16,PD,25,Villarreal CF,Getafe CF,1,1,EMPATE
+438715,2024-02-17,PD,25,Club Atlético de Madrid,UD Las Palmas,5,0,LOCAL
+438717,2024-02-17,PD,25,CA Osasuna,Cádiz CF,2,0,LOCAL
+438718,2024-02-17,PD,25,RC Celta de Vigo,FC Barcelona,1,2,VISITANTE
+438720,2024-02-17,PD,25,Valencia CF,Sevilla FC,0,0,EMPATE
+438722,2024-02-18,PD,25,Rayo Vallecano de Madrid,Real Madrid CF,1,1,EMPATE
+438719,2024-02-18,PD,25,Granada CF,UD Almería,1,1,EMPATE
+438723,2024-02-18,PD,25,RCD Mallorca,Real Sociedad de Fútbol,1,2,VISITANTE
+438716,2024-02-18,PD,25,Real Betis Balompié,Deportivo Alavés,0,0,EMPATE
+438714,2024-02-19,PD,25,Athletic Club,Girona FC,3,2,LOCAL
+438731,2024-02-23,PD,26,Real Sociedad de Fútbol,Villarreal CF,1,3,VISITANTE
+438726,2024-02-24,PD,26,FC Barcelona,Getafe CF,4,0,LOCAL
+438725,2024-02-24,PD,26,Deportivo Alavés,RCD Mallorca,1,1,EMPATE
+438732,2024-02-24,PD,26,UD Almería,Club Atlético de Madrid,2,2,EMPATE
+438727,2024-02-25,PD,26,Cádiz CF,RC Celta de Vigo,2,2,EMPATE
+438724,2024-02-25,PD,26,Real Betis Balompié,Athletic Club,3,1,LOCAL
+438733,2024-02-25,PD,26,UD Las Palmas,CA Osasuna,1,1,EMPATE
+438730,2024-02-25,PD,26,Real Madrid CF,Sevilla FC,1,0,LOCAL
+438728,2024-02-26,PD,26,Girona FC,Rayo Vallecano de Madrid,3,0,LOCAL
+438737,2024-03-01,PD,27,RC Celta de Vigo,UD Almería,1,0,LOCAL
+438739,2024-03-02,PD,27,Sevilla FC,Real Sociedad de Fútbol,3,2,LOCAL
+438742,2024-03-02,PD,27,Rayo Vallecano de Madrid,Cádiz CF,1,1,EMPATE
+438738,2024-03-02,PD,27,Getafe CF,UD Las Palmas,3,3,EMPATE
+438740,2024-03-02,PD,27,Valencia CF,Real Madrid CF,2,2,EMPATE
+438741,2024-03-03,PD,27,Villarreal CF,Granada CF,5,1,LOCAL
+438735,2024-03-03,PD,27,Club Atlético de Madrid,Real Betis Balompié,2,1,LOCAL
+438743,2024-03-03,PD,27,RCD Mallorca,Girona FC,1,0,LOCAL
+438734,2024-03-03,PD,27,Athletic Club,FC Barcelona,0,0,EMPATE
+438736,2024-03-04,PD,27,CA Osasuna,Deportivo Alavés,1,0,LOCAL
+438746,2024-03-08,PD,28,FC Barcelona,RCD Mallorca,1,0,LOCAL
+438750,2024-03-09,PD,28,Valencia CF,Getafe CF,1,0,LOCAL
+438747,2024-03-09,PD,28,Cádiz CF,Club Atlético de Madrid,2,0,LOCAL
+438749,2024-03-09,PD,28,Granada CF,Real Sociedad de Fútbol,2,3,VISITANTE
+438748,2024-03-09,PD,28,Girona FC,CA Osasuna,2,0,LOCAL
+438745,2024-03-10,PD,28,Deportivo Alavés,Rayo Vallecano de Madrid,1,0,LOCAL
+438753,2024-03-10,PD,28,UD Las Palmas,Athletic Club,0,2,VISITANTE
+438751,2024-03-10,PD,28,Real Madrid CF,RC Celta de Vigo,4,0,LOCAL
+438744,2024-03-10,PD,28,Real Betis Balompié,Villarreal CF,2,3,VISITANTE
+438752,2024-03-11,PD,28,UD Almería,Sevilla FC,2,2,EMPATE
+438762,2024-03-15,PD,29,Real Sociedad de Fútbol,Cádiz CF,2,0,LOCAL
+438761,2024-03-16,PD,29,RCD Mallorca,Granada CF,1,0,LOCAL
+438756,2024-03-16,PD,29,CA Osasuna,Real Madrid CF,2,4,VISITANTE
+438757,2024-03-16,PD,29,Getafe CF,Girona FC,1,0,LOCAL
+438754,2024-03-16,PD,29,Athletic Club,Deportivo Alavés,2,0,LOCAL
+438758,2024-03-17,PD,29,Sevilla FC,RC Celta de Vigo,1,2,VISITANTE
+438759,2024-03-17,PD,29,Villarreal CF,Valencia CF,1,0,LOCAL
+438763,2024-03-17,PD,29,UD Las Palmas,UD Almería,0,1,VISITANTE
+438760,2024-03-17,PD,29,Rayo Vallecano de Madrid,Real Betis Balompié,2,0,LOCAL
+438755,2024-03-17,PD,29,Club Atlético de Madrid,FC Barcelona,0,3,VISITANTE
+438767,2024-03-29,PD,30,Cádiz CF,Granada CF,1,0,LOCAL
+438768,2024-03-30,PD,30,Getafe CF,Sevilla FC,0,1,VISITANTE
+438773,2024-03-30,PD,30,UD Almería,CA Osasuna,0,3,VISITANTE
+438770,2024-03-30,PD,30,Valencia CF,RCD Mallorca,0,0,EMPATE
+438766,2024-03-30,PD,30,FC Barcelona,UD Las Palmas,1,0,LOCAL
+438764,2024-03-31,PD,30,RC Celta de Vigo,Rayo Vallecano de Madrid,0,0,EMPATE
+438769,2024-03-31,PD,30,Girona FC,Real Betis Balompié,3,2,LOCAL
+438765,2024-03-31,PD,30,Deportivo Alavés,Real Sociedad de Fútbol,0,1,VISITANTE
+438772,2024-03-31,PD,30,Real Madrid CF,Athletic Club,2,0,LOCAL
+438771,2024-04-01,PD,30,Villarreal CF,Club Atlético de Madrid,1,2,VISITANTE
+438729,2024-04-04,PD,26,Granada CF,Valencia CF,0,1,VISITANTE
+438776,2024-04-12,PD,31,Real Betis Balompié,RC Celta de Vigo,2,1,LOCAL
+438775,2024-04-13,PD,31,Club Atlético de Madrid,Girona FC,3,1,LOCAL
+438780,2024-04-13,PD,31,Rayo Vallecano de Madrid,Getafe CF,0,0,EMPATE
+438781,2024-04-13,PD,31,RCD Mallorca,Real Madrid CF,0,1,VISITANTE
+438778,2024-04-13,PD,31,Cádiz CF,FC Barcelona,0,1,VISITANTE
+438783,2024-04-14,PD,31,UD Las Palmas,Sevilla FC,0,2,VISITANTE
+438779,2024-04-14,PD,31,Granada CF,Deportivo Alavés,2,0,LOCAL
+438774,2024-04-14,PD,31,Athletic Club,Villarreal CF,1,1,EMPATE
+438782,2024-04-14,PD,31,Real Sociedad de Fútbol,UD Almería,2,2,EMPATE
+438777,2024-04-15,PD,31,CA Osasuna,Valencia CF,0,1,VISITANTE
+438784,2024-04-19,PD,32,Athletic Club,Granada CF,1,1,EMPATE
+438785,2024-04-20,PD,32,RC Celta de Vigo,UD Las Palmas,4,1,LOCAL
+438791,2024-04-20,PD,32,Rayo Vallecano de Madrid,CA Osasuna,2,1,LOCAL
+438790,2024-04-20,PD,32,Valencia CF,Real Betis Balompié,1,2,VISITANTE
+438788,2024-04-20,PD,32,Girona FC,Cádiz CF,4,1,LOCAL
+438787,2024-04-21,PD,32,Getafe CF,Real Sociedad de Fútbol,1,1,EMPATE
+438793,2024-04-21,PD,32,UD Almería,Villarreal CF,1,2,VISITANTE
+438786,2024-04-21,PD,32,Deportivo Alavés,Club Atlético de Madrid,2,0,LOCAL
+438792,2024-04-21,PD,32,Real Madrid CF,FC Barcelona,3,2,LOCAL
+438789,2024-04-22,PD,32,Sevilla FC,RCD Mallorca,2,1,LOCAL
+438801,2024-04-26,PD,33,Real Sociedad de Fútbol,Real Madrid CF,0,1,VISITANTE
+438803,2024-04-27,PD,33,UD Las Palmas,Girona FC,0,2,VISITANTE
+438802,2024-04-27,PD,33,UD Almería,Getafe CF,1,3,VISITANTE
+438796,2024-04-27,PD,33,Deportivo Alavés,RC Celta de Vigo,3,0,LOCAL
+438794,2024-04-27,PD,33,Club Atlético de Madrid,Athletic Club,3,1,LOCAL
+438798,2024-04-28,PD,33,Cádiz CF,RCD Mallorca,1,1,EMPATE
+438799,2024-04-28,PD,33,Granada CF,CA Osasuna,3,0,LOCAL
+438800,2024-04-28,PD,33,Villarreal CF,Rayo Vallecano de Madrid,3,0,LOCAL
+438795,2024-04-28,PD,33,Real Betis Balompié,Sevilla FC,1,1,EMPATE
+438797,2024-04-29,PD,33,FC Barcelona,Valencia CF,4,2,LOCAL
+438806,2024-05-03,PD,34,Getafe CF,Athletic Club,0,2,VISITANTE
+438813,2024-05-04,PD,34,Real Sociedad de Fútbol,UD Las Palmas,2,0,LOCAL
+438812,2024-05-04,PD,34,Real Madrid CF,Cádiz CF,3,0,LOCAL
+438807,2024-05-04,PD,34,Girona FC,FC Barcelona,4,2,LOCAL
+438811,2024-05-04,PD,34,RCD Mallorca,Club Atlético de Madrid,0,1,VISITANTE
+438804,2024-05-05,PD,34,CA Osasuna,Real Betis Balompié,0,2,VISITANTE
+438805,2024-05-05,PD,34,RC Celta de Vigo,Villarreal CF,3,2,LOCAL
+438809,2024-05-05,PD,34,Valencia CF,Deportivo Alavés,0,1,VISITANTE
+438808,2024-05-05,PD,34,Sevilla FC,Granada CF,3,0,LOCAL
+438810,2024-05-05,PD,34,Rayo Vallecano de Madrid,UD Almería,0,1,VISITANTE
+438817,2024-05-10,PD,35,Deportivo Alavés,Girona FC,2,2,EMPATE
+438823,2024-05-11,PD,35,RCD Mallorca,UD Las Palmas,1,0,LOCAL
+438822,2024-05-11,PD,35,Villarreal CF,Sevilla FC,3,2,LOCAL
+438820,2024-05-11,PD,35,Granada CF,Real Madrid CF,0,4,VISITANTE
+438814,2024-05-11,PD,35,Athletic Club,CA Osasuna,2,2,EMPATE
+438819,2024-05-12,PD,35,Cádiz CF,Getafe CF,1,0,LOCAL
+438815,2024-05-12,PD,35,Club Atlético de Madrid,RC Celta de Vigo,1,0,LOCAL
+438821,2024-05-12,PD,35,Valencia CF,Rayo Vallecano de Madrid,0,0,EMPATE
+438816,2024-05-12,PD,35,Real Betis Balompié,UD Almería,3,2,LOCAL
+438818,2024-05-13,PD,35,FC Barcelona,Real Sociedad de Fútbol,2,0,LOCAL
+438824,2024-05-14,PD,36,CA Osasuna,RCD Mallorca,1,1,EMPATE
+438830,2024-05-14,PD,36,Real Madrid CF,Deportivo Alavés,5,0,LOCAL
+438827,2024-05-14,PD,36,Girona FC,Villarreal CF,0,1,VISITANTE
+438828,2024-05-15,PD,36,Sevilla FC,Cádiz CF,0,1,VISITANTE
+438829,2024-05-15,PD,36,Rayo Vallecano de Madrid,Granada CF,2,1,LOCAL
+438825,2024-05-15,PD,36,RC Celta de Vigo,Athletic Club,2,1,LOCAL
+438826,2024-05-15,PD,36,Getafe CF,Club Atlético de Madrid,0,3,VISITANTE
+438833,2024-05-16,PD,36,UD Las Palmas,Real Betis Balompié,2,2,EMPATE
+438832,2024-05-16,PD,36,UD Almería,FC Barcelona,0,2,VISITANTE
+438831,2024-05-16,PD,36,Real Sociedad de Fútbol,Valencia CF,1,0,LOCAL
+438837,2024-05-18,PD,37,Deportivo Alavés,Getafe CF,1,0,LOCAL
+438834,2024-05-19,PD,37,Athletic Club,Sevilla FC,2,0,LOCAL
+438835,2024-05-19,PD,37,Club Atlético de Madrid,CA Osasuna,1,4,VISITANTE
+438836,2024-05-19,PD,37,Real Betis Balompié,Real Sociedad de Fútbol,0,2,VISITANTE
+438838,2024-05-19,PD,37,FC Barcelona,Rayo Vallecano de Madrid,3,0,LOCAL
+438839,2024-05-19,PD,37,Cádiz CF,UD Las Palmas,0,0,EMPATE
+438840,2024-05-19,PD,37,Granada CF,RC Celta de Vigo,1,2,VISITANTE
+438841,2024-05-19,PD,37,Valencia CF,Girona FC,1,3,VISITANTE
+438842,2024-05-19,PD,37,Villarreal CF,Real Madrid CF,4,4,EMPATE
+438843,2024-05-19,PD,37,RCD Mallorca,UD Almería,2,2,EMPATE
+438847,2024-05-24,PD,38,Girona FC,Granada CF,7,0,LOCAL
+438844,2024-05-25,PD,38,CA Osasuna,Villarreal CF,1,1,EMPATE
+438851,2024-05-25,PD,38,Real Sociedad de Fútbol,Club Atlético de Madrid,0,2,VISITANTE
+438849,2024-05-25,PD,38,Rayo Vallecano de Madrid,Athletic Club,0,1,VISITANTE
+438852,2024-05-25,PD,38,UD Almería,Cádiz CF,6,1,LOCAL
+438850,2024-05-25,PD,38,Real Madrid CF,Real Betis Balompié,0,0,EMPATE
+438846,2024-05-26,PD,38,Getafe CF,RCD Mallorca,1,2,VISITANTE
+438845,2024-05-26,PD,38,RC Celta de Vigo,Valencia CF,2,2,EMPATE
+438853,2024-05-26,PD,38,UD Las Palmas,Deportivo Alavés,1,1,EMPATE
+438848,2024-05-26,PD,38,Sevilla FC,FC Barcelona,1,2,VISITANTE
+435943,2023-08-11,PL,1,Burnley FC,Manchester City FC,0,3,VISITANTE
+435944,2023-08-12,PL,1,Arsenal FC,Nottingham Forest FC,2,1,LOCAL
+435945,2023-08-12,PL,1,AFC Bournemouth,West Ham United FC,1,1,EMPATE
+435946,2023-08-12,PL,1,Brighton & Hove Albion FC,Luton Town FC,4,1,LOCAL
+435947,2023-08-12,PL,1,Everton FC,Fulham FC,0,1,VISITANTE
+435948,2023-08-12,PL,1,Sheffield United FC,Crystal Palace FC,0,1,VISITANTE
+435949,2023-08-12,PL,1,Newcastle United FC,Aston Villa FC,5,1,LOCAL
+435950,2023-08-13,PL,1,Brentford FC,Tottenham Hotspur FC,2,2,EMPATE
+435951,2023-08-13,PL,1,Chelsea FC,Liverpool FC,1,1,EMPATE
+435952,2023-08-14,PL,1,Manchester United FC,Wolverhampton Wanderers FC,1,0,LOCAL
+435959,2023-08-18,PL,2,Nottingham Forest FC,Sheffield United FC,2,1,LOCAL
+435955,2023-08-19,PL,2,Fulham FC,Brentford FC,0,3,VISITANTE
+435956,2023-08-19,PL,2,Liverpool FC,AFC Bournemouth,3,1,LOCAL
+435962,2023-08-19,PL,2,Wolverhampton Wanderers FC,Brighton & Hove Albion FC,1,4,VISITANTE
+435960,2023-08-19,PL,2,Tottenham Hotspur FC,Manchester United FC,2,0,LOCAL
+435958,2023-08-19,PL,2,Manchester City FC,Newcastle United FC,1,0,LOCAL
+435953,2023-08-20,PL,2,Aston Villa FC,Everton FC,4,0,LOCAL
+435961,2023-08-20,PL,2,West Ham United FC,Chelsea FC,3,1,LOCAL
+435954,2023-08-21,PL,2,Crystal Palace FC,Arsenal FC,0,1,VISITANTE
+435968,2023-08-25,PL,3,Chelsea FC,Luton Town FC,3,0,LOCAL
+435963,2023-08-26,PL,3,AFC Bournemouth,Tottenham Hotspur FC,0,2,VISITANTE
+435969,2023-08-26,PL,3,Everton FC,Wolverhampton Wanderers FC,0,1,VISITANTE
+435970,2023-08-26,PL,3,Manchester United FC,Nottingham Forest FC,3,2,LOCAL
+435964,2023-08-26,PL,3,Arsenal FC,Fulham FC,2,2,EMPATE
+435965,2023-08-26,PL,3,Brentford FC,Crystal Palace FC,1,1,EMPATE
+435966,2023-08-26,PL,3,Brighton & Hove Albion FC,West Ham United FC,1,3,VISITANTE
+435972,2023-08-27,PL,3,Sheffield United FC,Manchester City FC,1,2,VISITANTE
+435967,2023-08-27,PL,3,Burnley FC,Aston Villa FC,1,3,VISITANTE
+435971,2023-08-27,PL,3,Newcastle United FC,Liverpool FC,1,2,VISITANTE
+435980,2023-09-01,PL,4,Luton Town FC,West Ham United FC,1,2,VISITANTE
+435982,2023-09-02,PL,4,Sheffield United FC,Everton FC,2,2,EMPATE
+435974,2023-09-02,PL,4,Brentford FC,AFC Bournemouth,2,2,EMPATE
+435976,2023-09-02,PL,4,Burnley FC,Tottenham Hotspur FC,2,5,VISITANTE
+435977,2023-09-02,PL,4,Chelsea FC,Nottingham Forest FC,0,1,VISITANTE
+435981,2023-09-02,PL,4,Manchester City FC,Fulham FC,5,1,LOCAL
+435975,2023-09-02,PL,4,Brighton & Hove Albion FC,Newcastle United FC,3,1,LOCAL
+435978,2023-09-03,PL,4,Crystal Palace FC,Wolverhampton Wanderers FC,3,2,LOCAL
+435979,2023-09-03,PL,4,Liverpool FC,Aston Villa FC,3,0,LOCAL
+435973,2023-09-03,PL,4,Arsenal FC,Manchester United FC,3,1,LOCAL
+435992,2023-09-16,PL,5,Wolverhampton Wanderers FC,Liverpool FC,1,3,VISITANTE
+435984,2023-09-16,PL,5,Aston Villa FC,Crystal Palace FC,3,1,LOCAL
+435986,2023-09-16,PL,5,Fulham FC,Luton Town FC,1,0,LOCAL
+435987,2023-09-16,PL,5,Manchester United FC,Brighton & Hove Albion FC,1,3,VISITANTE
+435990,2023-09-16,PL,5,Tottenham Hotspur FC,Sheffield United FC,2,1,LOCAL
+435991,2023-09-16,PL,5,West Ham United FC,Manchester City FC,1,3,VISITANTE
+435988,2023-09-16,PL,5,Newcastle United FC,Brentford FC,1,0,LOCAL
+435983,2023-09-17,PL,5,AFC Bournemouth,Chelsea FC,0,0,EMPATE
+435985,2023-09-17,PL,5,Everton FC,Arsenal FC,0,1,VISITANTE
+435989,2023-09-18,PL,5,Nottingham Forest FC,Burnley FC,1,1,EMPATE
+435998,2023-09-23,PL,6,Crystal Palace FC,Fulham FC,0,0,EMPATE
+436000,2023-09-23,PL,6,Luton Town FC,Wolverhampton Wanderers FC,1,1,EMPATE
+436001,2023-09-23,PL,6,Manchester City FC,Nottingham Forest FC,2,0,LOCAL
+435994,2023-09-23,PL,6,Brentford FC,Everton FC,1,3,VISITANTE
+435996,2023-09-23,PL,6,Burnley FC,Manchester United FC,0,1,VISITANTE
+435993,2023-09-24,PL,6,Arsenal FC,Tottenham Hotspur FC,2,2,EMPATE
+435995,2023-09-24,PL,6,Brighton & Hove Albion FC,AFC Bournemouth,3,1,LOCAL
+435997,2023-09-24,PL,6,Chelsea FC,Aston Villa FC,0,1,VISITANTE
+435999,2023-09-24,PL,6,Liverpool FC,West Ham United FC,3,1,LOCAL
+436002,2023-09-24,PL,6,Sheffield United FC,Newcastle United FC,0,8,VISITANTE
+436004,2023-09-30,PL,7,Aston Villa FC,Brighton & Hove Albion FC,6,1,LOCAL
+436003,2023-09-30,PL,7,AFC Bournemouth,Arsenal FC,0,4,VISITANTE
+436005,2023-09-30,PL,7,Everton FC,Luton Town FC,1,2,VISITANTE
+436007,2023-09-30,PL,7,Manchester United FC,Crystal Palace FC,0,1,VISITANTE
+436008,2023-09-30,PL,7,Newcastle United FC,Burnley FC,2,0,LOCAL
+436011,2023-09-30,PL,7,West Ham United FC,Sheffield United FC,2,0,LOCAL
+436012,2023-09-30,PL,7,Wolverhampton Wanderers FC,Manchester City FC,2,1,LOCAL
+436010,2023-09-30,PL,7,Tottenham Hotspur FC,Liverpool FC,2,1,LOCAL
+436009,2023-10-01,PL,7,Nottingham Forest FC,Brentford FC,1,1,EMPATE
+436006,2023-10-02,PL,7,Fulham FC,Chelsea FC,0,2,VISITANTE
+435957,2023-10-03,PL,2,Luton Town FC,Burnley FC,1,2,VISITANTE
+436019,2023-10-07,PL,8,Luton Town FC,Tottenham Hotspur FC,0,1,VISITANTE
+436015,2023-10-07,PL,8,Burnley FC,Chelsea FC,1,4,VISITANTE
+436017,2023-10-07,PL,8,Everton FC,AFC Bournemouth,3,0,LOCAL
+436018,2023-10-07,PL,8,Fulham FC,Sheffield United FC,3,1,LOCAL
+436020,2023-10-07,PL,8,Manchester United FC,Brentford FC,2,1,LOCAL
+436016,2023-10-07,PL,8,Crystal Palace FC,Nottingham Forest FC,0,0,EMPATE
+436014,2023-10-08,PL,8,Brighton & Hove Albion FC,Liverpool FC,2,2,EMPATE
+436021,2023-10-08,PL,8,West Ham United FC,Newcastle United FC,2,2,EMPATE
+436022,2023-10-08,PL,8,Wolverhampton Wanderers FC,Aston Villa FC,1,1,EMPATE
+436013,2023-10-08,PL,8,Arsenal FC,Manchester City FC,1,0,LOCAL
+436027,2023-10-21,PL,9,Liverpool FC,Everton FC,2,0,LOCAL
+436023,2023-10-21,PL,9,AFC Bournemouth,Wolverhampton Wanderers FC,1,2,VISITANTE
+436025,2023-10-21,PL,9,Brentford FC,Burnley FC,3,0,LOCAL
+436028,2023-10-21,PL,9,Manchester City FC,Brighton & Hove Albion FC,2,1,LOCAL
+436029,2023-10-21,PL,9,Newcastle United FC,Crystal Palace FC,4,0,LOCAL
+436030,2023-10-21,PL,9,Nottingham Forest FC,Luton Town FC,2,2,EMPATE
+436026,2023-10-21,PL,9,Chelsea FC,Arsenal FC,2,2,EMPATE
+436031,2023-10-21,PL,9,Sheffield United FC,Manchester United FC,1,2,VISITANTE
+436024,2023-10-22,PL,9,Aston Villa FC,West Ham United FC,4,1,LOCAL
+436032,2023-10-23,PL,9,Tottenham Hotspur FC,Fulham FC,2,0,LOCAL
+436038,2023-10-27,PL,10,Crystal Palace FC,Tottenham Hotspur FC,1,2,VISITANTE
+436037,2023-10-28,PL,10,Chelsea FC,Brentford FC,0,2,VISITANTE
+436033,2023-10-28,PL,10,AFC Bournemouth,Burnley FC,2,1,LOCAL
+436034,2023-10-28,PL,10,Arsenal FC,Sheffield United FC,5,0,LOCAL
+436042,2023-10-28,PL,10,Wolverhampton Wanderers FC,Newcastle United FC,2,2,EMPATE
+436041,2023-10-29,PL,10,West Ham United FC,Everton FC,0,1,VISITANTE
+436035,2023-10-29,PL,10,Aston Villa FC,Luton Town FC,3,1,LOCAL
+436036,2023-10-29,PL,10,Brighton & Hove Albion FC,Fulham FC,1,1,EMPATE
+436039,2023-10-29,PL,10,Liverpool FC,Nottingham Forest FC,3,0,LOCAL
+436040,2023-10-29,PL,10,Manchester United FC,Manchester City FC,0,3,VISITANTE
+436046,2023-11-04,PL,11,Fulham FC,Manchester United FC,0,1,VISITANTE
+436043,2023-11-04,PL,11,Brentford FC,West Ham United FC,3,2,LOCAL
+436044,2023-11-04,PL,11,Burnley FC,Crystal Palace FC,0,2,VISITANTE
+436045,2023-11-04,PL,11,Everton FC,Brighton & Hove Albion FC,1,1,EMPATE
+436048,2023-11-04,PL,11,Manchester City FC,AFC Bournemouth,6,1,LOCAL
+436051,2023-11-04,PL,11,Sheffield United FC,Wolverhampton Wanderers FC,2,1,LOCAL
+436049,2023-11-04,PL,11,Newcastle United FC,Arsenal FC,1,0,LOCAL
+436050,2023-11-05,PL,11,Nottingham Forest FC,Aston Villa FC,2,0,LOCAL
+436047,2023-11-05,PL,11,Luton Town FC,Liverpool FC,1,1,EMPATE
+436052,2023-11-06,PL,11,Tottenham Hotspur FC,Chelsea FC,1,4,VISITANTE
+436062,2023-11-11,PL,12,Wolverhampton Wanderers FC,Tottenham Hotspur FC,2,1,LOCAL
+436054,2023-11-11,PL,12,Arsenal FC,Burnley FC,3,1,LOCAL
+436058,2023-11-11,PL,12,Crystal Palace FC,Everton FC,2,3,VISITANTE
+436060,2023-11-11,PL,12,Manchester United FC,Luton Town FC,1,0,LOCAL
+436053,2023-11-11,PL,12,AFC Bournemouth,Newcastle United FC,2,0,LOCAL
+436055,2023-11-12,PL,12,Aston Villa FC,Fulham FC,3,1,LOCAL
+436056,2023-11-12,PL,12,Brighton & Hove Albion FC,Sheffield United FC,1,1,EMPATE
+436059,2023-11-12,PL,12,Liverpool FC,Brentford FC,3,0,LOCAL
+436061,2023-11-12,PL,12,West Ham United FC,Nottingham Forest FC,3,2,LOCAL
+436057,2023-11-12,PL,12,Chelsea FC,Manchester City FC,4,4,EMPATE
+436068,2023-11-25,PL,13,Manchester City FC,Liverpool FC,1,1,EMPATE
+436064,2023-11-25,PL,13,Burnley FC,West Ham United FC,1,2,VISITANTE
+436067,2023-11-25,PL,13,Luton Town FC,Crystal Palace FC,2,1,LOCAL
+436069,2023-11-25,PL,13,Newcastle United FC,Chelsea FC,4,1,LOCAL
+436070,2023-11-25,PL,13,Nottingham Forest FC,Brighton & Hove Albion FC,2,3,VISITANTE
+436071,2023-11-25,PL,13,Sheffield United FC,AFC Bournemouth,1,3,VISITANTE
+436063,2023-11-25,PL,13,Brentford FC,Arsenal FC,0,1,VISITANTE
+436072,2023-11-26,PL,13,Tottenham Hotspur FC,Aston Villa FC,1,2,VISITANTE
+436065,2023-11-26,PL,13,Everton FC,Manchester United FC,0,3,VISITANTE
+436066,2023-11-27,PL,13,Fulham FC,Wolverhampton Wanderers FC,3,2,LOCAL
+436074,2023-12-02,PL,14,Arsenal FC,Wolverhampton Wanderers FC,2,1,LOCAL
+436075,2023-12-02,PL,14,Brentford FC,Luton Town FC,3,1,LOCAL
+436076,2023-12-02,PL,14,Burnley FC,Sheffield United FC,5,0,LOCAL
+436081,2023-12-02,PL,14,Nottingham Forest FC,Everton FC,0,1,VISITANTE
+436080,2023-12-02,PL,14,Newcastle United FC,Manchester United FC,1,0,LOCAL
+436073,2023-12-03,PL,14,AFC Bournemouth,Aston Villa FC,2,2,EMPATE
+436077,2023-12-03,PL,14,Chelsea FC,Brighton & Hove Albion FC,3,2,LOCAL
+436078,2023-12-03,PL,14,Liverpool FC,Fulham FC,4,3,LOCAL
+436082,2023-12-03,PL,14,West Ham United FC,Crystal Palace FC,1,1,EMPATE
+436079,2023-12-03,PL,14,Manchester City FC,Tottenham Hotspur FC,3,3,EMPATE
+436090,2023-12-05,PL,15,Wolverhampton Wanderers FC,Burnley FC,1,0,LOCAL
+436087,2023-12-05,PL,15,Luton Town FC,Arsenal FC,3,4,VISITANTE
+436084,2023-12-06,PL,15,Brighton & Hove Albion FC,Brentford FC,2,1,LOCAL
+436086,2023-12-06,PL,15,Fulham FC,Nottingham Forest FC,5,0,LOCAL
+436088,2023-12-06,PL,15,Sheffield United FC,Liverpool FC,0,2,VISITANTE
+436091,2023-12-06,PL,15,Crystal Palace FC,AFC Bournemouth,0,2,VISITANTE
+436083,2023-12-06,PL,15,Aston Villa FC,Manchester City FC,1,0,LOCAL
+436092,2023-12-06,PL,15,Manchester United FC,Chelsea FC,2,1,LOCAL
+436085,2023-12-07,PL,15,Everton FC,Newcastle United FC,3,0,LOCAL
+436089,2023-12-07,PL,15,Tottenham Hotspur FC,West Ham United FC,1,2,VISITANTE
+436095,2023-12-09,PL,16,Crystal Palace FC,Liverpool FC,1,2,VISITANTE
+436094,2023-12-09,PL,16,Brighton & Hove Albion FC,Burnley FC,1,1,EMPATE
+436099,2023-12-09,PL,16,Manchester United FC,AFC Bournemouth,0,3,VISITANTE
+436100,2023-12-09,PL,16,Sheffield United FC,Brentford FC,1,0,LOCAL
+436102,2023-12-09,PL,16,Wolverhampton Wanderers FC,Nottingham Forest FC,1,1,EMPATE
+436093,2023-12-09,PL,16,Aston Villa FC,Arsenal FC,1,0,LOCAL
+436096,2023-12-10,PL,16,Everton FC,Chelsea FC,2,0,LOCAL
+436097,2023-12-10,PL,16,Fulham FC,West Ham United FC,5,0,LOCAL
+436098,2023-12-10,PL,16,Luton Town FC,Manchester City FC,1,2,VISITANTE
+436101,2023-12-10,PL,16,Tottenham Hotspur FC,Newcastle United FC,4,1,LOCAL
+436111,2023-12-15,PL,17,Nottingham Forest FC,Tottenham Hotspur FC,0,2,VISITANTE
+436107,2023-12-16,PL,17,Chelsea FC,Sheffield United FC,2,0,LOCAL
+436109,2023-12-16,PL,17,Manchester City FC,Crystal Palace FC,2,2,EMPATE
+436110,2023-12-16,PL,17,Newcastle United FC,Fulham FC,3,0,LOCAL
+436106,2023-12-16,PL,17,Burnley FC,Everton FC,0,2,VISITANTE
+436104,2023-12-17,PL,17,Arsenal FC,Brighton & Hove Albion FC,2,0,LOCAL
+436105,2023-12-17,PL,17,Brentford FC,Aston Villa FC,1,2,VISITANTE
+436112,2023-12-17,PL,17,West Ham United FC,Wolverhampton Wanderers FC,3,0,LOCAL
+436108,2023-12-17,PL,17,Liverpool FC,Manchester United FC,0,0,EMPATE
+436114,2023-12-21,PL,18,Crystal Palace FC,Brighton & Hove Albion FC,1,1,EMPATE
+436113,2023-12-22,PL,18,Aston Villa FC,Sheffield United FC,1,1,EMPATE
+436121,2023-12-23,PL,18,West Ham United FC,Manchester United FC,2,0,LOCAL
+436115,2023-12-23,PL,18,Fulham FC,Burnley FC,0,2,VISITANTE
+436117,2023-12-23,PL,18,Luton Town FC,Newcastle United FC,1,0,LOCAL
+436119,2023-12-23,PL,18,Nottingham Forest FC,AFC Bournemouth,2,3,VISITANTE
+436120,2023-12-23,PL,18,Tottenham Hotspur FC,Everton FC,2,1,LOCAL
+436116,2023-12-23,PL,18,Liverpool FC,Arsenal FC,1,1,EMPATE
+436122,2023-12-24,PL,18,Wolverhampton Wanderers FC,Chelsea FC,2,1,LOCAL
+436131,2023-12-26,PL,19,Newcastle United FC,Nottingham Forest FC,1,3,VISITANTE
+436123,2023-12-26,PL,19,AFC Bournemouth,Fulham FC,3,0,LOCAL
+436132,2023-12-26,PL,19,Sheffield United FC,Luton Town FC,2,3,VISITANTE
+436127,2023-12-26,PL,19,Burnley FC,Liverpool FC,0,2,VISITANTE
+436130,2023-12-26,PL,19,Manchester United FC,Aston Villa FC,3,2,LOCAL
+436125,2023-12-27,PL,19,Brentford FC,Wolverhampton Wanderers FC,1,4,VISITANTE
+436128,2023-12-27,PL,19,Chelsea FC,Crystal Palace FC,2,1,LOCAL
+436129,2023-12-27,PL,19,Everton FC,Manchester City FC,1,3,VISITANTE
+436126,2023-12-28,PL,19,Brighton & Hove Albion FC,Tottenham Hotspur FC,4,2,LOCAL
+436124,2023-12-28,PL,19,Arsenal FC,West Ham United FC,0,2,VISITANTE
+436137,2023-12-30,PL,20,Luton Town FC,Chelsea FC,2,3,VISITANTE
+436133,2023-12-30,PL,20,Aston Villa FC,Burnley FC,3,2,LOCAL
+436134,2023-12-30,PL,20,Crystal Palace FC,Brentford FC,3,1,LOCAL
+436138,2023-12-30,PL,20,Manchester City FC,Sheffield United FC,2,0,LOCAL
+436142,2023-12-30,PL,20,Wolverhampton Wanderers FC,Everton FC,3,0,LOCAL
+436139,2023-12-30,PL,20,Nottingham Forest FC,Manchester United FC,2,1,LOCAL
+436135,2023-12-31,PL,20,Fulham FC,Arsenal FC,2,1,LOCAL
+436140,2023-12-31,PL,20,Tottenham Hotspur FC,AFC Bournemouth,3,1,LOCAL
+436136,2024-01-01,PL,20,Liverpool FC,Newcastle United FC,4,2,LOCAL
+436141,2024-01-02,PL,20,West Ham United FC,Brighton & Hove Albion FC,0,0,EMPATE
+436147,2024-01-12,PL,21,Burnley FC,Luton Town FC,1,1,EMPATE
+436148,2024-01-13,PL,21,Chelsea FC,Fulham FC,1,0,LOCAL
+436151,2024-01-13,PL,21,Newcastle United FC,Manchester City FC,2,3,VISITANTE
+436149,2024-01-14,PL,21,Everton FC,Aston Villa FC,0,0,EMPATE
+436150,2024-01-14,PL,21,Manchester United FC,Tottenham Hotspur FC,2,2,EMPATE
+436144,2024-01-20,PL,21,Arsenal FC,Crystal Palace FC,5,0,LOCAL
+436145,2024-01-20,PL,21,Brentford FC,Nottingham Forest FC,3,2,LOCAL
+436152,2024-01-21,PL,21,Sheffield United FC,West Ham United FC,2,2,EMPATE
+436143,2024-01-21,PL,21,AFC Bournemouth,Liverpool FC,0,4,VISITANTE
+436146,2024-01-22,PL,21,Brighton & Hove Albion FC,Wolverhampton Wanderers FC,0,0,EMPATE
+436153,2024-01-30,PL,22,Nottingham Forest FC,Arsenal FC,1,2,VISITANTE
+436155,2024-01-30,PL,22,Luton Town FC,Brighton & Hove Albion FC,4,0,LOCAL
+436156,2024-01-30,PL,22,Fulham FC,Everton FC,0,0,EMPATE
+436157,2024-01-30,PL,22,Crystal Palace FC,Sheffield United FC,3,2,LOCAL
+436158,2024-01-30,PL,22,Aston Villa FC,Newcastle United FC,1,3,VISITANTE
+436159,2024-01-31,PL,22,Tottenham Hotspur FC,Brentford FC,3,2,LOCAL
+436161,2024-01-31,PL,22,Manchester City FC,Burnley FC,3,1,LOCAL
+436162,2024-01-31,PL,22,Liverpool FC,Chelsea FC,4,1,LOCAL
+436154,2024-02-01,PL,22,West Ham United FC,AFC Bournemouth,1,1,EMPATE
+436160,2024-02-01,PL,22,Wolverhampton Wanderers FC,Manchester United FC,3,4,VISITANTE
+436169,2024-02-03,PL,23,Everton FC,Tottenham Hotspur FC,2,2,EMPATE
+436166,2024-02-03,PL,23,Brighton & Hove Albion FC,Crystal Palace FC,4,1,LOCAL
+436167,2024-02-03,PL,23,Burnley FC,Fulham FC,2,2,EMPATE
+436171,2024-02-03,PL,23,Newcastle United FC,Luton Town FC,4,4,EMPATE
+436172,2024-02-03,PL,23,Sheffield United FC,Aston Villa FC,0,5,VISITANTE
+436163,2024-02-04,PL,23,AFC Bournemouth,Nottingham Forest FC,1,1,EMPATE
+436168,2024-02-04,PL,23,Chelsea FC,Wolverhampton Wanderers FC,2,4,VISITANTE
+436170,2024-02-04,PL,23,Manchester United FC,West Ham United FC,3,0,LOCAL
+436164,2024-02-04,PL,23,Arsenal FC,Liverpool FC,3,1,LOCAL
+436165,2024-02-05,PL,23,Brentford FC,Manchester City FC,1,3,VISITANTE
+436178,2024-02-10,PL,24,Manchester City FC,Everton FC,2,0,LOCAL
+436175,2024-02-10,PL,24,Fulham FC,AFC Bournemouth,3,1,LOCAL
+436176,2024-02-10,PL,24,Liverpool FC,Burnley FC,3,1,LOCAL
+436177,2024-02-10,PL,24,Luton Town FC,Sheffield United FC,1,3,VISITANTE
+436180,2024-02-10,PL,24,Tottenham Hotspur FC,Brighton & Hove Albion FC,2,1,LOCAL
+436182,2024-02-10,PL,24,Wolverhampton Wanderers FC,Brentford FC,0,2,VISITANTE
+436179,2024-02-10,PL,24,Nottingham Forest FC,Newcastle United FC,2,3,VISITANTE
+436181,2024-02-11,PL,24,West Ham United FC,Arsenal FC,0,6,VISITANTE
+436173,2024-02-11,PL,24,Aston Villa FC,Manchester United FC,1,2,VISITANTE
+436174,2024-02-12,PL,24,Crystal Palace FC,Chelsea FC,1,3,VISITANTE
+436183,2024-02-17,PL,25,Brentford FC,Liverpool FC,1,4,VISITANTE
+436184,2024-02-17,PL,25,Burnley FC,Arsenal FC,0,5,VISITANTE
+436186,2024-02-17,PL,25,Fulham FC,Aston Villa FC,1,2,VISITANTE
+436189,2024-02-17,PL,25,Newcastle United FC,AFC Bournemouth,2,2,EMPATE
+436190,2024-02-17,PL,25,Nottingham Forest FC,West Ham United FC,2,0,LOCAL
+436192,2024-02-17,PL,25,Tottenham Hotspur FC,Wolverhampton Wanderers FC,1,2,VISITANTE
+436188,2024-02-17,PL,25,Manchester City FC,Chelsea FC,1,1,EMPATE
+436191,2024-02-18,PL,25,Sheffield United FC,Brighton & Hove Albion FC,0,5,VISITANTE
+436187,2024-02-18,PL,25,Luton Town FC,Manchester United FC,1,2,VISITANTE
+436185,2024-02-19,PL,25,Everton FC,Crystal Palace FC,1,1,EMPATE
+436118,2024-02-20,PL,18,Manchester City FC,Brentford FC,1,0,LOCAL
+436199,2024-02-21,PL,26,Liverpool FC,Luton Town FC,4,1,LOCAL
+436195,2024-02-24,PL,26,Aston Villa FC,Nottingham Forest FC,4,2,LOCAL
+436196,2024-02-24,PL,26,Brighton & Hove Albion FC,Everton FC,1,1,EMPATE
+436198,2024-02-24,PL,26,Crystal Palace FC,Burnley FC,3,0,LOCAL
+436200,2024-02-24,PL,26,Manchester United FC,Fulham FC,1,2,VISITANTE
+436193,2024-02-24,PL,26,AFC Bournemouth,Manchester City FC,0,1,VISITANTE
+436194,2024-02-24,PL,26,Arsenal FC,Newcastle United FC,4,1,LOCAL
+436202,2024-02-25,PL,26,Wolverhampton Wanderers FC,Sheffield United FC,1,0,LOCAL
+436201,2024-02-26,PL,26,West Ham United FC,Brentford FC,4,2,LOCAL
+436203,2024-03-02,PL,27,Brentford FC,Chelsea FC,2,2,EMPATE
+436205,2024-03-02,PL,27,Everton FC,West Ham United FC,1,3,VISITANTE
+436206,2024-03-02,PL,27,Fulham FC,Brighton & Hove Albion FC,3,0,LOCAL
+436209,2024-03-02,PL,27,Newcastle United FC,Wolverhampton Wanderers FC,3,0,LOCAL
+436210,2024-03-02,PL,27,Nottingham Forest FC,Liverpool FC,0,1,VISITANTE
+436212,2024-03-02,PL,27,Tottenham Hotspur FC,Crystal Palace FC,3,1,LOCAL
+436207,2024-03-02,PL,27,Luton Town FC,Aston Villa FC,2,3,VISITANTE
+436204,2024-03-03,PL,27,Burnley FC,AFC Bournemouth,0,2,VISITANTE
+436208,2024-03-03,PL,27,Manchester City FC,Manchester United FC,3,1,LOCAL
+436211,2024-03-04,PL,27,Sheffield United FC,Arsenal FC,0,6,VISITANTE
+436220,2024-03-09,PL,28,Manchester United FC,Everton FC,2,0,LOCAL
+436213,2024-03-09,PL,28,AFC Bournemouth,Sheffield United FC,2,2,EMPATE
+436218,2024-03-09,PL,28,Crystal Palace FC,Luton Town FC,1,1,EMPATE
+436222,2024-03-09,PL,28,Wolverhampton Wanderers FC,Fulham FC,2,1,LOCAL
+436214,2024-03-09,PL,28,Arsenal FC,Brentford FC,2,1,LOCAL
+436215,2024-03-10,PL,28,Aston Villa FC,Tottenham Hotspur FC,0,4,VISITANTE
+436216,2024-03-10,PL,28,Brighton & Hove Albion FC,Nottingham Forest FC,1,0,LOCAL
+436221,2024-03-10,PL,28,West Ham United FC,Burnley FC,2,2,EMPATE
+436219,2024-03-10,PL,28,Liverpool FC,Manchester City FC,1,1,EMPATE
+436217,2024-03-11,PL,28,Chelsea FC,Newcastle United FC,3,2,LOCAL
+436103,2024-03-13,PL,17,AFC Bournemouth,Luton Town FC,4,3,LOCAL
+436225,2024-03-16,PL,29,Burnley FC,Brentford FC,2,1,LOCAL
+436229,2024-03-16,PL,29,Luton Town FC,Nottingham Forest FC,1,1,EMPATE
+436228,2024-03-16,PL,29,Fulham FC,Tottenham Hotspur FC,3,0,LOCAL
+436231,2024-03-17,PL,29,West Ham United FC,Aston Villa FC,1,1,EMPATE
+436239,2024-03-30,PL,30,Newcastle United FC,West Ham United FC,4,3,LOCAL
+436233,2024-03-30,PL,30,AFC Bournemouth,Everton FC,2,1,LOCAL
+436236,2024-03-30,PL,30,Chelsea FC,Burnley FC,2,2,EMPATE
+436240,2024-03-30,PL,30,Nottingham Forest FC,Crystal Palace FC,1,1,EMPATE
+436241,2024-03-30,PL,30,Sheffield United FC,Fulham FC,3,3,EMPATE
+436242,2024-03-30,PL,30,Tottenham Hotspur FC,Luton Town FC,2,1,LOCAL
+436234,2024-03-30,PL,30,Aston Villa FC,Wolverhampton Wanderers FC,2,0,LOCAL
+436235,2024-03-30,PL,30,Brentford FC,Manchester United FC,1,1,EMPATE
+436237,2024-03-31,PL,30,Liverpool FC,Brighton & Hove Albion FC,2,1,LOCAL
+436238,2024-03-31,PL,30,Manchester City FC,Arsenal FC,0,0,EMPATE
+436247,2024-04-02,PL,31,Nottingham Forest FC,Fulham FC,3,1,LOCAL
+436250,2024-04-02,PL,31,Newcastle United FC,Everton FC,1,1,EMPATE
+436243,2024-04-02,PL,31,AFC Bournemouth,Crystal Palace FC,1,0,LOCAL
+436246,2024-04-02,PL,31,Burnley FC,Wolverhampton Wanderers FC,1,1,EMPATE
+436248,2024-04-02,PL,31,West Ham United FC,Tottenham Hotspur FC,1,1,EMPATE
+436244,2024-04-03,PL,31,Arsenal FC,Luton Town FC,2,0,LOCAL
+436245,2024-04-03,PL,31,Brentford FC,Brighton & Hove Albion FC,0,0,EMPATE
+436252,2024-04-03,PL,31,Manchester City FC,Aston Villa FC,4,1,LOCAL
+436251,2024-04-04,PL,31,Liverpool FC,Sheffield United FC,3,1,LOCAL
+436249,2024-04-04,PL,31,Chelsea FC,Manchester United FC,4,3,LOCAL
+436255,2024-04-06,PL,32,Crystal Palace FC,Manchester City FC,2,4,VISITANTE
+436253,2024-04-06,PL,32,Aston Villa FC,Brentford FC,3,3,EMPATE
+436256,2024-04-06,PL,32,Everton FC,Burnley FC,1,0,LOCAL
+436257,2024-04-06,PL,32,Fulham FC,Newcastle United FC,0,1,VISITANTE
+436258,2024-04-06,PL,32,Luton Town FC,AFC Bournemouth,2,1,LOCAL
+436262,2024-04-06,PL,32,Wolverhampton Wanderers FC,West Ham United FC,1,2,VISITANTE
+436254,2024-04-06,PL,32,Brighton & Hove Albion FC,Arsenal FC,0,3,VISITANTE
+436259,2024-04-07,PL,32,Manchester United FC,Liverpool FC,2,2,EMPATE
+436260,2024-04-07,PL,32,Sheffield United FC,Chelsea FC,2,2,EMPATE
+436261,2024-04-07,PL,32,Tottenham Hotspur FC,Nottingham Forest FC,3,1,LOCAL
+436270,2024-04-13,PL,33,Newcastle United FC,Tottenham Hotspur FC,4,0,LOCAL
+436265,2024-04-13,PL,33,Brentford FC,Sheffield United FC,2,0,LOCAL
+436266,2024-04-13,PL,33,Burnley FC,Brighton & Hove Albion FC,1,1,EMPATE
+436269,2024-04-13,PL,33,Manchester City FC,Luton Town FC,5,1,LOCAL
+436271,2024-04-13,PL,33,Nottingham Forest FC,Wolverhampton Wanderers FC,2,2,EMPATE
+436263,2024-04-13,PL,33,AFC Bournemouth,Manchester United FC,2,2,EMPATE
+436268,2024-04-14,PL,33,Liverpool FC,Crystal Palace FC,0,1,VISITANTE
+436272,2024-04-14,PL,33,West Ham United FC,Fulham FC,0,2,VISITANTE
+436264,2024-04-14,PL,33,Arsenal FC,Aston Villa FC,0,2,VISITANTE
+436267,2024-04-15,PL,33,Chelsea FC,Everton FC,6,0,LOCAL
+436278,2024-04-20,PL,34,Luton Town FC,Brentford FC,1,5,VISITANTE
+436280,2024-04-20,PL,34,Sheffield United FC,Burnley FC,1,4,VISITANTE
+436282,2024-04-20,PL,34,Wolverhampton Wanderers FC,Arsenal FC,0,2,VISITANTE
+436276,2024-04-21,PL,34,Everton FC,Nottingham Forest FC,2,0,LOCAL
+436273,2024-04-21,PL,34,Aston Villa FC,AFC Bournemouth,3,1,LOCAL
+436275,2024-04-21,PL,34,Crystal Palace FC,West Ham United FC,5,2,LOCAL
+436277,2024-04-21,PL,34,Fulham FC,Liverpool FC,1,3,VISITANTE
+436223,2024-04-23,PL,29,Arsenal FC,Chelsea FC,5,0,LOCAL
+436232,2024-04-24,PL,29,Wolverhampton Wanderers FC,AFC Bournemouth,0,1,VISITANTE
+436226,2024-04-24,PL,29,Crystal Palace FC,Newcastle United FC,2,0,LOCAL
+436227,2024-04-24,PL,29,Everton FC,Liverpool FC,2,0,LOCAL
+436230,2024-04-24,PL,29,Manchester United FC,Sheffield United FC,4,2,LOCAL
+436224,2024-04-25,PL,29,Brighton & Hove Albion FC,Manchester City FC,0,4,VISITANTE
+436291,2024-04-27,PL,35,West Ham United FC,Liverpool FC,2,2,EMPATE
+436286,2024-04-27,PL,35,Fulham FC,Crystal Palace FC,1,1,EMPATE
+436287,2024-04-27,PL,35,Manchester United FC,Burnley FC,1,1,EMPATE
+436288,2024-04-27,PL,35,Newcastle United FC,Sheffield United FC,5,1,LOCAL
+436292,2024-04-27,PL,35,Wolverhampton Wanderers FC,Luton Town FC,2,1,LOCAL
+436285,2024-04-27,PL,35,Everton FC,Brentford FC,1,0,LOCAL
+436284,2024-04-27,PL,35,Aston Villa FC,Chelsea FC,2,2,EMPATE
+436283,2024-04-28,PL,35,AFC Bournemouth,Brighton & Hove Albion FC,3,0,LOCAL
+436290,2024-04-28,PL,35,Tottenham Hotspur FC,Arsenal FC,2,3,VISITANTE
+436289,2024-04-28,PL,35,Nottingham Forest FC,Manchester City FC,0,2,VISITANTE
+436197,2024-05-02,PL,26,Chelsea FC,Tottenham Hotspur FC,2,0,LOCAL
+436300,2024-05-03,PL,36,Luton Town FC,Everton FC,1,1,EMPATE
+436293,2024-05-04,PL,36,Arsenal FC,AFC Bournemouth,3,0,LOCAL
+436294,2024-05-04,PL,36,Brentford FC,Fulham FC,0,0,EMPATE
+436296,2024-05-04,PL,36,Burnley FC,Newcastle United FC,1,4,VISITANTE
+436302,2024-05-04,PL,36,Sheffield United FC,Nottingham Forest FC,1,3,VISITANTE
+436301,2024-05-04,PL,36,Manchester City FC,Wolverhampton Wanderers FC,5,1,LOCAL
+436295,2024-05-05,PL,36,Brighton & Hove Albion FC,Aston Villa FC,1,0,LOCAL
+436297,2024-05-05,PL,36,Chelsea FC,West Ham United FC,5,0,LOCAL
+436299,2024-05-05,PL,36,Liverpool FC,Tottenham Hotspur FC,4,2,LOCAL
+436298,2024-05-06,PL,36,Crystal Palace FC,Manchester United FC,4,0,LOCAL
+436306,2024-05-11,PL,37,Fulham FC,Manchester City FC,0,4,VISITANTE
+436303,2024-05-11,PL,37,AFC Bournemouth,Brentford FC,1,2,VISITANTE
+436305,2024-05-11,PL,37,Everton FC,Sheffield United FC,1,0,LOCAL
+436308,2024-05-11,PL,37,Newcastle United FC,Brighton & Hove Albion FC,1,1,EMPATE
+436310,2024-05-11,PL,37,Tottenham Hotspur FC,Burnley FC,2,1,LOCAL
+436311,2024-05-11,PL,37,West Ham United FC,Luton Town FC,3,1,LOCAL
+436312,2024-05-11,PL,37,Wolverhampton Wanderers FC,Crystal Palace FC,1,3,VISITANTE
+436309,2024-05-11,PL,37,Nottingham Forest FC,Chelsea FC,2,3,VISITANTE
+436307,2024-05-12,PL,37,Manchester United FC,Arsenal FC,0,1,VISITANTE
+436304,2024-05-13,PL,37,Aston Villa FC,Liverpool FC,3,3,EMPATE
+436281,2024-05-14,PL,34,Tottenham Hotspur FC,Manchester City FC,0,2,VISITANTE
+436274,2024-05-15,PL,34,Brighton & Hove Albion FC,Chelsea FC,1,2,VISITANTE
+436279,2024-05-15,PL,34,Manchester United FC,Newcastle United FC,3,2,LOCAL
+436313,2024-05-19,PL,38,Arsenal FC,Everton FC,2,1,LOCAL
+436314,2024-05-19,PL,38,Brentford FC,Newcastle United FC,2,4,VISITANTE
+436315,2024-05-19,PL,38,Brighton & Hove Albion FC,Manchester United FC,0,2,VISITANTE
+436316,2024-05-19,PL,38,Burnley FC,Nottingham Forest FC,1,2,VISITANTE
+436317,2024-05-19,PL,38,Chelsea FC,AFC Bournemouth,2,1,LOCAL
+436318,2024-05-19,PL,38,Crystal Palace FC,Aston Villa FC,5,0,LOCAL
+436319,2024-05-19,PL,38,Liverpool FC,Wolverhampton Wanderers FC,2,0,LOCAL
+436320,2024-05-19,PL,38,Luton Town FC,Fulham FC,2,4,VISITANTE
+436321,2024-05-19,PL,38,Manchester City FC,West Ham United FC,3,1,LOCAL
+436322,2024-05-19,PL,38,Sheffield United FC,Tottenham Hotspur FC,0,3,VISITANTE
+441789,2023-08-18,BL1,1,SV Werder Bremen,FC Bayern München,0,4,VISITANTE
+441792,2023-08-19,BL1,1,Bayer 04 Leverkusen,RB Leipzig,3,2,LOCAL
+441794,2023-08-19,BL1,1,VfL Wolfsburg,1. FC Heidenheim 1846,2,0,LOCAL
+441795,2023-08-19,BL1,1,TSG 1899 Hoffenheim,SC Freiburg,1,2,VISITANTE
+441796,2023-08-19,BL1,1,FC Augsburg,Borussia Mönchengladbach,4,4,EMPATE
+441797,2023-08-19,BL1,1,VfB Stuttgart,VfL Bochum 1848,5,0,LOCAL
+441790,2023-08-19,BL1,1,Borussia Dortmund,1. FC Köln,1,0,LOCAL
+441791,2023-08-20,BL1,1,1. FC Union Berlin,1. FSV Mainz 05,4,1,LOCAL
+441793,2023-08-20,BL1,1,Eintracht Frankfurt,SV Darmstadt 98,1,0,LOCAL
+441799,2023-08-25,BL1,2,RB Leipzig,VfB Stuttgart,5,1,LOCAL
+441800,2023-08-26,BL1,2,SC Freiburg,SV Werder Bremen,1,0,LOCAL
+441803,2023-08-26,BL1,2,1. FC Köln,VfL Wolfsburg,1,2,VISITANTE
+441804,2023-08-26,BL1,2,VfL Bochum 1848,Borussia Dortmund,1,1,EMPATE
+441805,2023-08-26,BL1,2,1. FC Heidenheim 1846,TSG 1899 Hoffenheim,2,3,VISITANTE
+441806,2023-08-26,BL1,2,SV Darmstadt 98,1. FC Union Berlin,1,4,VISITANTE
+441802,2023-08-26,BL1,2,Borussia Mönchengladbach,Bayer 04 Leverkusen,0,3,VISITANTE
+441801,2023-08-27,BL1,2,1. FSV Mainz 05,Eintracht Frankfurt,1,1,EMPATE
+441798,2023-08-27,BL1,2,FC Bayern München,FC Augsburg,3,1,LOCAL
+441807,2023-09-01,BL1,3,Borussia Dortmund,1. FC Heidenheim 1846,2,2,EMPATE
+441809,2023-09-02,BL1,3,Bayer 04 Leverkusen,SV Darmstadt 98,5,1,LOCAL
+441812,2023-09-02,BL1,3,TSG 1899 Hoffenheim,VfL Wolfsburg,3,1,LOCAL
+441813,2023-09-02,BL1,3,SV Werder Bremen,1. FSV Mainz 05,4,0,LOCAL
+441814,2023-09-02,BL1,3,FC Augsburg,VfL Bochum 1848,2,2,EMPATE
+441815,2023-09-02,BL1,3,VfB Stuttgart,SC Freiburg,5,0,LOCAL
+441811,2023-09-02,BL1,3,Borussia Mönchengladbach,FC Bayern München,1,2,VISITANTE
+441810,2023-09-03,BL1,3,Eintracht Frankfurt,1. FC Köln,1,1,EMPATE
+441808,2023-09-03,BL1,3,1. FC Union Berlin,RB Leipzig,0,3,VISITANTE
+441816,2023-09-15,BL1,4,FC Bayern München,Bayer 04 Leverkusen,2,2,EMPATE
+441817,2023-09-16,BL1,4,RB Leipzig,FC Augsburg,3,0,LOCAL
+441818,2023-09-16,BL1,4,SC Freiburg,Borussia Dortmund,2,4,VISITANTE
+441819,2023-09-16,BL1,4,VfL Wolfsburg,1. FC Union Berlin,2,1,LOCAL
+441820,2023-09-16,BL1,4,1. FSV Mainz 05,VfB Stuttgart,1,3,VISITANTE
+441821,2023-09-16,BL1,4,1. FC Köln,TSG 1899 Hoffenheim,1,3,VISITANTE
+441822,2023-09-16,BL1,4,VfL Bochum 1848,Eintracht Frankfurt,1,1,EMPATE
+441823,2023-09-17,BL1,4,1. FC Heidenheim 1846,SV Werder Bremen,4,2,LOCAL
+441824,2023-09-17,BL1,4,SV Darmstadt 98,Borussia Mönchengladbach,3,3,EMPATE
+441833,2023-09-22,BL1,5,VfB Stuttgart,SV Darmstadt 98,3,1,LOCAL
+441825,2023-09-23,BL1,5,FC Bayern München,VfL Bochum 1848,7,0,LOCAL
+441826,2023-09-23,BL1,5,Borussia Dortmund,VfL Wolfsburg,1,0,LOCAL
+441827,2023-09-23,BL1,5,1. FC Union Berlin,TSG 1899 Hoffenheim,0,2,VISITANTE
+441830,2023-09-23,BL1,5,Borussia Mönchengladbach,RB Leipzig,0,1,VISITANTE
+441832,2023-09-23,BL1,5,FC Augsburg,1. FSV Mainz 05,2,1,LOCAL
+441831,2023-09-23,BL1,5,SV Werder Bremen,1. FC Köln,2,1,LOCAL
+441828,2023-09-24,BL1,5,Bayer 04 Leverkusen,1. FC Heidenheim 1846,4,1,LOCAL
+441829,2023-09-24,BL1,5,Eintracht Frankfurt,SC Freiburg,0,0,EMPATE
+441839,2023-09-29,BL1,6,TSG 1899 Hoffenheim,Borussia Dortmund,1,3,VISITANTE
+441836,2023-09-30,BL1,6,VfL Wolfsburg,Eintracht Frankfurt,2,0,LOCAL
+441837,2023-09-30,BL1,6,1. FSV Mainz 05,Bayer 04 Leverkusen,0,3,VISITANTE
+441838,2023-09-30,BL1,6,1. FC Köln,VfB Stuttgart,0,2,VISITANTE
+441840,2023-09-30,BL1,6,VfL Bochum 1848,Borussia Mönchengladbach,1,3,VISITANTE
+441841,2023-09-30,BL1,6,1. FC Heidenheim 1846,1. FC Union Berlin,1,0,LOCAL
+441834,2023-09-30,BL1,6,RB Leipzig,FC Bayern München,2,2,EMPATE
+441842,2023-10-01,BL1,6,SV Darmstadt 98,SV Werder Bremen,4,2,LOCAL
+441835,2023-10-01,BL1,6,SC Freiburg,FC Augsburg,2,0,LOCAL
+441848,2023-10-06,BL1,7,Borussia Mönchengladbach,1. FSV Mainz 05,2,2,EMPATE
+441844,2023-10-07,BL1,7,Borussia Dortmund,1. FC Union Berlin,4,2,LOCAL
+441845,2023-10-07,BL1,7,RB Leipzig,VfL Bochum 1848,0,0,EMPATE
+441850,2023-10-07,BL1,7,FC Augsburg,SV Darmstadt 98,1,2,VISITANTE
+441851,2023-10-07,BL1,7,VfB Stuttgart,VfL Wolfsburg,3,1,LOCAL
+441849,2023-10-07,BL1,7,SV Werder Bremen,TSG 1899 Hoffenheim,2,3,VISITANTE
+441846,2023-10-08,BL1,7,Bayer 04 Leverkusen,1. FC Köln,3,0,LOCAL
+441843,2023-10-08,BL1,7,FC Bayern München,SC Freiburg,3,0,LOCAL
+441847,2023-10-08,BL1,7,Eintracht Frankfurt,1. FC Heidenheim 1846,2,0,LOCAL
+441852,2023-10-20,BL1,8,Borussia Dortmund,SV Werder Bremen,1,0,LOCAL
+441858,2023-10-21,BL1,8,TSG 1899 Hoffenheim,Eintracht Frankfurt,1,3,VISITANTE
+441860,2023-10-21,BL1,8,SV Darmstadt 98,RB Leipzig,1,3,VISITANTE
+441853,2023-10-21,BL1,8,1. FC Union Berlin,VfB Stuttgart,0,3,VISITANTE
+441854,2023-10-21,BL1,8,SC Freiburg,VfL Bochum 1848,2,1,LOCAL
+441855,2023-10-21,BL1,8,VfL Wolfsburg,Bayer 04 Leverkusen,1,2,VISITANTE
+441856,2023-10-21,BL1,8,1. FSV Mainz 05,FC Bayern München,1,3,VISITANTE
+441857,2023-10-22,BL1,8,1. FC Köln,Borussia Mönchengladbach,3,1,LOCAL
+441859,2023-10-22,BL1,8,1. FC Heidenheim 1846,FC Augsburg,2,5,VISITANTE
+441867,2023-10-27,BL1,9,VfL Bochum 1848,1. FSV Mainz 05,2,2,EMPATE
+441861,2023-10-28,BL1,9,FC Bayern München,SV Darmstadt 98,8,0,LOCAL
+441865,2023-10-28,BL1,9,Borussia Mönchengladbach,1. FC Heidenheim 1846,2,1,LOCAL
+441866,2023-10-28,BL1,9,SV Werder Bremen,1. FC Union Berlin,2,0,LOCAL
+441868,2023-10-28,BL1,9,FC Augsburg,VfL Wolfsburg,3,2,LOCAL
+441869,2023-10-28,BL1,9,VfB Stuttgart,TSG 1899 Hoffenheim,2,3,VISITANTE
+441862,2023-10-28,BL1,9,RB Leipzig,1. FC Köln,6,0,LOCAL
+441864,2023-10-29,BL1,9,Eintracht Frankfurt,Borussia Dortmund,3,3,EMPATE
+441863,2023-10-29,BL1,9,Bayer 04 Leverkusen,SC Freiburg,2,1,LOCAL
+441878,2023-11-03,BL1,10,SV Darmstadt 98,VfL Bochum 1848,1,2,VISITANTE
+441871,2023-11-04,BL1,10,1. FC Union Berlin,Eintracht Frankfurt,0,3,VISITANTE
+441872,2023-11-04,BL1,10,SC Freiburg,Borussia Mönchengladbach,3,3,EMPATE
+441874,2023-11-04,BL1,10,1. FSV Mainz 05,RB Leipzig,2,0,LOCAL
+441875,2023-11-04,BL1,10,1. FC Köln,FC Augsburg,1,1,EMPATE
+441876,2023-11-04,BL1,10,TSG 1899 Hoffenheim,Bayer 04 Leverkusen,2,3,VISITANTE
+441870,2023-11-04,BL1,10,Borussia Dortmund,FC Bayern München,0,4,VISITANTE
+441873,2023-11-05,BL1,10,VfL Wolfsburg,SV Werder Bremen,2,2,EMPATE
+441877,2023-11-05,BL1,10,1. FC Heidenheim 1846,VfB Stuttgart,2,0,LOCAL
+441882,2023-11-10,BL1,11,Borussia Mönchengladbach,VfL Wolfsburg,4,0,LOCAL
+441879,2023-11-11,BL1,11,FC Bayern München,1. FC Heidenheim 1846,4,2,LOCAL
+441885,2023-11-11,BL1,11,FC Augsburg,TSG 1899 Hoffenheim,1,1,EMPATE
+441886,2023-11-11,BL1,11,VfB Stuttgart,Borussia Dortmund,2,1,LOCAL
+441887,2023-11-11,BL1,11,SV Darmstadt 98,1. FSV Mainz 05,0,0,EMPATE
+441884,2023-11-11,BL1,11,VfL Bochum 1848,1. FC Köln,1,1,EMPATE
+441881,2023-11-12,BL1,11,Bayer 04 Leverkusen,1. FC Union Berlin,4,0,LOCAL
+441883,2023-11-12,BL1,11,SV Werder Bremen,Eintracht Frankfurt,2,2,EMPATE
+441880,2023-11-12,BL1,11,RB Leipzig,SC Freiburg,3,1,LOCAL
+441893,2023-11-24,BL1,12,1. FC Köln,FC Bayern München,0,1,VISITANTE
+441888,2023-11-25,BL1,12,Borussia Dortmund,Borussia Mönchengladbach,4,2,LOCAL
+441889,2023-11-25,BL1,12,1. FC Union Berlin,FC Augsburg,1,1,EMPATE
+441890,2023-11-25,BL1,12,SC Freiburg,SV Darmstadt 98,1,1,EMPATE
+441892,2023-11-25,BL1,12,VfL Wolfsburg,RB Leipzig,2,1,LOCAL
+441895,2023-11-25,BL1,12,SV Werder Bremen,Bayer 04 Leverkusen,0,3,VISITANTE
+441891,2023-11-25,BL1,12,Eintracht Frankfurt,VfB Stuttgart,1,2,VISITANTE
+441896,2023-11-26,BL1,12,1. FC Heidenheim 1846,VfL Bochum 1848,0,0,EMPATE
+441894,2023-11-26,BL1,12,TSG 1899 Hoffenheim,1. FSV Mainz 05,1,1,EMPATE
+441905,2023-12-01,BL1,13,SV Darmstadt 98,1. FC Köln,0,1,VISITANTE
+441898,2023-12-02,BL1,13,RB Leipzig,1. FC Heidenheim 1846,2,1,LOCAL
+441901,2023-12-02,BL1,13,Borussia Mönchengladbach,TSG 1899 Hoffenheim,2,1,LOCAL
+441902,2023-12-02,BL1,13,VfL Bochum 1848,VfL Wolfsburg,3,1,LOCAL
+441904,2023-12-02,BL1,13,VfB Stuttgart,SV Werder Bremen,2,0,LOCAL
+441900,2023-12-03,BL1,13,1. FSV Mainz 05,SC Freiburg,0,1,VISITANTE
+441899,2023-12-03,BL1,13,Bayer 04 Leverkusen,Borussia Dortmund,1,1,EMPATE
+441903,2023-12-03,BL1,13,FC Augsburg,Eintracht Frankfurt,2,1,LOCAL
+441911,2023-12-08,BL1,14,TSG 1899 Hoffenheim,VfL Bochum 1848,3,1,LOCAL
+441907,2023-12-09,BL1,14,1. FC Union Berlin,Borussia Mönchengladbach,3,1,LOCAL
+441908,2023-12-09,BL1,14,Eintracht Frankfurt,FC Bayern München,5,1,LOCAL
+441909,2023-12-09,BL1,14,VfL Wolfsburg,SC Freiburg,0,1,VISITANTE
+441912,2023-12-09,BL1,14,SV Werder Bremen,FC Augsburg,2,0,LOCAL
+441914,2023-12-09,BL1,14,1. FC Heidenheim 1846,SV Darmstadt 98,3,2,LOCAL
+441906,2023-12-09,BL1,14,Borussia Dortmund,RB Leipzig,2,3,VISITANTE
+441913,2023-12-10,BL1,14,VfB Stuttgart,Bayer 04 Leverkusen,1,1,EMPATE
+441910,2023-12-10,BL1,14,1. FC Köln,1. FSV Mainz 05,0,0,EMPATE
+441920,2023-12-15,BL1,15,Borussia Mönchengladbach,SV Werder Bremen,2,2,EMPATE
+441919,2023-12-16,BL1,15,1. FSV Mainz 05,1. FC Heidenheim 1846,0,1,VISITANTE
+441921,2023-12-16,BL1,15,VfL Bochum 1848,1. FC Union Berlin,3,0,LOCAL
+441922,2023-12-16,BL1,15,FC Augsburg,Borussia Dortmund,1,1,EMPATE
+441923,2023-12-16,BL1,15,SV Darmstadt 98,VfL Wolfsburg,0,1,VISITANTE
+441916,2023-12-16,BL1,15,RB Leipzig,TSG 1899 Hoffenheim,3,1,LOCAL
+441917,2023-12-17,BL1,15,SC Freiburg,1. FC Köln,2,0,LOCAL
+441918,2023-12-17,BL1,15,Bayer 04 Leverkusen,Eintracht Frankfurt,3,0,LOCAL
+441915,2023-12-17,BL1,15,FC Bayern München,VfB Stuttgart,3,0,LOCAL
+441930,2023-12-19,BL1,16,SV Werder Bremen,RB Leipzig,1,1,EMPATE
+441924,2023-12-19,BL1,16,Borussia Dortmund,1. FSV Mainz 05,1,1,EMPATE
+441929,2023-12-19,BL1,16,TSG 1899 Hoffenheim,SV Darmstadt 98,3,3,EMPATE
+441925,2023-12-20,BL1,16,1. FC Union Berlin,1. FC Köln,2,0,LOCAL
+441926,2023-12-20,BL1,16,Bayer 04 Leverkusen,VfL Bochum 1848,4,0,LOCAL
+441927,2023-12-20,BL1,16,Eintracht Frankfurt,Borussia Mönchengladbach,2,1,LOCAL
+441928,2023-12-20,BL1,16,VfL Wolfsburg,FC Bayern München,1,2,VISITANTE
+441931,2023-12-20,BL1,16,VfB Stuttgart,FC Augsburg,3,0,LOCAL
+441932,2023-12-20,BL1,16,1. FC Heidenheim 1846,SC Freiburg,3,2,LOCAL
+441933,2024-01-12,BL1,17,FC Bayern München,TSG 1899 Hoffenheim,3,0,LOCAL
+441934,2024-01-13,BL1,17,RB Leipzig,Eintracht Frankfurt,0,1,VISITANTE
+441935,2024-01-13,BL1,17,SC Freiburg,1. FC Union Berlin,0,0,EMPATE
+441936,2024-01-13,BL1,17,1. FSV Mainz 05,VfL Wolfsburg,1,1,EMPATE
+441938,2024-01-13,BL1,17,1. FC Köln,1. FC Heidenheim 1846,1,1,EMPATE
+441940,2024-01-13,BL1,17,FC Augsburg,Bayer 04 Leverkusen,0,1,VISITANTE
+441941,2024-01-13,BL1,17,SV Darmstadt 98,Borussia Dortmund,0,3,VISITANTE
+441939,2024-01-14,BL1,17,VfL Bochum 1848,SV Werder Bremen,1,1,EMPATE
+441937,2024-01-14,BL1,17,Borussia Mönchengladbach,VfB Stuttgart,3,1,LOCAL
+441943,2024-01-20,BL1,18,1. FC Köln,Borussia Dortmund,0,4,VISITANTE
+441946,2024-01-20,BL1,18,SV Darmstadt 98,Eintracht Frankfurt,2,2,EMPATE
+441947,2024-01-20,BL1,18,1. FC Heidenheim 1846,VfL Wolfsburg,1,1,EMPATE
+441948,2024-01-20,BL1,18,SC Freiburg,TSG 1899 Hoffenheim,3,2,LOCAL
+441950,2024-01-20,BL1,18,VfL Bochum 1848,VfB Stuttgart,1,0,LOCAL
+441945,2024-01-20,BL1,18,RB Leipzig,Bayer 04 Leverkusen,2,3,VISITANTE
+441942,2024-01-21,BL1,18,FC Bayern München,SV Werder Bremen,0,1,VISITANTE
+441949,2024-01-21,BL1,18,Borussia Mönchengladbach,FC Augsburg,1,2,VISITANTE
+441897,2024-01-24,BL1,13,FC Bayern München,1. FC Union Berlin,1,0,LOCAL
+441954,2024-01-26,BL1,19,Eintracht Frankfurt,1. FSV Mainz 05,1,0,LOCAL
+441951,2024-01-27,BL1,19,FC Augsburg,FC Bayern München,2,3,VISITANTE
+441952,2024-01-27,BL1,19,VfB Stuttgart,RB Leipzig,5,2,LOCAL
+441953,2024-01-27,BL1,19,SV Werder Bremen,SC Freiburg,3,1,LOCAL
+441956,2024-01-27,BL1,19,VfL Wolfsburg,1. FC Köln,1,1,EMPATE
+441958,2024-01-27,BL1,19,TSG 1899 Hoffenheim,1. FC Heidenheim 1846,1,1,EMPATE
+441955,2024-01-27,BL1,19,Bayer 04 Leverkusen,Borussia Mönchengladbach,0,0,EMPATE
+441959,2024-01-28,BL1,19,1. FC Union Berlin,SV Darmstadt 98,1,0,LOCAL
+441957,2024-01-28,BL1,19,Borussia Dortmund,VfL Bochum 1848,3,1,LOCAL
+441960,2024-02-02,BL1,20,1. FC Heidenheim 1846,Borussia Dortmund,0,0,EMPATE
+441962,2024-02-03,BL1,20,SV Darmstadt 98,Bayer 04 Leverkusen,0,2,VISITANTE
+441964,2024-02-03,BL1,20,FC Bayern München,Borussia Mönchengladbach,3,1,LOCAL
+441966,2024-02-03,BL1,20,1. FSV Mainz 05,SV Werder Bremen,0,1,VISITANTE
+441967,2024-02-03,BL1,20,VfL Bochum 1848,FC Augsburg,1,1,EMPATE
+441968,2024-02-03,BL1,20,SC Freiburg,VfB Stuttgart,1,3,VISITANTE
+441963,2024-02-03,BL1,20,1. FC Köln,Eintracht Frankfurt,2,0,LOCAL
+441965,2024-02-04,BL1,20,VfL Wolfsburg,TSG 1899 Hoffenheim,2,2,EMPATE
+441961,2024-02-04,BL1,20,RB Leipzig,1. FC Union Berlin,2,0,LOCAL
+441944,2024-02-07,BL1,18,1. FSV Mainz 05,1. FC Union Berlin,1,1,EMPATE
+441971,2024-02-09,BL1,21,Borussia Dortmund,SC Freiburg,3,0,LOCAL
+441970,2024-02-10,BL1,21,FC Augsburg,RB Leipzig,2,2,EMPATE
+441972,2024-02-10,BL1,21,1. FC Union Berlin,VfL Wolfsburg,1,0,LOCAL
+441975,2024-02-10,BL1,21,Eintracht Frankfurt,VfL Bochum 1848,1,1,EMPATE
+441976,2024-02-10,BL1,21,SV Werder Bremen,1. FC Heidenheim 1846,1,2,VISITANTE
+441977,2024-02-10,BL1,21,Borussia Mönchengladbach,SV Darmstadt 98,0,0,EMPATE
+441969,2024-02-10,BL1,21,Bayer 04 Leverkusen,FC Bayern München,3,0,LOCAL
+441973,2024-02-11,BL1,21,VfB Stuttgart,1. FSV Mainz 05,3,1,LOCAL
+441974,2024-02-11,BL1,21,TSG 1899 Hoffenheim,1. FC Köln,1,1,EMPATE
+441984,2024-02-16,BL1,22,1. FC Köln,SV Werder Bremen,0,1,VISITANTE
+441979,2024-02-17,BL1,22,VfL Wolfsburg,Borussia Dortmund,1,1,EMPATE
+441980,2024-02-17,BL1,22,TSG 1899 Hoffenheim,1. FC Union Berlin,0,1,VISITANTE
+441981,2024-02-17,BL1,22,1. FC Heidenheim 1846,Bayer 04 Leverkusen,1,2,VISITANTE
+441985,2024-02-17,BL1,22,1. FSV Mainz 05,FC Augsburg,1,0,LOCAL
+441986,2024-02-17,BL1,22,SV Darmstadt 98,VfB Stuttgart,1,2,VISITANTE
+441983,2024-02-17,BL1,22,RB Leipzig,Borussia Mönchengladbach,2,0,LOCAL
+441982,2024-02-18,BL1,22,SC Freiburg,Eintracht Frankfurt,3,3,EMPATE
+441978,2024-02-18,BL1,22,VfL Bochum 1848,FC Bayern München,3,2,LOCAL
+441990,2024-02-23,BL1,23,Bayer 04 Leverkusen,1. FSV Mainz 05,2,1,LOCAL
+441991,2024-02-24,BL1,23,VfB Stuttgart,1. FC Köln,1,1,EMPATE
+441994,2024-02-24,BL1,23,1. FC Union Berlin,1. FC Heidenheim 1846,2,2,EMPATE
+441995,2024-02-24,BL1,23,SV Werder Bremen,SV Darmstadt 98,1,1,EMPATE
+441993,2024-02-24,BL1,23,Borussia Mönchengladbach,VfL Bochum 1848,5,2,LOCAL
+441987,2024-02-24,BL1,23,FC Bayern München,RB Leipzig,2,1,LOCAL
+441989,2024-02-25,BL1,23,Eintracht Frankfurt,VfL Wolfsburg,2,2,EMPATE
+441992,2024-02-25,BL1,23,Borussia Dortmund,TSG 1899 Hoffenheim,2,3,VISITANTE
+441988,2024-02-25,BL1,23,FC Augsburg,SC Freiburg,2,1,LOCAL
+441996,2024-03-01,BL1,24,SC Freiburg,FC Bayern München,2,2,EMPATE
+441997,2024-03-02,BL1,24,1. FC Union Berlin,Borussia Dortmund,0,2,VISITANTE
+441998,2024-03-02,BL1,24,VfL Bochum 1848,RB Leipzig,1,4,VISITANTE
+442000,2024-03-02,BL1,24,1. FC Heidenheim 1846,Eintracht Frankfurt,1,2,VISITANTE
+442001,2024-03-02,BL1,24,1. FSV Mainz 05,Borussia Mönchengladbach,1,1,EMPATE
+442003,2024-03-02,BL1,24,SV Darmstadt 98,FC Augsburg,0,6,VISITANTE
+442004,2024-03-02,BL1,24,VfL Wolfsburg,VfB Stuttgart,2,3,VISITANTE
+441999,2024-03-03,BL1,24,1. FC Köln,Bayer 04 Leverkusen,0,2,VISITANTE
+442002,2024-03-03,BL1,24,TSG 1899 Hoffenheim,SV Werder Bremen,2,1,LOCAL
+442006,2024-03-08,BL1,25,VfB Stuttgart,1. FC Union Berlin,2,0,LOCAL
+442009,2024-03-09,BL1,25,FC Bayern München,1. FSV Mainz 05,8,1,LOCAL
+442010,2024-03-09,BL1,25,Borussia Mönchengladbach,1. FC Köln,3,3,EMPATE
+442012,2024-03-09,BL1,25,FC Augsburg,1. FC Heidenheim 1846,1,0,LOCAL
+442013,2024-03-09,BL1,25,RB Leipzig,SV Darmstadt 98,2,0,LOCAL
+442005,2024-03-09,BL1,25,SV Werder Bremen,Borussia Dortmund,1,2,VISITANTE
+442007,2024-03-10,BL1,25,VfL Bochum 1848,SC Freiburg,1,2,VISITANTE
+442011,2024-03-10,BL1,25,Eintracht Frankfurt,TSG 1899 Hoffenheim,3,1,LOCAL
+442008,2024-03-10,BL1,25,Bayer 04 Leverkusen,VfL Wolfsburg,2,0,LOCAL
+442015,2024-03-15,BL1,26,1. FC Köln,RB Leipzig,1,5,VISITANTE
+442014,2024-03-16,BL1,26,SV Darmstadt 98,FC Bayern München,2,5,VISITANTE
+442018,2024-03-16,BL1,26,1. FC Heidenheim 1846,Borussia Mönchengladbach,1,1,EMPATE
+442019,2024-03-16,BL1,26,1. FC Union Berlin,SV Werder Bremen,2,1,LOCAL
+442020,2024-03-16,BL1,26,1. FSV Mainz 05,VfL Bochum 1848,2,0,LOCAL
+442021,2024-03-16,BL1,26,VfL Wolfsburg,FC Augsburg,1,3,VISITANTE
+442022,2024-03-16,BL1,26,TSG 1899 Hoffenheim,VfB Stuttgart,0,3,VISITANTE
+442016,2024-03-17,BL1,26,SC Freiburg,Bayer 04 Leverkusen,2,3,VISITANTE
+442017,2024-03-17,BL1,26,Borussia Dortmund,Eintracht Frankfurt,3,1,LOCAL
+442024,2024-03-30,BL1,27,Eintracht Frankfurt,1. FC Union Berlin,0,0,EMPATE
+442025,2024-03-30,BL1,27,Borussia Mönchengladbach,SC Freiburg,0,3,VISITANTE
+442026,2024-03-30,BL1,27,SV Werder Bremen,VfL Wolfsburg,0,2,VISITANTE
+442027,2024-03-30,BL1,27,RB Leipzig,1. FSV Mainz 05,0,0,EMPATE
+442029,2024-03-30,BL1,27,Bayer 04 Leverkusen,TSG 1899 Hoffenheim,2,1,LOCAL
+442023,2024-03-30,BL1,27,FC Bayern München,Borussia Dortmund,0,2,VISITANTE
+442028,2024-03-31,BL1,27,FC Augsburg,1. FC Köln,1,1,EMPATE
+442030,2024-03-31,BL1,27,VfB Stuttgart,1. FC Heidenheim 1846,3,3,EMPATE
+442031,2024-03-31,BL1,27,VfL Bochum 1848,SV Darmstadt 98,2,2,EMPATE
+442036,2024-04-05,BL1,28,Eintracht Frankfurt,SV Werder Bremen,1,1,EMPATE
+442032,2024-04-06,BL1,28,1. FC Heidenheim 1846,FC Bayern München,3,2,LOCAL
+442033,2024-04-06,BL1,28,SC Freiburg,RB Leipzig,1,4,VISITANTE
+442034,2024-04-06,BL1,28,1. FC Union Berlin,Bayer 04 Leverkusen,0,1,VISITANTE
+442037,2024-04-06,BL1,28,1. FC Köln,VfL Bochum 1848,2,1,LOCAL
+442040,2024-04-06,BL1,28,1. FSV Mainz 05,SV Darmstadt 98,4,0,LOCAL
+442039,2024-04-06,BL1,28,Borussia Dortmund,VfB Stuttgart,0,1,VISITANTE
+442038,2024-04-07,BL1,28,TSG 1899 Hoffenheim,FC Augsburg,3,1,LOCAL
+442035,2024-04-07,BL1,28,VfL Wolfsburg,Borussia Mönchengladbach,1,3,VISITANTE
+442042,2024-04-12,BL1,29,FC Augsburg,1. FC Union Berlin,2,0,LOCAL
+442041,2024-04-13,BL1,29,Borussia Mönchengladbach,Borussia Dortmund,1,2,VISITANTE
+442045,2024-04-13,BL1,29,RB Leipzig,VfL Wolfsburg,3,0,LOCAL
+442046,2024-04-13,BL1,29,FC Bayern München,1. FC Köln,2,0,LOCAL
+442047,2024-04-13,BL1,29,1. FSV Mainz 05,TSG 1899 Hoffenheim,4,1,LOCAL
+442049,2024-04-13,BL1,29,VfL Bochum 1848,1. FC Heidenheim 1846,1,1,EMPATE
+442044,2024-04-13,BL1,29,VfB Stuttgart,Eintracht Frankfurt,3,0,LOCAL
+442043,2024-04-14,BL1,29,SV Darmstadt 98,SC Freiburg,0,1,VISITANTE
+442048,2024-04-14,BL1,29,Bayer 04 Leverkusen,SV Werder Bremen,5,0,LOCAL
+442056,2024-04-19,BL1,30,Eintracht Frankfurt,FC Augsburg,3,1,LOCAL
+442051,2024-04-20,BL1,30,1. FC Heidenheim 1846,RB Leipzig,1,2,VISITANTE
+442054,2024-04-20,BL1,30,TSG 1899 Hoffenheim,Borussia Mönchengladbach,4,3,LOCAL
+442055,2024-04-20,BL1,30,VfL Wolfsburg,VfL Bochum 1848,1,0,LOCAL
+442058,2024-04-20,BL1,30,1. FC Köln,SV Darmstadt 98,0,2,VISITANTE
+442050,2024-04-20,BL1,30,1. FC Union Berlin,FC Bayern München,1,5,VISITANTE
+442057,2024-04-21,BL1,30,SV Werder Bremen,VfB Stuttgart,2,1,LOCAL
+442052,2024-04-21,BL1,30,Borussia Dortmund,Bayer 04 Leverkusen,1,1,EMPATE
+442053,2024-04-21,BL1,30,SC Freiburg,1. FSV Mainz 05,1,1,EMPATE
+442064,2024-04-26,BL1,31,VfL Bochum 1848,TSG 1899 Hoffenheim,3,2,LOCAL
+442059,2024-04-27,BL1,31,RB Leipzig,Borussia Dortmund,4,1,LOCAL
+442061,2024-04-27,BL1,31,FC Bayern München,Eintracht Frankfurt,2,1,LOCAL
+442062,2024-04-27,BL1,31,SC Freiburg,VfL Wolfsburg,1,2,VISITANTE
+442065,2024-04-27,BL1,31,FC Augsburg,SV Werder Bremen,0,3,VISITANTE
+442066,2024-04-27,BL1,31,Bayer 04 Leverkusen,VfB Stuttgart,2,2,EMPATE
+442060,2024-04-28,BL1,31,Borussia Mönchengladbach,1. FC Union Berlin,0,0,EMPATE
+442063,2024-04-28,BL1,31,1. FSV Mainz 05,1. FC Köln,1,1,EMPATE
+442067,2024-04-28,BL1,31,SV Darmstadt 98,1. FC Heidenheim 1846,0,1,VISITANTE
+442069,2024-05-03,BL1,32,TSG 1899 Hoffenheim,RB Leipzig,1,1,EMPATE
+442068,2024-05-04,BL1,32,VfB Stuttgart,FC Bayern München,3,1,LOCAL
+442073,2024-05-04,BL1,32,SV Werder Bremen,Borussia Mönchengladbach,2,2,EMPATE
+442075,2024-05-04,BL1,32,Borussia Dortmund,FC Augsburg,5,1,LOCAL
+442076,2024-05-04,BL1,32,VfL Wolfsburg,SV Darmstadt 98,3,0,LOCAL
+442070,2024-05-04,BL1,32,1. FC Köln,SC Freiburg,0,0,EMPATE
+442074,2024-05-05,BL1,32,1. FC Union Berlin,VfL Bochum 1848,3,4,VISITANTE
+442071,2024-05-05,BL1,32,Eintracht Frankfurt,Bayer 04 Leverkusen,1,5,VISITANTE
+442072,2024-05-05,BL1,32,1. FC Heidenheim 1846,1. FSV Mainz 05,1,1,EMPATE
+442084,2024-05-10,BL1,33,FC Augsburg,VfB Stuttgart,0,1,VISITANTE
+442078,2024-05-11,BL1,33,1. FC Köln,1. FC Union Berlin,3,2,LOCAL
+442080,2024-05-11,BL1,33,Borussia Mönchengladbach,Eintracht Frankfurt,1,1,EMPATE
+442083,2024-05-11,BL1,33,RB Leipzig,SV Werder Bremen,1,1,EMPATE
+442085,2024-05-11,BL1,33,SC Freiburg,1. FC Heidenheim 1846,1,1,EMPATE
+442077,2024-05-11,BL1,33,1. FSV Mainz 05,Borussia Dortmund,3,0,LOCAL
+442082,2024-05-12,BL1,33,SV Darmstadt 98,TSG 1899 Hoffenheim,0,6,VISITANTE
+442081,2024-05-12,BL1,33,FC Bayern München,VfL Wolfsburg,2,0,LOCAL
+442079,2024-05-12,BL1,33,VfL Bochum 1848,Bayer 04 Leverkusen,0,5,VISITANTE
+442086,2024-05-18,BL1,34,TSG 1899 Hoffenheim,FC Bayern München,4,2,LOCAL
+442087,2024-05-18,BL1,34,Eintracht Frankfurt,RB Leipzig,2,2,EMPATE
+442088,2024-05-18,BL1,34,1. FC Union Berlin,SC Freiburg,2,1,LOCAL
+442089,2024-05-18,BL1,34,VfL Wolfsburg,1. FSV Mainz 05,1,3,VISITANTE
+442090,2024-05-18,BL1,34,VfB Stuttgart,Borussia Mönchengladbach,4,0,LOCAL
+442091,2024-05-18,BL1,34,1. FC Heidenheim 1846,1. FC Köln,4,1,LOCAL
+442092,2024-05-18,BL1,34,SV Werder Bremen,VfL Bochum 1848,4,1,LOCAL
+442093,2024-05-18,BL1,34,Bayer 04 Leverkusen,FC Augsburg,2,1,LOCAL
+442094,2024-05-18,BL1,34,Borussia Dortmund,SV Darmstadt 98,4,0,LOCAL

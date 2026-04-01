@@ -1,0 +1,13 @@
+{
+  "private": true,
+  "scripts": {
+    "start": "cd lifehackia-frontend && npm run dev",
+    "dev": "cd lifehackia-frontend && npm run dev",
+    "frontend": "cd lifehackia-frontend && npm run dev",
+    "backend": "python 3_api.py"
+  },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "lucide-react": "^1.7.0"
+  }
+}
