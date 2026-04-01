@@ -12,7 +12,7 @@ import {
   Zap,
 } from "lucide-react";
 
-const API_BASE_DEFAULT = import.meta.env.VITE_API_BASE_URL || (window.location.hostname === "localhost" ? "http://localhost:8000" : "");
+const API_BASE_DEFAULT = "https://lifehackia-futbol-production.up.railway.app"
 
 const demoMatches = [
   { id: 1, league: "LaLiga", home: "Real Madrid", away: "Sevilla", date: "2026-04-02 19:00", status: "Programado" },
