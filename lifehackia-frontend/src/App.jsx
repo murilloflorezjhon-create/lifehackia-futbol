@@ -298,18 +298,31 @@ Genera un comentario en español que:
 3. Sea directo y específico, como un analista deportivo profesional
 4. Máximo 4 oraciones, sin usar asteriscos ni markdown`;
 
-      const res = await fetch("https://api.anthropic.com/v1/messages", {
-        method:"POST",
-        headers:{"Content-Type":"application/json"},
+      const res = await fetch(`${API_BASE}/comentario`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          model: "claude-sonnet-4-20250514",
-          max_tokens: 1000,
-          messages:[{ role:"user", content: prompt }]
+          equipo_local:       m.home,
+          equipo_visitante:   m.away,
+          liga:               m.league,
+          prediccion:         predData.prediccion,
+          confianza:          predData.confianza,
+          prob_local:         Math.round((predData.probabilidades?.LOCAL     || predData.probabilidades?.local     || 0) * 100),
+          prob_empate:        Math.round((predData.probabilidades?.EMPATE    || predData.probabilidades?.empate    || 0) * 100),
+          prob_visitante:     Math.round((predData.probabilidades?.VISITANTE || predData.probabilidades?.visitante || 0) * 100),
+          goles_favor_local:  1.7,
+          goles_contra_local: 0.9,
+          puntos_local:       2.1,
+          goles_favor_visit:  1.5,
+          goles_contra_visit: 1.0,
+          puntos_visit:       1.9,
+          h2h_victorias_local: 3,
+          h2h_total:          10,
         })
       });
 
       const data = await res.json();
-      const text = data.content?.map(c => c.text||"").join("").trim();
+      const text = data.comentario;
       if (text) setAiComment(text);
     } catch {
       setAiComment(null);
