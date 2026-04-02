@@ -1,0 +1,308 @@
+
+<style>
+  .wrap{padding:1rem 0;font-family:system-ui,sans-serif}
+  .phase-tabs{display:flex;gap:6px;margin-bottom:20px;flex-wrap:wrap}
+  .pt{padding:8px 16px;border-radius:20px;border:1px solid var(--color-border-tertiary);background:var(--color-background-secondary);color:var(--color-text-secondary);font-size:12px;font-weight:500;cursor:pointer;transition:all .2s}
+  .pt.active{background:#C9A84C;color:#000;border-color:#C9A84C;font-weight:700}
+  .phase{display:none}
+  .phase.active{display:block}
+  .phase-header{border-radius:var(--border-radius-lg);padding:16px 20px;margin-bottom:16px}
+  .ph-dias{font-size:10px;font-weight:500;letter-spacing:2px;margin-bottom:4px}
+  .ph-title{font-size:20px;font-weight:500;margin-bottom:4px}
+  .ph-sub{font-size:13px;opacity:.7}
+  .ph1 .phase-header{background:rgba(59,110,17,0.08);border:1px solid rgba(59,110,17,0.2)}
+  .ph1 .ph-dias{color:#3B6D11}
+  .ph2 .phase-header{background:rgba(186,117,23,0.08);border:1px solid rgba(186,117,23,0.2)}
+  .ph2 .ph-dias{color:#BA7517}
+  .ph3 .phase-header{background:rgba(168,41,61,0.08);border:1px solid rgba(168,41,61,0.2)}
+  .ph3 .ph-dias{color:#993556}
+
+  .dim-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin-bottom:16px}
+  .dim-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:16px}
+  .dim-title{font-size:13px;font-weight:500;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+  .dim-icon{width:28px;height:28px;border-radius:var(--border-radius-md);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+  .task{display:flex;align-items:flex-start;gap:8px;padding:6px 0;border-bottom:0.5px solid var(--color-border-tertiary)}
+  .task:last-child{border:none}
+  .task-num{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;flex-shrink:0;margin-top:1px}
+  .task-txt{font-size:12px;color:var(--color-text-secondary);line-height:1.5;flex:1}
+  .task-txt strong{color:var(--color-text-primary);font-weight:500}
+
+  .kpi-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-bottom:16px}
+  .kpi{background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:12px;text-align:center}
+  .kpi-val{font-size:22px;font-weight:500;margin-bottom:2px}
+  .kpi-lbl{font-size:10px;color:var(--color-text-secondary)}
+
+  .insight-box{background:var(--color-background-secondary);border-left:3px solid #C9A84C;border-radius:0 var(--border-radius-md) var(--border-radius-md) 0;padding:12px 14px;font-size:12px;color:var(--color-text-secondary);line-height:1.6;margin-bottom:16px}
+
+  .money-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-bottom:16px}
+  .money-card{background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-lg);padding:14px}
+  .money-title{font-size:12px;font-weight:500;margin-bottom:4px}
+  .money-val{font-size:18px;font-weight:500;color:#C9A84C;margin-bottom:4px}
+  .money-desc{font-size:11px;color:var(--color-text-secondary);line-height:1.5}
+
+  .timeline{display:flex;gap:0;margin-bottom:20px;overflow-x:auto}
+  .tl-item{flex:1;min-width:80px;text-align:center;padding:0 4px}
+  .tl-bar{height:8px;border-radius:4px;margin-bottom:6px}
+  .tl-lbl{font-size:9px;color:var(--color-text-secondary)}
+  .tl-dias{font-size:10px;font-weight:500;color:var(--color-text-primary)}
+
+  .badge{display:inline-block;padding:2px 8px;border-radius:20px;font-size:10px;font-weight:500}
+  .badge-green{background:var(--color-background-success);color:var(--color-text-success)}
+  .badge-amber{background:var(--color-background-warning);color:var(--color-text-warning)}
+  .badge-pink{background:rgba(153,53,86,0.1);color:#993556}
+</style>
+
+<div class="wrap">
+
+  <div style="margin-bottom:16px">
+    <div style="font-size:10px;color:#C9A84C;letter-spacing:2px;font-weight:500;margin-bottom:4px">LIFEHACKIA · PLAN ESTRATÉGICO</div>
+    <div style="font-size:22px;font-weight:500;margin-bottom:4px">Roadmap 90 días</div>
+    <div style="font-size:13px;color:var(--color-text-secondary)">UI/UX · Técnico · Monetización — desde Buenaventura para LATAM</div>
+  </div>
+
+  <!-- TIMELINE VISUAL -->
+  <div class="timeline">
+    <div class="tl-item"><div class="tl-bar" style="background:#3B6D11"></div><div class="tl-dias">Días 1–30</div><div class="tl-lbl">Fundamentos</div></div>
+    <div class="tl-item"><div class="tl-bar" style="background:#BA7517"></div><div class="tl-dias">Días 31–60</div><div class="tl-lbl">Crecimiento</div></div>
+    <div class="tl-item"><div class="tl-bar" style="background:#993556"></div><div class="tl-dias">Días 61–90</div><div class="tl-lbl">Escala</div></div>
+  </div>
+
+  <!-- TABS -->
+  <div class="phase-tabs">
+    <button class="pt active" onclick="showPhase('p1',this)">🌱 Fase 1 · Días 1–30</button>
+    <button class="pt" onclick="showPhase('p2',this)">🚀 Fase 2 · Días 31–60</button>
+    <button class="pt" onclick="showPhase('p3',this)">💰 Fase 3 · Días 61–90</button>
+    <button class="pt" onclick="showPhase('resumen',this)">📊 Resumen ejecutivo</button>
+  </div>
+
+  <!-- FASE 1 -->
+  <div id="p1" class="phase ph1 active">
+    <div class="phase-header">
+      <div class="ph-dias">FASE 1 · DÍAS 1–30</div>
+      <div class="ph-title">Fundamentos de confianza</div>
+      <div class="ph-sub">Propuesta única · Transparencia del modelo · UX base · Primeros ingresos</div>
+    </div>
+
+    <div class="insight-box">
+      El análisis es claro: sin confianza no hay retención. El usuario debe entender en 3 segundos qué hace tu app, por qué debe creerle y qué gana usándola. Esta fase construye esa base.
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="kpi-val" style="color:#3B6D11">500</div><div class="kpi-lbl">usuarios activos meta</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#3B6D11">10</div><div class="kpi-lbl">suscriptores Premium</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#3B6D11">70%</div><div class="kpi-lbl">precisión modelo visible</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#3B6D11">$200k</div><div class="kpi-lbl">COP ingresos mes 1</div></div>
+    </div>
+
+    <div class="dim-grid">
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-info)">🎨</div>UI/UX</div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">1</div><div class="task-txt"><strong>Propuesta única visible</strong> — Hero con subtítulo claro: "Pronósticos explicables de fútbol con IA para LATAM"</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">2</div><div class="task-txt"><strong>Índice de confianza</strong> — Badge visual en cada predicción: Baja / Media / Alta / Premium con colores semáforo</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">3</div><div class="task-txt"><strong>Tarjetas de partido premium</strong> — Local, visitante, pick principal, confianza y hora en máximo 3 segundos de lectura</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">4</div><div class="task-txt"><strong>Panel "Hoy" como home</strong> — Los mejores picks del día visibles desde la primera pantalla sin scroll</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">5</div><div class="task-txt"><strong>Modo móvil impecable</strong> — Revisión completa del flujo en celular. Este producto vive en móvil</div></div>
+      </div>
+
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-success)">⚙️</div>Técnico</div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">6</div><div class="task-txt"><strong>Histórico verificable</strong> — Página pública con rendimiento de los últimos 7, 30 y 90 días. Transparencia total</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">7</div><div class="task-txt"><strong>Badge de transparencia</strong> — Última actualización del modelo, fuente de datos, versión y hora del cálculo en cada predicción</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">8</div><div class="task-txt"><strong>Rendimiento por liga</strong> — El usuario ve dónde tu modelo funciona mejor: Premier 73%, BetPlay 68%, etc.</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">9</div><div class="task-txt"><strong>Página "Cómo funciona"</strong> — Variables usadas, método predictivo y métricas históricas. Vende seriedad</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">10</div><div class="task-txt"><strong>Posición en tabla como variable ML</strong> — Mejora inmediata de precisión del modelo XGBoost</div></div>
+      </div>
+
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-warning)">💰</div>Monetización</div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">11</div><div class="task-txt"><strong>Plan freemium definido</strong> — Gratis: 3 picks/día básicos. Premium: todos los picks + alta confianza + alertas</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">12</div><div class="task-txt"><strong>Canal Telegram gratuito</strong> — @LifeHackIAPronosticos con picks diarios. Embudo de entrada al Premium</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">13</div><div class="task-txt"><strong>Wompi activado</strong> — Cobro $19.900 COP/mes por suscripción Premium. Integración con webhook automático</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">14</div><div class="task-txt"><strong>Google AdSense aplicar</strong> — Solicitar aprobación ahora para tener banners activos en 2–4 semanas</div></div>
+        <div class="task"><div class="task-num" style="background:#3B6D11;color:#fff">15</div><div class="task-txt"><strong>Registro en Betplay afiliados</strong> — betplay.com.co/afiliados · $20–50 USD por referido convertido</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 2 -->
+  <div id="p2" class="phase ph2">
+    <div class="phase-header">
+      <div class="ph-dias">FASE 2 · DÍAS 31–60</div>
+      <div class="ph-title">Motor de crecimiento</div>
+      <div class="ph-sub">Retención · Comunidad · SEO · Automatización con N8N</div>
+    </div>
+
+    <div class="insight-box">
+      Con la base de confianza lista, ahora construyes el hábito diario. El usuario debe volver solo, sin que lo invites. Notificaciones, favoritos, rankings y contenido SEO son el motor de esto.
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="kpi-val" style="color:#BA7517">2.000</div><div class="kpi-lbl">usuarios activos meta</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#BA7517">50</div><div class="kpi-lbl">suscriptores Premium</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#BA7517">500</div><div class="kpi-lbl">suscriptores Telegram</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#BA7517">$1M</div><div class="kpi-lbl">COP ingresos mes 2</div></div>
+    </div>
+
+    <div class="dim-grid">
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-info)">🎨</div>UI/UX</div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">16</div><div class="task-txt"><strong>Favoritos y seguimiento</strong> — El usuario puede seguir equipos y ligas. Notificación cuando hay pick nuevo</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">17</div><div class="task-txt"><strong>Calendario visual</strong> — Vista Hoy / Mañana / Fin de semana / Champions. Hábito de consulta diaria</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">18</div><div class="task-txt"><strong>Filtros poderosos</strong> — Por liga, país, fecha, nivel de confianza y tipo de mercado (1X2, BTTS, Over/Under)</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">19</div><div class="task-txt"><strong>Modo Rápido vs Pro</strong> — Vista casual: pick + confianza. Vista pro: xG, forma, H2H, probabilidades detalladas</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">20</div><div class="task-txt"><strong>Scoring semáforo por partido</strong> — 6 indicadores visuales: forma, ataque, defensa, localía, lesiones, valor</div></div>
+      </div>
+
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-success)">⚙️</div>Técnico</div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">21</div><div class="task-txt"><strong>N8N Workflow 1</strong> — Pronósticos automáticos cada mañana → publica en Telegram y WhatsApp sin intervención manual</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">22</div><div class="task-txt"><strong>N8N Workflow 2</strong> — Gestión de suscriptores: pago confirmado → acceso automático → email bienvenida → recordatorio renovación</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">23</div><div class="task-txt"><strong>Base de datos histórico</strong> — PostgreSQL en Railway para guardar predicciones, resultados reales y métricas de acierto</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">24</div><div class="task-txt"><strong>Rendimiento por mercado</strong> — El modelo ahora predice también BTTS, Over 2.5 y doble oportunidad</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">25</div><div class="task-txt"><strong>Análisis postpartido automático</strong> — Por qué acertó o falló cada predicción. Genera confianza masiva</div></div>
+      </div>
+
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-warning)">💰</div>Monetización</div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">26</div><div class="task-txt"><strong>SEO por partido y liga</strong> — Páginas automáticas: "pronóstico Millonarios vs Nacional", "picks Premier League hoy". Tráfico orgánico gratuito</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">27</div><div class="task-txt"><strong>Blog de análisis</strong> — 3 artículos/semana sobre picks top, ligas, rendimiento del modelo. SEO y autoridad</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">28</div><div class="task-txt"><strong>Canal WhatsApp Business</strong> — $29.900 COP/mes por alertas de picks de alta confianza directo al celular</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">29</div><div class="task-txt"><strong>Pack Champions/Fines de semana</strong> — Venta de packs temáticos únicos por torneo o jornada especial</div></div>
+        <div class="task"><div class="task-num" style="background:#BA7517;color:#fff">30</div><div class="task-txt"><strong>Contenido TikTok/Reels diario</strong> — 1 pick explicado por video corto. Embudo principal de adquisición masiva</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FASE 3 -->
+  <div id="p3" class="phase ph3">
+    <div class="phase-header">
+      <div class="ph-dias">FASE 3 · DÍAS 61–90</div>
+      <div class="ph-title">Escala y liderazgo</div>
+      <div class="ph-sub">Comunidad · B2B · Marca regional · Ingresos recurrentes sólidos</div>
+    </div>
+
+    <div class="insight-box">
+      Con usuarios fieles y modelo probado, ahora escala. Comunidad activa, cuenta personal con tracker, widgets para terceros y posicionamiento como referente hispano de pronósticos con IA.
+    </div>
+
+    <div class="kpi-row">
+      <div class="kpi"><div class="kpi-val" style="color:#993556">5.000</div><div class="kpi-lbl">usuarios activos meta</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#993556">200</div><div class="kpi-lbl">suscriptores Premium</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#993556">2.000</div><div class="kpi-lbl">comunidad Telegram</div></div>
+      <div class="kpi"><div class="kpi-val" style="color:#993556">$5M</div><div class="kpi-lbl">COP ingresos mes 3</div></div>
+    </div>
+
+    <div class="dim-grid">
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-info)">🎨</div>UI/UX</div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">31</div><div class="task-txt"><strong>Cuenta personal</strong> — Registro con Google. Historial de picks vistos, favoritos y rendimiento personal del usuario</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">32</div><div class="task-txt"><strong>Bankroll tracker simulado</strong> — El usuario simula cuánto ganaría siguiendo los picks. Fidelización altísima</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">33</div><div class="task-txt"><strong>Asistente conversacional</strong> — "Explícame por qué recomiendas este partido" — IA que responde en lenguaje natural</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">34</div><div class="task-txt"><strong>Comparador IA vs mercado</strong> — Muestra si tu probabilidad difiere de la cuota implícita de los bookmakers. Muy valorado por usuarios serios</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">35</div><div class="task-txt"><strong>Predicción por perfil</strong> — Conservador / Balanceado / Agresivo. Personaliza los picks según el apetito de riesgo del usuario</div></div>
+      </div>
+
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-success)">⚙️</div>Técnico</div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">36</div><div class="task-txt"><strong>Integración alineaciones</strong> — Recalcular predicción cuando se confirma la nómina oficial antes del partido</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">37</div><div class="task-txt"><strong>Widgets embebibles</strong> — "Pick del día" y "probabilidades IA" que publishers y creadores pueden poner en sus webs</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">38</div><div class="task-txt"><strong>API propia documentada</strong> — Exponer tu motor de predicciones para terceros. Primer paso hacia B2B</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">39</div><div class="task-txt"><strong>Sistema de caché inteligente</strong> — Redis para predicciones frecuentes. Reduce carga y mejora velocidad de respuesta</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">40</div><div class="task-txt"><strong>Dashboard admin</strong> — Panel interno: usuarios activos, ingresos, picks publicados, tasa de aciertos en tiempo real</div></div>
+      </div>
+
+      <div class="dim-card">
+        <div class="dim-title"><div class="dim-icon" style="background:var(--color-background-warning)">💰</div>Monetización</div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">41</div><div class="task-txt"><strong>3 planes de suscripción</strong> — Free / Premium $19.900 / VIP $49.900 COP. VIP incluye alertas, bankroll y análisis postpartido</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">42</div><div class="task-txt"><strong>B2B API picks</strong> — Venta de acceso API a medios deportivos pequeños, blogs y creadores de contenido LATAM</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">43</div><div class="task-txt"><strong>Patrocinios deportivos</strong> — FotMob y SofaScore monetizan fuerte con advertising. Busca patrocinadores locales colombianos</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">44</div><div class="task-txt"><strong>Dominio propio</strong> — lifehackia.co o lifehackia.com. Diferencia enorme en percepción de marca y SEO</div></div>
+        <div class="task"><div class="task-num" style="background:#993556;color:#fff">45</div><div class="task-txt"><strong>Programa de referidos</strong> — Usuario que trae 3 amigos Premium obtiene 1 mes gratis. Crecimiento viral orgánico</div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESUMEN EJECUTIVO -->
+  <div id="resumen" class="phase">
+    <div style="margin-bottom:16px">
+      <div style="font-size:16px;font-weight:500;margin-bottom:12px">Proyección de ingresos — 90 días</div>
+      <div class="money-grid">
+        <div class="money-card">
+          <div class="money-title">Mes 1 · Fundamentos</div>
+          <div class="money-val">~$200k COP</div>
+          <div class="money-desc">10 suscriptores × $19.900 + primeros afiliados Betplay</div>
+        </div>
+        <div class="money-card">
+          <div class="money-title">Mes 2 · Crecimiento</div>
+          <div class="money-val">~$1M COP</div>
+          <div class="money-desc">50 Premium + AdSense activo + WhatsApp Business + afiliados</div>
+        </div>
+        <div class="money-card">
+          <div class="money-title">Mes 3 · Escala</div>
+          <div class="money-val">~$5M COP</div>
+          <div class="money-desc">200 Premium + VIP + API B2B + patrocinios + programa referidos</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px">
+      <div style="font-size:16px;font-weight:500;margin-bottom:12px">Propuesta única de valor</div>
+      <div class="insight-box" style="font-size:13px;font-style:italic">
+        "La única app hispana de pronósticos de fútbol con IA explicable, historial verificable, enfoque latinoamericano y monetización transparente. No solo decimos IA — demostramos resultados."
+      </div>
+    </div>
+
+    <div style="margin-bottom:16px">
+      <div style="font-size:16px;font-weight:500;margin-bottom:12px">Prioridades de la semana 1</div>
+      <div style="display:flex;flex-direction:column;gap:8px">
+        <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px">1️⃣</span>
+          <div style="flex:1;font-size:12px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Página de transparencia</strong> — Rendimiento histórico público con porcentajes reales por liga</div>
+          <span class="badge badge-green">Urgente</span>
+        </div>
+        <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px">2️⃣</span>
+          <div style="flex:1;font-size:12px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Índice de confianza visual</strong> — Badge semáforo en cada pick: Baja / Media / Alta</div>
+          <span class="badge badge-green">Urgente</span>
+        </div>
+        <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px">3️⃣</span>
+          <div style="flex:1;font-size:12px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Wompi + suscripción Premium</strong> — Cobro activo $19.900 COP/mes desde hoy</div>
+          <span class="badge badge-green">Urgente</span>
+        </div>
+        <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px">4️⃣</span>
+          <div style="flex:1;font-size:12px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Canal Telegram + primer video TikTok</strong> — Embudo de adquisición masiva desde redes</div>
+          <span class="badge badge-amber">Esta semana</span>
+        </div>
+        <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px">5️⃣</span>
+          <div style="flex:1;font-size:12px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Solicitar Google AdSense</strong> — Requiere 2–4 semanas de aprobación, aplicar ya</div>
+          <span class="badge badge-amber">Esta semana</span>
+        </div>
+        <div style="background:var(--color-background-primary);border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:10px 14px;display:flex;align-items:center;gap:10px">
+          <span style="font-size:14px">6️⃣</span>
+          <div style="flex:1;font-size:12px;color:var(--color-text-secondary)"><strong style="color:var(--color-text-primary)">Registrar dominio lifehackia.co</strong> — Desde $25.000 COP/año en NIC Colombia</div>
+          <span class="badge badge-pink">Próximos días</span>
+        </div>
+      </div>
+    </div>
+
+    <div style="background:rgba(201,168,76,0.06);border:1px solid rgba(201,168,76,0.2);border-radius:var(--border-radius-lg);padding:16px;text-align:center">
+      <div style="font-size:13px;color:var(--color-text-secondary);margin-bottom:8px">Ventaja competitiva única de LifeHackIA</div>
+      <div style="font-size:15px;font-weight:500;color:var(--color-text-primary);margin-bottom:8px">"El único referente hispano de IA predictiva en fútbol<br>nacido desde Buenaventura para toda LATAM"</div>
+      <div style="font-size:11px;color:var(--color-text-secondary)">Forebet no habla español · SofaScore no tiene IA propia · NerdyTips no tiene fútbol colombiano · FotMob no tiene comunidad latina</div>
+      <button onclick="sendPrompt('¿Por dónde empezamos con el roadmap? Quiero implementar la semana 1 ahora mismo')" style="margin-top:12px;padding:10px 20px;border-radius:var(--border-radius-md);border:0.5px solid var(--color-border-secondary);background:none;color:var(--color-text-primary);cursor:pointer;font-size:13px">Implementar semana 1 ahora →</button>
+    </div>
+  </div>
+
+</div>
+
+<script>
+function showPhase(id, btn) {
+  document.querySelectorAll('.phase').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.pt').forEach(b => b.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  btn.classList.add('active');
+}
+</script>
