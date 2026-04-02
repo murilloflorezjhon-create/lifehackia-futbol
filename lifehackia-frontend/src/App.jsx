@@ -238,6 +238,8 @@ export default function App() {
   const [swipeAnim, setSwipeAnim] = useState(null);
   const [votes, setVotes]       = useState([]);
   const [copied, setCopied]     = useState(false);
+  const [aiComment, setAiComment]   = useState(null);
+  const [aiLoading, setAiLoading]   = useState(false);
 
   useEffect(() => {
     fetch(`${API_BASE}/salud`).then(r => r.json())
@@ -246,7 +248,7 @@ export default function App() {
   }, []);
 
   const predict = useCallback(async (m) => {
-    setLoading(true); setPred(null);
+    setLoading(true); setPred(null); setAiComment(null);
     try {
       const r = await fetch(`${API_BASE}/pronostico`, {
         method:"POST", headers:{"Content-Type":"application/json"},
@@ -257,17 +259,62 @@ export default function App() {
           h2h_victorias_local:3, h2h_total_partidos:10,
         })
       });
-      setPred(await r.json());
+      const data = await r.json();
+      setPred(data);
+      generateAIComment(m, data);
     } catch {
       const opts = ["LOCAL","EMPATE","VISITANTE"];
       const p = opts[Math.floor(Math.random()*3)];
       const c = 50 + Math.floor(Math.random()*36);
       const e = Math.floor(Math.random()*(100-c)/2);
-      setPred({ prediccion:p, confianza:c,
+      const fallback = { prediccion:p, confianza:c,
         probabilidades:{ LOCAL:p==="LOCAL"?c:e, EMPATE:p==="EMPATE"?c:e, VISITANTE:p==="VISITANTE"?c:100-c-e },
-        advertencia: c>70?"✅ Alta confianza.":"⚠️ Partido incierto." });
+        advertencia: c>70?"✅ Alta confianza.":"⚠️ Partido incierto." };
+      setPred(fallback);
+      generateAIComment(m, fallback);
     }
     setLoading(false);
+  }, []);
+
+  const generateAIComment = useCallback(async (m, predData) => {
+    setAiLoading(true);
+    try {
+      const winner = predData.prediccion==="LOCAL" ? m.home
+                   : predData.prediccion==="VISITANTE" ? m.away
+                   : "ninguno (empate)";
+
+      const prompt = `Eres un analista deportivo experto en fútbol latinoamericano e internacional.
+Analiza este partido y genera un comentario breve (máximo 4 oraciones) sobre el estado actual de los dos equipos que argumente la predicción del modelo IA.
+
+Partido: ${m.home} (local) vs ${m.away} (visitante)
+Liga: ${m.league}
+Predicción del modelo: ${predData.prediccion} con ${predData.confianza}% de confianza
+Favorito: ${winner}
+Probabilidades: Local ${Math.round(predData.probabilidades?.LOCAL||0)}% | Empate ${Math.round(predData.probabilidades?.EMPATE||0)}% | Visitante ${Math.round(predData.probabilidades?.VISITANTE||0)}%
+
+Genera un comentario en español que:
+1. Mencione el estado de forma actual de cada equipo
+2. Argumente por qué el modelo favorece ese resultado
+3. Sea directo y específico, como un analista deportivo profesional
+4. Máximo 4 oraciones, sin usar asteriscos ni markdown`;
+
+      const res = await fetch("https://api.anthropic.com/v1/messages", {
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({
+          model: "claude-sonnet-4-20250514",
+          max_tokens: 1000,
+          messages:[{ role:"user", content: prompt }]
+        })
+      });
+
+      const data = await res.json();
+      const text = data.content?.map(c => c.text||"").join("").trim();
+      if (text) setAiComment(text);
+    } catch {
+      setAiComment(null);
+    }
+    setAiLoading(false);
   }, []);
 
   const pickMatch = (m) => {
@@ -417,6 +464,35 @@ export default function App() {
 
               <div style={{background:"#161616",borderLeft:`3px solid ${G}`,borderRadius:"0 10px 10px 0",padding:"11px 14px",margin:"14px 0",fontSize:11,color:"rgba(255,255,255,0.55)",lineHeight:1.6}}>
                 {pred.advertencia} Análisis basado en forma reciente, H2H y estadísticas de los últimos 5 partidos{selected.tipo==="COL"?" · Liga BetPlay Colombia.":"."}
+              </div>
+
+              {/* COMENTARIO IA — estado actual de los equipos */}
+              <div style={{background:"rgba(201,168,76,0.05)",border:`1px solid rgba(201,168,76,0.2)`,borderRadius:12,padding:14,marginBottom:14}}>
+                <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
+                  <div style={{width:24,height:24,borderRadius:6,background:`linear-gradient(135deg,${GD},${G})`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:12,flexShrink:0}}>🤖</div>
+                  <span style={{fontSize:10,fontWeight:700,color:G,letterSpacing:1}}>ANÁLISIS DE LA IA</span>
+                  {aiLoading && (
+                    <div style={{width:14,height:14,borderRadius:"50%",border:`2px solid rgba(201,168,76,0.2)`,borderTopColor:G,animation:"spin .8s linear infinite",marginLeft:"auto"}}/>
+                  )}
+                </div>
+                {aiLoading && !aiComment && (
+                  <div style={{display:"flex",flexDirection:"column",gap:6}}>
+                    {[100,85,70].map(w => (
+                      <div key={w} style={{height:10,borderRadius:5,background:"rgba(255,255,255,0.06)",width:`${w}%`,animation:"pulse 1.5s ease-in-out infinite"}}/>
+                    ))}
+                    <style>{`@keyframes pulse{0%,100%{opacity:.4}50%{opacity:.9}}`}</style>
+                  </div>
+                )}
+                {aiComment && (
+                  <p style={{fontSize:12,color:"rgba(255,255,255,0.75)",lineHeight:1.75,margin:0}}>
+                    {aiComment}
+                  </p>
+                )}
+                {!aiLoading && !aiComment && (
+                  <p style={{fontSize:11,color:"rgba(255,255,255,0.3)",margin:0,fontStyle:"italic"}}>
+                    Generando análisis del estado actual de los equipos…
+                  </p>
+                )}
               </div>
 
               {/* BANNER DENTRO DEL ANÁLISIS */}
