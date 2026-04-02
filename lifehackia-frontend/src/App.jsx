@@ -94,6 +94,79 @@ const LEADERBOARD = [
   { rank:5, name:"TigreGol",       country:"🇵🇪", streak:4,  acc:67 },
 ];
 
+// ─── TU ID DE ADSENSE ────────────────────────────────────────
+// Cuando Google apruebe tu cuenta, reemplaza estos valores:
+const ADSENSE_CLIENT      = "ca-pub-XXXXXXXXXXXXXXXXX"; // ← tu Publisher ID
+const ADSENSE_SLOT_TOP    = "1234567890"; // ← slot banner superior (728×90)
+const ADSENSE_SLOT_MIDDLE = "0987654321"; // ← slot banner análisis  (336×280)
+const ADSENSE_SLOT_SIDE   = "1122334455"; // ← slot banner lateral   (300×600)
+
+const USE_ADSENSE = false; // ← cambia a true cuando AdSense esté aprobado
+
+function AdBanner({ slot, vertical = false, style = {} }) {
+  const defaultStyle = {
+    display:"block", width:"100%", overflow:"hidden",
+    borderRadius:10, ...style,
+  };
+
+  if (USE_ADSENSE) {
+    return (
+      <div style={defaultStyle}>
+        <ins
+          className="adsbygoogle"
+          style={{ display:"block" }}
+          data-ad-client={ADSENSE_CLIENT}
+          data-ad-slot={slot}
+          data-ad-format={vertical ? "vertical" : "auto"}
+          data-full-width-responsive={vertical ? "false" : "true"}
+        />
+      </div>
+    );
+  }
+
+  // PLACEHOLDER visual
+  if (vertical) {
+    return (
+      <div style={{
+        ...defaultStyle,
+        background:"#161616",
+        border:"1px dashed rgba(201,168,76,0.2)",
+        width:160, minHeight:400,
+        display:"flex", flexDirection:"column",
+        alignItems:"center", justifyContent:"center",
+        gap:10, padding:16, textAlign:"center",
+        flexShrink:0,
+      }}>
+        <div style={{fontSize:28}}>📢</div>
+        <div style={{fontSize:10,fontWeight:600,color:"rgba(255,255,255,0.4)"}}>Publicidad</div>
+        <div style={{fontSize:8,color:"rgba(255,255,255,0.2)",lineHeight:1.5}}>AdSense<br/>160×600<br/>Skyscraper</div>
+        <div style={{marginTop:8,fontSize:8,color:"rgba(201,168,76,0.35)",border:"1px dashed rgba(201,168,76,0.2)",borderRadius:6,padding:"4px 8px"}}>Próximamente</div>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{
+      ...defaultStyle,
+      background:"#161616",
+      border:"1px dashed rgba(201,168,76,0.2)",
+      padding:"10px 16px",
+      display:"flex", alignItems:"center", justifyContent:"space-between", gap:12,
+    }}>
+      <div style={{display:"flex",alignItems:"center",gap:10}}>
+        <div style={{width:32,height:32,borderRadius:8,background:"rgba(201,168,76,0.1)",display:"flex",alignItems:"center",justifyContent:"center",fontSize:16,flexShrink:0}}>📢</div>
+        <div>
+          <div style={{fontSize:11,fontWeight:600,color:"rgba(255,255,255,0.5)"}}>Espacio publicitario</div>
+          <div style={{fontSize:9,color:"rgba(255,255,255,0.25)",marginTop:1}}>Google AdSense · próximamente activo</div>
+        </div>
+      </div>
+      <div style={{fontSize:9,color:"rgba(201,168,76,0.4)",flexShrink:0,textAlign:"right"}}>
+        728×90<br/>Leaderboard
+      </div>
+    </div>
+  );
+}
+
 function useBreakpoint() {
   const [bp, setBp] = useState("desktop");
   useEffect(() => {
@@ -346,6 +419,9 @@ export default function App() {
                 {pred.advertencia} Análisis basado en forma reciente, H2H y estadísticas de los últimos 5 partidos{selected.tipo==="COL"?" · Liga BetPlay Colombia.":"."}
               </div>
 
+              {/* BANNER DENTRO DEL ANÁLISIS */}
+              <AdBanner slot={ADSENSE_SLOT_MIDDLE} style={{marginBottom:12}} />
+
               <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:10}}>
                 <button onClick={share} style={{padding:12,background:`linear-gradient(135deg,${GD},${G},${GL})`,border:"none",borderRadius:10,color:"#000",fontFamily:"inherit",fontSize:12,fontWeight:700,cursor:"pointer"}}>
                   {copied ? "✅ Copiado" : "📤 Compartir"}
@@ -554,12 +630,17 @@ export default function App() {
         ))}
       </nav>
 
+      {/* ── BANNER SUPERIOR ── */}
+      <AdBanner slot={ADSENSE_SLOT_TOP} style={{margin: isMobile?"8px 12px":"10px 20px"}} />
+
       {/* ── PARTIDOS ── */}
       {tab==="partidos" && (
         <>
           {/* DESKTOP / TABLET */}
           {!isMobile && (
-            <div style={{display:"grid",gridTemplateColumns:isTablet?"260px 1fr":"290px 1fr",minHeight:"calc(100vh - 102px)"}}>
+            <div style={{display:"grid", gridTemplateColumns: isTablet?"240px 1fr 160px":"280px 1fr 180px", minHeight:"calc(100vh - 130px)"}}>
+
+              {/* COLUMNA 1 — Lista partidos */}
               <aside style={{background:"#111",borderRight:`1px solid rgba(201,168,76,0.1)`,overflowY:"auto"}}>
                 <div style={{padding:"13px 14px 10px",borderBottom:`1px solid rgba(201,168,76,0.07)`,display:"flex",alignItems:"center",justifyContent:"space-between",position:"sticky",top:0,background:"#111",zIndex:10}}>
                   <span style={{fontSize:13,fontWeight:700,color:"#fff",fontFamily:"Georgia,serif"}}>Partidos</span>
@@ -567,9 +648,21 @@ export default function App() {
                 </div>
                 {MATCHES.map(m => <MatchItem key={m.id} m={m} />)}
               </aside>
+
+              {/* COLUMNA 2 — Análisis */}
               <main style={{background:"#0a0a0a",overflowY:"auto"}}>
                 <AnalysisPanel />
               </main>
+
+              {/* COLUMNA 3 — Banner lateral derecho */}
+              <aside style={{background:"#0d0d0d",borderLeft:`1px solid rgba(201,168,76,0.08)`,padding:"16px 10px",display:"flex",flexDirection:"column",alignItems:"center",gap:16,overflowY:"auto"}}>
+                <AdBanner slot={ADSENSE_SLOT_SIDE} vertical={true} />
+                {/* Segundo banner lateral si la página es larga */}
+                <div style={{marginTop:16}}>
+                  <AdBanner slot={ADSENSE_SLOT_SIDE} vertical={true} />
+                </div>
+              </aside>
+
             </div>
           )}
 
@@ -666,6 +759,85 @@ export default function App() {
           <button onClick={share} style={{width:"100%",padding:14,background:`linear-gradient(135deg,${GD},${G},${GL})`,border:"none",borderRadius:12,color:"#000",fontFamily:"inherit",fontSize:13,fontWeight:700,cursor:"pointer",marginTop:4}}>
             📤 Compartir combina del día
           </button>
+
+          {/* ── HISTORIAL ÚLTIMOS 10 DÍAS ── */}
+          <div style={{marginTop:28}}>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:16}}>
+              <div style={{fontFamily:"Georgia,serif",fontSize:16,fontWeight:800}}>📋 Record de combinadas</div>
+              <div style={{fontSize:10,color:"rgba(255,255,255,0.35)"}}>últimos 10 días</div>
+            </div>
+
+            {/* RESUMEN STATS */}
+            <div style={{display:"grid",gridTemplateColumns:"repeat(3,1fr)",gap:10,marginBottom:18}}>
+              {[
+                ["7","Acertadas","#22c55e","rgba(34,197,94,0.1)","rgba(34,197,94,0.25)"],
+                ["3","Falladas","#ef4444","rgba(239,68,68,0.1)","rgba(239,68,68,0.25)"],
+                ["70%","Efectividad",G,"rgba(201,168,76,0.1)","rgba(201,168,76,0.25)"],
+              ].map(([v,l,color,bg,border]) => (
+                <div key={l} style={{background:bg,border:`1px solid ${border}`,borderRadius:12,padding:"12px 8px",textAlign:"center"}}>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,color}}>{v}</div>
+                  <div style={{fontSize:9,color:"rgba(255,255,255,0.4)",marginTop:2}}>{l}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* LISTA DE DÍAS */}
+            {[
+              { fecha:"Hoy · 02 Abr",     partidos:["Millonarios vs Nacional","Liverpool vs Man United","Real Madrid vs Man City"],    predicciones:["LOCAL","LOCAL","LOCAL"],    resultado:"pendiente" },
+              { fecha:"Ayer · 01 Abr",     partidos:["América vs D. Cali","Bayern vs Arsenal","Barcelona vs Atlético"],                predicciones:["LOCAL","VISITANTE","LOCAL"], resultado:"acertada" },
+              { fecha:"31 Mar",            partidos:["Junior vs Tolima","Liverpool vs Chelsea","Inter vs Juventus"],                   predicciones:["EMPATE","LOCAL","LOCAL"],    resultado:"fallada" },
+              { fecha:"30 Mar",            partidos:["Santa Fe vs Envigado","Real Madrid vs PSG","Dortmund vs Leverkusen"],            predicciones:["LOCAL","LOCAL","EMPATE"],    resultado:"acertada" },
+              { fecha:"29 Mar",            partidos:["Millonarios vs Junior","Arsenal vs Man City","Bayern vs Inter"],                 predicciones:["LOCAL","EMPATE","LOCAL"],    resultado:"acertada" },
+              { fecha:"28 Mar",            partidos:["Nacional vs América","Barcelona vs Liverpool","Juventus vs PSG"],               predicciones:["LOCAL","LOCAL","VISITANTE"], resultado:"fallada" },
+              { fecha:"27 Mar",            partidos:["Tolima vs Santa Fe","Real Madrid vs Barcelona","Chelsea vs Arsenal"],           predicciones:["EMPATE","LOCAL","EMPATE"],   resultado:"acertada" },
+              { fecha:"26 Mar",            partidos:["Envigado vs Junior","Bayern vs Dortmund","Man United vs Liverpool"],            predicciones:["VISITANTE","LOCAL","LOCAL"],  resultado:"acertada" },
+              { fecha:"25 Mar",            partidos:["D. Cali vs Millonarios","PSG vs Arsenal","Inter vs Barcelona"],                 predicciones:["VISITANTE","LOCAL","LOCAL"], resultado:"fallada" },
+              { fecha:"24 Mar",            partidos:["América vs Nacional","Man City vs Chelsea","Leverkusen vs Juventus"],           predicciones:["LOCAL","LOCAL","LOCAL"],     resultado:"acertada" },
+            ].map((dia, idx) => {
+              const esHoy = idx === 0;
+              const acertada = dia.resultado === "acertada";
+              const fallada  = dia.resultado === "fallada";
+              const pendiente = dia.resultado === "pendiente";
+              const colorBorde = pendiente ? "rgba(201,168,76,0.25)" : acertada ? "rgba(34,197,94,0.3)" : "rgba(239,68,68,0.3)";
+              const colorBg    = pendiente ? "rgba(201,168,76,0.05)" : acertada ? "rgba(34,197,94,0.06)" : "rgba(239,68,68,0.06)";
+              const iconRes    = pendiente ? "⏳" : acertada ? "✅" : "❌";
+              const colorTag   = pendiente ? G : acertada ? "#22c55e" : "#ef4444";
+              const bgTag      = pendiente ? "rgba(201,168,76,0.12)" : acertada ? "rgba(34,197,94,0.12)" : "rgba(239,68,68,0.12)";
+              const txtTag     = pendiente ? "PENDIENTE" : acertada ? "ACERTADA" : "FALLADA";
+
+              return (
+                <div key={idx} style={{background:colorBg, border:`1px solid ${colorBorde}`, borderRadius:14, padding:14, marginBottom:10, position:"relative", overflow:"hidden"}}>
+                  {/* Barra lateral de color */}
+                  <div style={{position:"absolute",left:0,top:0,bottom:0,width:3, background: pendiente?G:acertada?"#22c55e":"#ef4444", borderRadius:"14px 0 0 14px"}} />
+                  <div style={{paddingLeft:8}}>
+                    {/* Header día */}
+                    <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
+                      <div style={{display:"flex",alignItems:"center",gap:8}}>
+                        <span style={{fontSize:16}}>{iconRes}</span>
+                        <span style={{fontSize:12,fontWeight:700,color:"rgba(255,255,255,0.8)"}}>{dia.fecha}</span>
+                      </div>
+                      <span style={{fontSize:10,fontWeight:700,padding:"3px 10px",borderRadius:20,background:bgTag,color:colorTag}}>
+                        {txtTag}
+                      </span>
+                    </div>
+
+                    {/* Partidos de la combina */}
+                    {dia.partidos.map((p, j) => (
+                      <div key={j} style={{display:"flex",alignItems:"center",justifyContent:"space-between",padding:"5px 0",borderBottom: j < dia.partidos.length-1 ? "1px solid rgba(255,255,255,0.04)" : "none"}}>
+                        <span style={{fontSize:11,color:"rgba(255,255,255,0.55)"}}>{p}</span>
+                        <span style={{fontSize:10,fontWeight:600,padding:"1px 8px",borderRadius:10,flexShrink:0,marginLeft:8,
+                          background: dia.predicciones[j]==="LOCAL"?"rgba(34,197,94,0.12)":dia.predicciones[j]==="VISITANTE"?"rgba(239,68,68,0.12)":"rgba(201,168,76,0.12)",
+                          color: dia.predicciones[j]==="LOCAL"?"#22c55e":dia.predicciones[j]==="VISITANTE"?"#ef4444":G,
+                        }}>
+                          {dia.predicciones[j]}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
 
