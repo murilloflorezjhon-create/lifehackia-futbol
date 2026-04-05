@@ -3,11 +3,12 @@ import { useState, useEffect, useCallback } from "react";
 const API_BASE = "https://lifehackia-futbol-production.up.railway.app";
 const G = "#C9A84C", GL = "#E8C96B", GD = "#8B6914";
 
-// ─── WOMPI — Links de pago ────────────────────────────────────
-// Cambia test_ por el link real cuando Wompi apruebe tu cuenta
-const WOMPI_PREMIUM = "https://checkout.wompi.co/l/test_QZ7Tz2";
-const WOMPI_MUNDIAL = "https://checkout.wompi.co/l/test_QZ7Tz2"; // ← crea link aparte para $29.900
+// ─── PAGOS — Colombia + Internacional ────────────────────────
+const WOMPI_PREMIUM  = "https://checkout.wompi.co/l/test_QZ7Tz2"; // COP — cambia por link real cuando Wompi apruebe
+const PAYPAL_PREMIUM = "https://paypal.me/LifeHackIA/5.99";          // USD — $5.99 ≈ $25.000 COP
+const PAYPAL_MUNDIAL = "https://paypal.me/LifeHackIA/9.99";          // USD — $9.99 Mundial 2026
 const TELEGRAM_CANAL = "https://t.me/LifeHackIAPronosticos";
+const WHATSAPP_SOPORTE = "https://wa.me/573187653979?text=Hola%20LifeHackIA%2C%20quiero%20suscribirme%20al%20plan%20Premium";
 
 const MATCHES = [
   {
@@ -887,10 +888,20 @@ Genera un comentario en español que:
                   </div>
                   <button onClick={() => {
                     if(plan.cta.includes("gratis") || plan.cta === "Gratis") window.open(TELEGRAM_CANAL, "_blank");
-                    else window.open(WOMPI_MUNDIAL, "_blank");
+                    else window.open(PAYPAL_MUNDIAL, "_blank");
                   }} style={{width:"100%",padding:13,...plan.ctaStyle,fontFamily:"inherit",fontSize:13,fontWeight:700,cursor:"pointer",borderRadius:10}}>
                     {plan.cta}
                   </button>
+                  {plan.highlight && (
+                    <div style={{display:"flex",gap:8,marginTop:8}}>
+                      <button onClick={()=>window.open(WOMPI_PREMIUM,"_blank")} style={{flex:1,padding:10,background:`linear-gradient(135deg,${GD},${G})`,border:"none",borderRadius:8,color:"#000",fontFamily:"inherit",fontSize:11,fontWeight:700,cursor:"pointer"}}>
+                        🇨🇴 Wompi COP
+                      </button>
+                      <button onClick={()=>window.open(PAYPAL_MUNDIAL,"_blank")} style={{flex:1,padding:10,background:"linear-gradient(135deg,#003087,#009cde)",border:"none",borderRadius:8,color:"#fff",fontFamily:"inherit",fontSize:11,fontWeight:700,cursor:"pointer"}}>
+                        🌍 PayPal USD
+                      </button>
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -1543,55 +1554,149 @@ Genera un comentario en español que:
 
       {/* ── PRONÓSTICO PREMIUM ── */}
       {tab==="premium" && (
-        <div style={{maxWidth:560,margin:"0 auto",padding:"24px 20px"}}>
-          <div style={{textAlign:"center",marginBottom:24}}>
-            <div style={{fontSize:36,marginBottom:10}}>👑</div>
-            <div style={{fontFamily:"Georgia,serif",fontSize:22,fontWeight:900,marginBottom:6,color:G}}>Pronóstico Premium</div>
-            <div style={{fontSize:13,color:"rgba(255,255,255,0.4)"}}>Análisis profundo con estadísticas avanzadas</div>
-          </div>
+        <div style={{maxWidth:600,margin:"0 auto",padding:`24px ${isMobile?"14px":"20px"}`}}>
 
-          {/* LOCK CARD */}
-          <div style={{background:"linear-gradient(135deg,rgba(201,168,76,0.12),rgba(201,168,76,0.04))",border:`1px solid rgba(201,168,76,0.35)`,borderRadius:20,padding:28,textAlign:"center",marginBottom:20,position:"relative",overflow:"hidden"}}>
-            <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:`linear-gradient(90deg,${GD},${G},${GL})`}}/>
-            <div style={{fontSize:48,marginBottom:12}}>🔒</div>
-            <div style={{fontFamily:"Georgia,serif",fontSize:18,fontWeight:800,marginBottom:8}}>Contenido exclusivo</div>
-            <div style={{fontSize:13,color:"rgba(255,255,255,0.45)",lineHeight:1.7,marginBottom:20}}>
-              Accede a pronósticos con análisis de xG, posesión, lesiones, forma reciente ponderada y modelos de probabilidad avanzados para los partidos de mayor interés.
+          {/* HEADER */}
+          <div style={{textAlign:"center",marginBottom:24}}>
+            <div style={{fontSize:36,marginBottom:8}}>👑</div>
+            <div style={{fontFamily:"Georgia,serif",fontSize:isMobile?20:24,fontWeight:900,marginBottom:6,color:G}}>Pronóstico Premium</div>
+            <div style={{fontSize:13,color:"rgba(255,255,255,0.4)",lineHeight:1.6}}>
+              Disponible para Colombia 🇨🇴 y todo el mundo 🌍
             </div>
-            <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:12,marginBottom:20}}>
-              {[["📊","xG y estadísticas avanzadas"],["🏥","Estado de lesiones"],["📈","Forma ponderada 10 partidos"],["🎯","Predicción de marcador exacto"]].map(([icon,txt]) => (
-                <div key={txt} style={{background:"rgba(201,168,76,0.08)",borderRadius:10,padding:"10px 12px",display:"flex",alignItems:"center",gap:8}}>
-                  <span style={{fontSize:16}}>{icon}</span>
-                  <span style={{fontSize:11,color:"rgba(255,255,255,0.7)",textAlign:"left",lineHeight:1.3}}>{txt}</span>
-                </div>
-              ))}
-            </div>
-            <div style={{marginBottom:16}}>
-              <div style={{fontFamily:"Georgia,serif",fontSize:32,fontWeight:900,color:G}}>$19.900</div>
-              <div style={{fontSize:12,color:"rgba(255,255,255,0.4)"}}>COP / mes · Cancela cuando quieras</div>
-            </div>
-            <button onClick={() => window.open(WOMPI_PREMIUM, "_blank")} style={{width:"100%",padding:15,background:`linear-gradient(135deg,${GD},${G},${GL})`,border:"none",borderRadius:12,color:"#000",fontFamily:"inherit",fontSize:14,fontWeight:800,cursor:"pointer",marginBottom:10}}>
-              👑 Suscribirme ahora — $19.900 COP/mes
-            </button>
-            <button onClick={() => window.open(TELEGRAM_CANAL, "_blank")} style={{width:"100%",padding:12,background:"transparent",border:`1px solid rgba(201,168,76,0.25)`,borderRadius:12,color:G,fontFamily:"inherit",fontSize:13,fontWeight:600,cursor:"pointer"}}>
-              💬 Unirme al canal Telegram gratis
-            </button>
           </div>
 
           {/* BENEFICIOS */}
-          <div style={{background:"#111",border:`1px solid rgba(201,168,76,0.1)`,borderRadius:16,padding:16}}>
-            <div style={{fontFamily:"Georgia,serif",fontSize:14,fontWeight:700,marginBottom:14,color:"#fff"}}>¿Qué incluye el Premium?</div>
-            {[
-              ["✅","Pronósticos diarios de todos los partidos"],
-              ["✅","Análisis xG y estadísticas avanzadas"],
-              ["✅","Alertas por WhatsApp antes de cada partido"],
-              ["✅","Acceso al canal Telegram VIP"],
-              ["✅","Historial de aciertos verificado"],
-              ["✅","Combina del día con cuotas sugeridas"],
-            ].map(([icon,txt]) => (
-              <div key={txt} style={{display:"flex",alignItems:"center",gap:10,padding:"8px 0",borderBottom:"1px solid rgba(255,255,255,0.04)"}}>
-                <span style={{fontSize:14,flexShrink:0}}>{icon}</span>
-                <span style={{fontSize:12,color:"rgba(255,255,255,0.7)"}}>{txt}</span>
+          <div style={{background:"rgba(201,168,76,0.06)",border:`1px solid rgba(201,168,76,0.2)`,borderRadius:16,padding:16,marginBottom:20}}>
+            <div style={{fontFamily:"Georgia,serif",fontSize:14,fontWeight:700,marginBottom:12,color:G}}>¿Qué incluye el Premium?</div>
+            <div style={{display:"grid",gridTemplateColumns:`repeat(${isMobile?1:2},1fr)`,gap:6}}>
+              {[
+                ["📊","Análisis IA de todos los partidos"],
+                ["🎯","Combina del día con cuotas"],
+                ["🔔","Alertas antes de cada partido"],
+                ["👑","Acceso canal Telegram VIP"],
+                ["📈","Historial verificado de aciertos"],
+                ["🏆","Picks Mundial 2026 incluidos"],
+                ["🤖","Comentario IA argumentado"],
+                ["📱","Soporte por WhatsApp"],
+              ].map(([icon,txt])=>(
+                <div key={txt} style={{display:"flex",alignItems:"center",gap:8,padding:"6px 0",fontSize:12,color:"rgba(255,255,255,0.7)"}}>
+                  <span style={{fontSize:14,flexShrink:0}}>{icon}</span>{txt}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ── TARJETA COLOMBIA ── */}
+          <div style={{background:"#111",border:`2px solid rgba(201,168,76,0.4)`,borderRadius:18,padding:20,marginBottom:14,position:"relative",overflow:"hidden"}}>
+            <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:`linear-gradient(90deg,${GD},${G},${GL})`}}/>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14}}>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                <span style={{fontSize:22}}>🇨🇴</span>
+                <div>
+                  <div style={{fontSize:13,fontWeight:700}}>Para Colombia</div>
+                  <div style={{fontSize:10,color:"rgba(255,255,255,0.35)"}}>Nequi · PSE · Tarjeta · Daviplata</div>
+                </div>
+              </div>
+              <div style={{textAlign:"right"}}>
+                <div style={{fontFamily:"Georgia,serif",fontSize:26,fontWeight:900,color:G}}>$19.900</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,0.35)"}}>COP / mes</div>
+              </div>
+            </div>
+            <button onClick={() => window.open(WOMPI_PREMIUM, "_blank")} style={{
+              width:"100%", padding:14,
+              background:`linear-gradient(135deg,${GD},${G},${GL})`,
+              border:"none", borderRadius:12, color:"#000",
+              fontFamily:"inherit", fontSize:14, fontWeight:800, cursor:"pointer",
+              marginBottom:8,
+            }}>
+              💳 Pagar con Wompi — $19.900 COP
+            </button>
+            <div style={{fontSize:10,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+              ✓ Pago seguro · ✓ Cancela cuando quieras · ✓ Acceso inmediato
+            </div>
+          </div>
+
+          {/* ── TARJETA INTERNACIONAL ── */}
+          <div style={{background:"#111",border:"2px solid rgba(0,112,240,0.4)",borderRadius:18,padding:20,marginBottom:14,position:"relative",overflow:"hidden"}}>
+            <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:"linear-gradient(90deg,#003087,#009cde,#012169)"}}/>
+            <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:14}}>
+              <div style={{display:"flex",alignItems:"center",gap:8}}>
+                <span style={{fontSize:22}}>🌍</span>
+                <div>
+                  <div style={{fontSize:13,fontWeight:700}}>Internacional</div>
+                  <div style={{fontSize:10,color:"rgba(255,255,255,0.35)"}}>México · Argentina · Perú · USA · España y más</div>
+                </div>
+              </div>
+              <div style={{textAlign:"right"}}>
+                <div style={{fontFamily:"Georgia,serif",fontSize:26,fontWeight:900,color:"#009cde"}}>$5.99</div>
+                <div style={{fontSize:10,color:"rgba(255,255,255,0.35)"}}>USD / mes</div>
+              </div>
+            </div>
+
+            {/* BOTÓN PAYPAL */}
+            <button onClick={() => window.open(PAYPAL_PREMIUM, "_blank")} style={{
+              width:"100%", padding:14,
+              background:"linear-gradient(135deg,#003087,#009cde)",
+              border:"none", borderRadius:12, color:"#fff",
+              fontFamily:"inherit", fontSize:14, fontWeight:800, cursor:"pointer",
+              marginBottom:8, display:"flex", alignItems:"center", justifyContent:"center", gap:10,
+            }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="white">
+                <path d="M7.076 21.337H2.47a.641.641 0 0 1-.633-.74L4.944.901C5.026.382 5.474 0 5.998 0h7.46c2.57 0 4.578.543 5.69 1.81 1.01 1.15 1.304 2.42 1.012 4.287-.023.143-.047.288-.077.437-.983 5.05-4.349 6.797-8.647 6.797h-2.19c-.524 0-.968.382-1.05.9l-1.12 7.106zm14.146-14.42a3.35 3.35 0 0 0-.607-.541c-.013.076-.026.175-.041.254-.59 3.025-2.566 4.643-5.813 4.643h-2.19c-.523 0-.968.382-1.05.9l-1.12 7.106-.316 2.003a.641.641 0 0 0 .634.74h3.944a.641.641 0 0 0 .633-.54l.026-.13.504-3.19.032-.174a.641.641 0 0 1 .633-.54h.398c2.58 0 4.6-.547 5.19-2.13.5-1.34.238-2.47-.661-3.4z"/>
+              </svg>
+              Pagar con PayPal — $5.99 USD
+            </button>
+
+            {/* BANDERAS DE PAÍSES */}
+            <div style={{display:"flex",gap:6,flexWrap:"wrap",justifyContent:"center",marginBottom:8}}>
+              {["🇲🇽","🇦🇷","🇵🇪","🇨🇱","🇺🇾","🇪🇨","🇻🇪","🇧🇴","🇵🇾","🇺🇸","🇪🇸","🇬🇧","🇩🇪","🇫🇷","🇮🇹"].map(f=>(
+                <span key={f} style={{fontSize:16}}>{f}</span>
+              ))}
+            </div>
+            <div style={{fontSize:10,color:"rgba(255,255,255,0.25)",textAlign:"center"}}>
+              ✓ Pago seguro con PayPal · ✓ Más de 200 países · ✓ Acceso inmediato
+            </div>
+          </div>
+
+          {/* ── OPCIÓN WHATSAPP ── */}
+          <div style={{background:"#111",border:"1px solid rgba(34,197,94,0.2)",borderRadius:14,padding:14,marginBottom:14}}>
+            <div style={{display:"flex",alignItems:"center",gap:10,marginBottom:10}}>
+              <span style={{fontSize:20}}>💬</span>
+              <div>
+                <div style={{fontSize:13,fontWeight:600}}>¿Prefieres pagar por WhatsApp?</div>
+                <div style={{fontSize:11,color:"rgba(255,255,255,0.4)"}}>Te atendemos personalmente</div>
+              </div>
+            </div>
+            <button onClick={() => window.open(WHATSAPP_SOPORTE, "_blank")} style={{
+              width:"100%", padding:11,
+              background:"linear-gradient(135deg,#128C7E,#25D366)",
+              border:"none", borderRadius:10, color:"#fff",
+              fontFamily:"inherit", fontSize:13, fontWeight:700, cursor:"pointer",
+            }}>
+              📱 Contactar por WhatsApp
+            </button>
+          </div>
+
+          {/* ── CANAL TELEGRAM GRATIS ── */}
+          <div style={{background:"rgba(201,168,76,0.05)",border:`1px solid rgba(201,168,76,0.15)`,borderRadius:14,padding:14,textAlign:"center"}}>
+            <div style={{fontSize:12,color:"rgba(255,255,255,0.45)",marginBottom:10}}>
+              ¿Quieres probar antes de suscribirte?
+            </div>
+            <button onClick={() => window.open(TELEGRAM_CANAL, "_blank")} style={{
+              padding:"10px 24px",
+              background:"transparent", border:`1px solid rgba(201,168,76,0.3)`,
+              borderRadius:20, color:G, fontFamily:"inherit",
+              fontSize:13, fontWeight:600, cursor:"pointer",
+            }}>
+              📢 Únete al canal Telegram gratis →
+            </button>
+          </div>
+
+          {/* GARANTÍA */}
+          <div style={{marginTop:16,display:"flex",gap:12,justifyContent:"center",flexWrap:"wrap"}}>
+            {[["🔒","Pago seguro"],["↩️","Cancela cuando quieras"],["⚡","Acceso inmediato"],["🌍","+200 países"]].map(([icon,txt])=>(
+              <div key={txt} style={{display:"flex",alignItems:"center",gap:5,fontSize:11,color:"rgba(255,255,255,0.35)"}}>
+                <span>{icon}</span><span>{txt}</span>
               </div>
             ))}
           </div>
