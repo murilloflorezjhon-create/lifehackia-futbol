@@ -1,0 +1,227 @@
+{
+  "name": "LifeHackIA — Workflow 1: Pronósticos Automáticos Diarios",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 8,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      },
+      "id": "trigger-diario",
+      "name": "⏰ Trigger 8am COT",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "url": "https://api.football-data.org/v4/matches",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-Auth-Token",
+              "value": "={{$env.FOOTBALL_API_KEY}}"
+            }
+          ]
+        },
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "competitions",
+              "value": "PL,PD,CL,BL1,SA,FL1,BSA"
+            },
+            {
+              "name": "dateFrom",
+              "value": "={{new Date().toISOString().split('T')[0]}}"
+            },
+            {
+              "name": "dateTo",
+              "value": "={{new Date().toISOString().split('T')[0]}}"
+            }
+          ]
+        }
+      },
+      "id": "get-partidos",
+      "name": "📡 GET Partidos de Hoy",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "matches",
+        "options": {}
+      },
+      "id": "split-partidos",
+      "name": "🔀 Split por Partido",
+      "type": "n8n-nodes-base.splitOut",
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": false
+          },
+          "conditions": [
+            {
+              "leftValue": "={{$json.status}}",
+              "rightValue": "SCHEDULED",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ]
+        }
+      },
+      "id": "filter-scheduled",
+      "name": "🔍 Solo partidos programados",
+      "type": "n8n-nodes-base.filter",
+      "position": [900, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.API_BASE}}/pronostico",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "equipo_local",
+              "value": "={{$json.homeTeam.name}}"
+            },
+            {
+              "name": "equipo_visitante",
+              "value": "={{$json.awayTeam.name}}"
+            },
+            {
+              "name": "h2h_victorias_local",
+              "value": 3
+            },
+            {
+              "name": "h2h_total_partidos",
+              "value": 10
+            }
+          ]
+        }
+      },
+      "id": "post-pronostico",
+      "name": "🤖 POST /pronostico",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1120, 300]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "={{$env.API_BASE}}/comentario",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"equipo_local\": \"{{$node['🔍 Solo partidos programados'].json.homeTeam.name}}\",\n  \"equipo_visitante\": \"{{$node['🔍 Solo partidos programados'].json.awayTeam.name}}\",\n  \"liga\": \"{{$node['🔍 Solo partidos programados'].json.competition.name}}\",\n  \"prediccion\": \"{{$json.prediccion}}\",\n  \"confianza\": {{$json.confianza}},\n  \"prob_local\": {{Math.round(($json.probabilidades.local || 0) * 100)}},\n  \"prob_empate\": {{Math.round(($json.probabilidades.empate || 0) * 100)}},\n  \"prob_visitante\": {{Math.round(($json.probabilidades.visitante || 0) * 100)}},\n  \"h2h_victorias_local\": 3,\n  \"h2h_total\": 10\n}"
+      },
+      "id": "post-comentario",
+      "name": "💬 POST /comentario",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [1340, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const partido = $node['🔍 Solo partidos programados'].json;\nconst pred    = $node['🤖 POST /pronostico'].json;\nconst com     = $node['💬 POST /comentario'].json;\n\nconst hora = new Date(partido.utcDate)\n  .toLocaleTimeString('es-CO', {hour:'2-digit', minute:'2-digit', timeZone:'America/Bogota'});\n\nconst confPct  = Math.round(pred.confianza * 100);\nconst probL    = Math.round((pred.probabilidades?.local    || 0) * 100);\nconst probE    = Math.round((pred.probabilidades?.empate   || 0) * 100);\nconst probV    = Math.round((pred.probabilidades?.visitante|| 0) * 100);\n\nconst nivelConf = confPct >= 65 ? '🟢 Alta' : confPct >= 55 ? '🟡 Media' : '🔴 Baja';\n\n// ── MENSAJE CANAL GRATUITO ─────────────────────────────────\nconst msgGratis = `⚽ PICK DEL DÍA — LifeHackIA\n\n🏟️ ${partido.homeTeam.name} vs ${partido.awayTeam.name}\n🏆 ${partido.competition.name} · ${hora} COT\n\n🤖 Predicción IA: ${pred.prediccion}\n📊 Confianza: ${confPct}% (${nivelConf})\n📈 L ${probL}% | E ${probE}% | V ${probV}%\n\n🔗 Análisis completo → lifehackia-futbol.netlify.app\n👑 Picks premium → @LifeHackIAVIP\n\n#LifeHackIA #Fútbol #PronósticosIA`;\n\n// ── MENSAJE CANAL VIP ──────────────────────────────────────\nconst msgVip = `👑 ANÁLISIS PREMIUM — Solo suscriptores VIP\n\n⚽ ${partido.homeTeam.name} vs ${partido.awayTeam.name}\n📅 Hoy · ${hora} COT · ${partido.competition.name}\n\n━━━━━━━━━━━━━━━\n🤖 PREDICCIÓN IA: ${pred.prediccion}\n🎯 Confianza: ${confPct}% (${nivelConf})\n━━━━━━━━━━━━━━━\n\n📊 PROBABILIDADES\n• Victoria ${partido.homeTeam.name}: ${probL}%\n• Empate: ${probE}%\n• Victoria ${partido.awayTeam.name}: ${probV}%\n\n💬 ANÁLISIS:\n${com.comentario || 'Análisis no disponible en este momento.'}\n\n⚠️ Solo análisis informativo. No asesoría de apuestas.`;\n\nreturn [{ json: { msgGratis, msgVip, partido: `${partido.homeTeam.name} vs ${partido.awayTeam.name}`, confianza: confPct } }];"
+      },
+      "id": "format-messages",
+      "name": "📝 Formatear Mensajes",
+      "type": "n8n-nodes-base.code",
+      "position": [1560, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$env.TELEGRAM_CANAL_GRATIS_ID}}",
+        "text": "={{$json.msgGratis}}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "telegram-gratis",
+      "name": "📢 Telegram Canal Gratis",
+      "type": "n8n-nodes-base.telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-bot-cred",
+          "name": "LifeHackIA Bot"
+        }
+      },
+      "position": [1780, 180]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$env.TELEGRAM_CANAL_VIP_ID}}",
+        "text": "={{$json.msgVip}}",
+        "additionalFields": {
+          "parse_mode": "Markdown"
+        }
+      },
+      "id": "telegram-vip",
+      "name": "👑 Telegram Canal VIP",
+      "type": "n8n-nodes-base.telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-bot-cred",
+          "name": "LifeHackIA Bot"
+        }
+      },
+      "position": [1780, 420]
+    }
+  ],
+  "connections": {
+    "⏰ Trigger 8am COT": {
+      "main": [[{"node": "📡 GET Partidos de Hoy", "type": "main", "index": 0}]]
+    },
+    "📡 GET Partidos de Hoy": {
+      "main": [[{"node": "🔀 Split por Partido", "type": "main", "index": 0}]]
+    },
+    "🔀 Split por Partido": {
+      "main": [[{"node": "🔍 Solo partidos programados", "type": "main", "index": 0}]]
+    },
+    "🔍 Solo partidos programados": {
+      "main": [[{"node": "🤖 POST /pronostico", "type": "main", "index": 0}]]
+    },
+    "🤖 POST /pronostico": {
+      "main": [[{"node": "💬 POST /comentario", "type": "main", "index": 0}]]
+    },
+    "💬 POST /comentario": {
+      "main": [[{"node": "📝 Formatear Mensajes", "type": "main", "index": 0}]]
+    },
+    "📝 Formatear Mensajes": {
+      "main": [[
+        {"node": "📢 Telegram Canal Gratis", "type": "main", "index": 0},
+        {"node": "👑 Telegram Canal VIP", "type": "main", "index": 0}
+      ]]
+    }
+  },
+  "settings": {
+    "timezone": "America/Bogota"
+  }
+}

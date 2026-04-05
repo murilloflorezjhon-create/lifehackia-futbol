@@ -1,0 +1,167 @@
+{
+  "name": "LifeHackIA — Workflow 2: Gestión Suscriptores Premium",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "wompi-pago",
+        "responseMode": "responseNode"
+      },
+      "id": "webhook-wompi",
+      "name": "💳 Webhook Wompi — Pago confirmado",
+      "type": "n8n-nodes-base.webhook",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "conditions": [
+            {
+              "leftValue": "={{$json.body.data.transaction.status}}",
+              "rightValue": "APPROVED",
+              "operator": {
+                "type": "string",
+                "operation": "equals"
+              }
+            }
+          ]
+        }
+      },
+      "id": "check-aprobado",
+      "name": "✅ ¿Pago aprobado?",
+      "type": "n8n-nodes-base.filter",
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "const tx       = $json.body.data.transaction;\nconst customer = tx.customer_data || {};\nconst ref      = tx.reference || 'SIN-REF';\nconst monto    = (tx.amount_in_cents / 100).toLocaleString('es-CO');\n\nreturn [{\n  json: {\n    email:    customer.email || 'sin-email@lifehackia.co',\n    nombre:   customer.full_name || 'Suscriptor Premium',\n    telefono: customer.phone_number || '',\n    monto,\n    referencia: ref,\n    fecha: new Date().toLocaleDateString('es-CO', {timeZone:'America/Bogota'}),\n    planVencimiento: new Date(Date.now() + 30*24*60*60*1000)\n      .toLocaleDateString('es-CO', {timeZone:'America/Bogota'}),\n  }\n}];"
+      },
+      "id": "extract-data",
+      "name": "📋 Extraer datos del suscriptor",
+      "type": "n8n-nodes-base.code",
+      "position": [680, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$env.TELEGRAM_CANAL_VIP_ID}}",
+        "text": "=🎉 ¡Bienvenido al VIP, {{$json.nombre}}!\n\nYa tienes acceso completo a todos los picks premium de LifeHackIA. 👑\n\n📊 Picks de alta confianza diarios\n🎯 Combina del día\n🔔 Alertas antes de cada partido\n📈 Análisis completo con IA\n\nPlan válido hasta: {{$json.planVencimiento}}\n\n¡Activa las notificaciones de este canal! 🔔",
+        "additionalFields": {}
+      },
+      "id": "bienvenida-telegram",
+      "name": "👑 Mensaje bienvenida VIP",
+      "type": "n8n-nodes-base.telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-bot-cred",
+          "name": "LifeHackIA Bot"
+        }
+      },
+      "position": [900, 180]
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": "={{$env.GOOGLE_SHEET_ID}}",
+        "sheetName": "Suscriptores",
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Nombre":       "={{$json.nombre}}",
+            "Email":        "={{$json.email}}",
+            "Telefono":     "={{$json.telefono}}",
+            "Fecha":        "={{$json.fecha}}",
+            "Vencimiento":  "={{$json.planVencimiento}}",
+            "Plan":         "Premium $19.900",
+            "Estado":       "Activo",
+            "Referencia":   "={{$json.referencia}}"
+          }
+        }
+      },
+      "id": "guardar-sheets",
+      "name": "📊 Registrar en Google Sheets",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [900, 420]
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtDay": [1],
+              "triggerAtHour": 9,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      },
+      "id": "trigger-renovacion",
+      "name": "⏰ Trigger recordatorio renovación",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 600]
+    },
+    {
+      "parameters": {
+        "operation": "read",
+        "documentId": "={{$env.GOOGLE_SHEET_ID}}",
+        "sheetName": "Suscriptores",
+        "options": {}
+      },
+      "id": "leer-suscriptores",
+      "name": "📋 Leer suscriptores activos",
+      "type": "n8n-nodes-base.googleSheets",
+      "position": [460, 600]
+    },
+    {
+      "parameters": {
+        "jsCode": "const hoy     = new Date();\nconst en5dias = new Date(hoy.getTime() + 5*24*60*60*1000);\n\nreturn $input.all().filter(item => {\n  const venc = new Date(item.json.Vencimiento);\n  return venc >= hoy && venc <= en5dias && item.json.Estado === 'Activo';\n});"
+      },
+      "id": "filtrar-vencen",
+      "name": "🔍 Vencen en 5 días",
+      "type": "n8n-nodes-base.code",
+      "position": [680, 600]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$env.TELEGRAM_BOT_CHAT_ID}}",
+        "text": "=🔔 Recordatorio para {{$json.Nombre}}:\n\nTu suscripción Premium vence el {{$json.Vencimiento}}.\n\n¡Renueva para seguir recibiendo picks de alta confianza! 👑\n\nRenovar → [LINK_WOMPI]",
+        "additionalFields": {}
+      },
+      "id": "recordatorio-renovacion",
+      "name": "🔔 Enviar recordatorio renovación",
+      "type": "n8n-nodes-base.telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-bot-cred",
+          "name": "LifeHackIA Bot"
+        }
+      },
+      "position": [900, 600]
+    }
+  ],
+  "connections": {
+    "💳 Webhook Wompi — Pago confirmado": {
+      "main": [[{"node": "✅ ¿Pago aprobado?", "type": "main", "index": 0}]]
+    },
+    "✅ ¿Pago aprobado?": {
+      "main": [[{"node": "📋 Extraer datos del suscriptor", "type": "main", "index": 0}]]
+    },
+    "📋 Extraer datos del suscriptor": {
+      "main": [[
+        {"node": "👑 Mensaje bienvenida VIP", "type": "main", "index": 0},
+        {"node": "📊 Registrar en Google Sheets", "type": "main", "index": 0}
+      ]]
+    },
+    "⏰ Trigger recordatorio renovación": {
+      "main": [[{"node": "📋 Leer suscriptores activos", "type": "main", "index": 0}]]
+    },
+    "📋 Leer suscriptores activos": {
+      "main": [[{"node": "🔍 Vencen en 5 días", "type": "main", "index": 0}]]
+    },
+    "🔍 Vencen en 5 días": {
+      "main": [[{"node": "🔔 Enviar recordatorio renovación", "type": "main", "index": 0}]]
+    }
+  },
+  "settings": {
+    "timezone": "America/Bogota"
+  }
+}

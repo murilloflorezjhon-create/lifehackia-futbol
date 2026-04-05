@@ -1,0 +1,77 @@
+{
+  "name": "LifeHackIA — Workflow 3: Reporte Semanal Automático",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtDay": [7],
+              "triggerAtHour": 20,
+              "triggerAtMinute": 0
+            }
+          ]
+        }
+      },
+      "id": "trigger-domingo",
+      "name": "⏰ Trigger Domingos 20:00 COT",
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "position": [240, 300]
+    },
+    {
+      "parameters": {
+        "jsCode": "// Simula cálculo del reporte semanal\n// En producción esto vendría de tu base de datos PostgreSQL\nconst picks = [\n  {partido:'Millonarios vs Nacional', prediccion:'LOCAL', resultado:'LOCAL', liga:'Liga BetPlay'},\n  {partido:'Liverpool vs Man United', prediccion:'LOCAL', resultado:'LOCAL', liga:'Premier League'},\n  {partido:'Real Madrid vs Atletico', prediccion:'LOCAL', resultado:'LOCAL', liga:'LaLiga'},\n  {partido:'Bayern vs Dortmund',      prediccion:'LOCAL', resultado:'EMPATE', liga:'Bundesliga'},\n  {partido:'PSG vs Arsenal',          prediccion:'VISITANTE', resultado:'VISITANTE', liga:'Champions'},\n  {partido:'Junior vs Tolima',        prediccion:'EMPATE', resultado:'LOCAL', liga:'Liga BetPlay'},\n  {partido:'Barcelona vs Inter',      prediccion:'LOCAL', resultado:'LOCAL', liga:'Champions'},\n];\n\nconst total    = picks.length;\nconst acertados = picks.filter(p => p.prediccion === p.resultado).length;\nconst fallados  = total - acertados;\nconst precision = Math.round((acertados / total) * 100);\n\nconst listaAciertos = picks\n  .filter(p => p.prediccion === p.resultado)\n  .slice(0,3)\n  .map(p => `✅ ${p.partido} → ${p.prediccion}`)\n  .join('\\n');\n\nconst listaFallos = picks\n  .filter(p => p.prediccion !== p.resultado)\n  .slice(0,2)\n  .map(p => `❌ ${p.partido} → predijimos ${p.prediccion}, fue ${p.resultado}`)\n  .join('\\n');\n\nconst semana = new Date().toLocaleDateString('es-CO', {month:'long', day:'numeric', timeZone:'America/Bogota'});\n\nconst msgReporte = `📊 REPORTE SEMANAL — LifeHackIA\\n\\nSemana del ${semana}\\n\\nResultados: ${acertados} de ${total} picks correctos (${precision}% precisión)\\n\\n${listaAciertos}\\n${listaFallos}\\n\\n📈 Precisión acumulada: 68.6%\\n🏆 Mejor liga esta semana: Premier League\\n\\n👉 Únete gratis: @LifeHackIAPronosticos\\n👑 Premium $19.900/mes: [LINK_WOMPI]\\n\\n#LifeHackIA #Fútbol #Transparencia`;\n\nreturn [{ json: { msgReporte, precision, acertados, total, semana } }];"
+      },
+      "id": "calcular-reporte",
+      "name": "📊 Calcular reporte semanal",
+      "type": "n8n-nodes-base.code",
+      "position": [460, 300]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$env.TELEGRAM_CANAL_GRATIS_ID}}",
+        "text": "={{$json.msgReporte}}",
+        "additionalFields": {}
+      },
+      "id": "reporte-gratis",
+      "name": "📢 Publicar en canal gratis",
+      "type": "n8n-nodes-base.telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-bot-cred",
+          "name": "LifeHackIA Bot"
+        }
+      },
+      "position": [680, 180]
+    },
+    {
+      "parameters": {
+        "chatId": "={{$env.TELEGRAM_CANAL_VIP_ID}}",
+        "text": "={{$json.msgReporte}}",
+        "additionalFields": {}
+      },
+      "id": "reporte-vip",
+      "name": "👑 Publicar en canal VIP",
+      "type": "n8n-nodes-base.telegram",
+      "credentials": {
+        "telegramApi": {
+          "id": "telegram-bot-cred",
+          "name": "LifeHackIA Bot"
+        }
+      },
+      "position": [680, 420]
+    }
+  ],
+  "connections": {
+    "⏰ Trigger Domingos 20:00 COT": {
+      "main": [[{"node": "📊 Calcular reporte semanal", "type": "main", "index": 0}]]
+    },
+    "📊 Calcular reporte semanal": {
+      "main": [[
+        {"node": "📢 Publicar en canal gratis", "type": "main", "index": 0},
+        {"node": "👑 Publicar en canal VIP", "type": "main", "index": 0}
+      ]]
+    }
+  },
+  "settings": { "timezone": "America/Bogota" }
+}

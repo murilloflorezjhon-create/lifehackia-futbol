@@ -551,6 +551,357 @@ Genera un comentario en español que:
     </div>
   );
 
+  // ─── MUNDIAL TAB ─────────────────────────────────────────────
+  const MundialTab = () => {
+    const [seccion, setSeccion] = useState("inicio");
+    const [countdown, setCountdown] = useState({d:0,h:0,m:0,s:0});
+
+    // Fecha inicio Mundial 2026: 11 junio 2026
+    useEffect(() => {
+      const target = new Date("2026-06-11T18:00:00-05:00").getTime();
+      const tick = () => {
+        const diff = target - Date.now();
+        if (diff <= 0) return;
+        setCountdown({
+          d: Math.floor(diff / 86400000),
+          h: Math.floor((diff % 86400000) / 3600000),
+          m: Math.floor((diff % 3600000) / 60000),
+          s: Math.floor((diff % 60000) / 1000),
+        });
+      };
+      tick();
+      const t = setInterval(tick, 1000);
+      return () => clearInterval(t);
+    }, []);
+
+    const GRUPOS = [
+      { grupo:"A", paises:["🇺🇸 USA","🇨🇦 Canadá","🇲🇽 México","🏳️ TBD"] },
+      { grupo:"B", paises:["🇧🇷 Brasil","🇦🇷 Argentina","🇨🇱 Chile","🏳️ TBD"] },
+      { grupo:"C", paises:["🇫🇷 Francia","🇩🇪 Alemania","🇧🇪 Bélgica","🏳️ TBD"] },
+      { grupo:"D", paises:["🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra","🇵🇹 Portugal","🇳🇱 Países Bajos","🏳️ TBD"] },
+      { grupo:"E", paises:["🇪🇸 España","🇮🇹 Italia","🇨🇷 Croacia","🏳️ TBD"] },
+      { grupo:"F", paises:["🇯🇵 Japón","🇰🇷 Corea del Sur","🇦🇺 Australia","🏳️ TBD"] },
+      { grupo:"G", paises:["🇸🇳 Senegal","🇲🇦 Marruecos","🇳🇬 Nigeria","🏳️ TBD"] },
+      { grupo:"H", paises:["🇺🇾 Uruguay","🇪🇨 Ecuador","🇵🇾 Paraguay","🏳️ TBD"] },
+    ];
+
+    const FAVORITOS = [
+      { pais:"🇫🇷 Francia",    cuota:"4.5x", prob:28, color:"#003087" },
+      { pais:"🇧🇷 Brasil",     cuota:"5.0x", prob:24, color:"#009c3b" },
+      { pais:"🇦🇷 Argentina",  cuota:"5.5x", prob:22, color:"#74acdf" },
+      { pais:"🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra",cuota:"6.0x", prob:20, color:"#cf142b" },
+      { pais:"🇪🇸 España",     cuota:"7.0x", prob:18, color:"#c60b1e" },
+      { pais:"🇩🇪 Alemania",   cuota:"8.0x", prob:16, color:"#000" },
+    ];
+
+    const PARTIDOS_MUNDIAL = [
+      { fase:"Grupo A", local:"🇺🇸 USA",       visita:"🇲🇽 México",     fecha:"12 Jun", pred:"LOCAL",    conf:58 },
+      { fase:"Grupo B", local:"🇧🇷 Brasil",    visita:"🇨🇱 Chile",       fecha:"13 Jun", pred:"LOCAL",    conf:72 },
+      { fase:"Grupo C", local:"🇫🇷 Francia",   visita:"🇩🇪 Alemania",    fecha:"14 Jun", pred:"LOCAL",    conf:55 },
+      { fase:"Grupo D", local:"🏴󠁧󠁢󠁥󠁮󠁧󠁿 Inglaterra",visita:"🇵🇹 Portugal",  fecha:"15 Jun", pred:"EMPATE",   conf:44 },
+      { fase:"Grupo E", local:"🇪🇸 España",    visita:"🇮🇹 Italia",      fecha:"16 Jun", pred:"LOCAL",    conf:60 },
+      { fase:"Grupo H", local:"🇺🇾 Uruguay",   visita:"🇪🇨 Ecuador",     fecha:"17 Jun", pred:"LOCAL",    conf:62 },
+    ];
+
+    const PLANES_MUNDIAL = [
+      {
+        nombre:"Pick Mundial Free", precio:"$0", color:"rgba(255,255,255,0.06)", border:"rgba(255,255,255,0.1)",
+        features:["1 pick por jornada","Predicción básica","Sin análisis de la IA","Acceso a grupos y tabla"],
+        cta:"Gratis", ctaStyle:{background:"transparent",border:"1px solid rgba(255,255,255,0.2)",color:"#fff"},
+      },
+      {
+        nombre:"Mundial Premium", precio:"$29.900 COP", color:"rgba(201,168,76,0.08)", border:"rgba(201,168,76,0.4)",
+        features:["Todos los picks del Mundial","Análisis IA partido a partido","Combina del día cada jornada","Picks octavos, cuartos, semis y final","Alertas 1h antes de cada partido","Historial de aciertos verificado"],
+        cta:"Suscribirme al Mundial", ctaStyle:{background:`linear-gradient(135deg,${GD},${G},${GL})`,border:"none",color:"#000"},
+        highlight:true,
+      },
+      {
+        nombre:"Pack Final Mundial", precio:"$9.900 COP", color:"rgba(200,16,46,0.06)", border:"rgba(200,16,46,0.3)",
+        features:["Solo picks semifinal y final","Análisis profundo IA","Pick ganador del torneo","Cuota comparativa vs mercado"],
+        cta:"Comprar pack final", ctaStyle:{background:"linear-gradient(135deg,#8B0000,#c8102e)",border:"none",color:"#fff"},
+      },
+    ];
+
+    return (
+      <div style={{maxWidth:700,margin:"0 auto"}}>
+
+        {/* HERO MUNDIAL */}
+        <div style={{
+          background:"linear-gradient(135deg,#0a0a0a 0%,#1a0008 40%,#000822 100%)",
+          borderBottom:"1px solid rgba(200,16,46,0.3)",
+          padding:`${isMobile?"24px 16px":"32px 24px"}`,
+          textAlign:"center", position:"relative", overflow:"hidden",
+        }}>
+          {/* Fondo decorativo */}
+          <div style={{position:"absolute",top:-40,left:-40,width:200,height:200,borderRadius:"50%",background:"rgba(200,16,46,0.07)",pointerEvents:"none"}}/>
+          <div style={{position:"absolute",bottom:-40,right:-40,width:200,height:200,borderRadius:"50%",background:"rgba(0,48,135,0.07)",pointerEvents:"none"}}/>
+
+          <div style={{fontSize:isMobile?11:12,color:"rgba(255,255,255,0.4)",letterSpacing:3,marginBottom:8,position:"relative"}}>
+            COPA MUNDIAL DE LA FIFA
+          </div>
+          <div style={{fontFamily:"Georgia,serif",fontSize:isMobile?26:36,fontWeight:900,marginBottom:4,position:"relative",lineHeight:1.1}}>
+            <span style={{color:"#c8102e"}}>Mundial</span>{" "}
+            <span style={{color:"#fff"}}>2026</span>{" "}
+            <span style={{color:"#003087"}}>🏆</span>
+          </div>
+          <div style={{fontSize:12,color:"rgba(255,255,255,0.4)",marginBottom:20,position:"relative"}}>
+            🇺🇸 USA · 🇨🇦 Canadá · 🇲🇽 México · 11 Jun — 19 Jul 2026
+          </div>
+
+          {/* COUNTDOWN */}
+          <div style={{display:"flex",gap:10,justifyContent:"center",marginBottom:20,position:"relative"}}>
+            {[
+              [countdown.d,"Días"],
+              [countdown.h,"Horas"],
+              [countdown.m,"Min"],
+              [countdown.s,"Seg"],
+            ].map(([v,l])=>(
+              <div key={l} style={{
+                background:"rgba(255,255,255,0.05)",
+                border:"1px solid rgba(255,255,255,0.1)",
+                borderRadius:12, padding:isMobile?"10px 12px":"14px 18px",
+                minWidth:isMobile?54:70, textAlign:"center",
+              }}>
+                <div style={{fontFamily:"Georgia,serif",fontSize:isMobile?22:30,fontWeight:900,color:"#fff",lineHeight:1}}>
+                  {String(v).padStart(2,"0")}
+                </div>
+                <div style={{fontSize:9,color:"rgba(255,255,255,0.35)",marginTop:4,letterSpacing:1}}>{l}</div>
+              </div>
+            ))}
+          </div>
+
+          {/* CTA PRINCIPAL */}
+          <button onClick={() => setSeccion("planes")} style={{
+            padding:"14px 32px",
+            background:"linear-gradient(135deg,#c8102e,#003087)",
+            border:"none", borderRadius:30, color:"#fff",
+            fontFamily:"inherit", fontSize:14, fontWeight:700,
+            cursor:"pointer", letterSpacing:.5,
+            boxShadow:"0 4px 20px rgba(200,16,46,0.4)",
+            animation:"mundialPulse 2s ease-in-out infinite",
+          }}>
+            🏆 Ver planes Mundial 2026
+          </button>
+        </div>
+
+        {/* SUB-NAV MUNDIAL */}
+        <div style={{background:"#111",borderBottom:"1px solid rgba(255,255,255,0.06)",padding:`0 ${isMobile?"8px":"16px"}`,display:"flex",gap:0,overflowX:"auto"}}>
+          {[
+            ["inicio","🏠","Inicio"],
+            ["partidos","⚽","Picks"],
+            ["grupos","🗺️","Grupos"],
+            ["favoritos","⭐","Favoritos"],
+            ["planes","💳","Planes"],
+          ].map(([id,icon,lbl])=>(
+            <button key={id} onClick={()=>setSeccion(id)} style={{
+              padding:isMobile?"8px 12px":"10px 18px",
+              fontSize:11, fontWeight:500,
+              color:seccion===id?"#c8102e":"rgba(255,255,255,0.35)",
+              borderBottom:seccion===id?"2px solid #c8102e":"2px solid transparent",
+              background:"none", border:"none",
+              borderBottom:seccion===id?"2px solid #c8102e":"2px solid transparent",
+              cursor:"pointer", whiteSpace:"nowrap", flexShrink:0,
+            }}>
+              {icon} {lbl}
+            </button>
+          ))}
+        </div>
+
+        {/* ── INICIO ── */}
+        {seccion==="inicio" && (
+          <div style={{padding:isMobile?"16px":"20px"}}>
+            <div style={{display:"grid",gridTemplateColumns:`repeat(${isMobile?2:4},1fr)`,gap:10,marginBottom:16}}>
+              {[["48","Partidos totales","#fff"],["104","Días de torneo","#fff"],["32","Selecciones","#c8102e"],["68.6%","Precisión IA",G]].map(([v,l,c])=>(
+                <div key={l} style={{background:"#111",border:"1px solid rgba(255,255,255,0.07)",borderRadius:12,padding:"12px 10px",textAlign:"center"}}>
+                  <div style={{fontFamily:"Georgia,serif",fontSize:isMobile?18:22,fontWeight:900,color:c}}>{v}</div>
+                  <div style={{fontSize:9,color:"rgba(255,255,255,0.35)",marginTop:2}}>{l}</div>
+                </div>
+              ))}
+            </div>
+
+            {/* BANNER MONETIZACIÓN */}
+            <div style={{background:"linear-gradient(135deg,rgba(200,16,46,0.12),rgba(0,48,135,0.12))",border:"1px solid rgba(200,16,46,0.3)",borderRadius:16,padding:20,marginBottom:16,textAlign:"center"}}>
+              <div style={{fontSize:isMobile?22:28,marginBottom:8}}>🏆💰</div>
+              <div style={{fontFamily:"Georgia,serif",fontSize:isMobile?16:20,fontWeight:800,marginBottom:6}}>La mayor oportunidad del año</div>
+              <div style={{fontSize:12,color:"rgba(255,255,255,0.5)",lineHeight:1.7,marginBottom:16}}>
+                El Mundial 2026 es el evento deportivo más visto del planeta. Más de <strong style={{color:"#fff"}}>5 mil millones</strong> de personas lo siguen. Tu app tiene la oportunidad de convertir ese tráfico en suscriptores Premium.
+              </div>
+              <div style={{display:"grid",gridTemplateColumns:"1fr 1fr 1fr",gap:8,marginBottom:16}}>
+                {[["$29.900","Plan Mundial/mes","#C9A84C"],["×3","Más tráfico en Jun-Jul","#22c55e"],["104 días","Duración del torneo","#c8102e"]].map(([v,l,c])=>(
+                  <div key={l} style={{background:"rgba(0,0,0,0.3)",borderRadius:10,padding:"10px 8px"}}>
+                    <div style={{fontSize:isMobile?16:20,fontWeight:800,color:c,fontFamily:"Georgia,serif"}}>{v}</div>
+                    <div style={{fontSize:9,color:"rgba(255,255,255,0.35)",marginTop:2,lineHeight:1.4}}>{l}</div>
+                  </div>
+                ))}
+              </div>
+              <button onClick={()=>setSeccion("planes")} style={{padding:"12px 28px",background:"linear-gradient(135deg,#c8102e,#003087)",border:"none",borderRadius:20,color:"#fff",fontFamily:"inherit",fontSize:13,fontWeight:700,cursor:"pointer"}}>
+                Ver planes de suscripción →
+              </button>
+            </div>
+
+            {/* ESTRATEGIA CONTENIDO */}
+            <div style={{background:"#111",border:"1px solid rgba(201,168,76,0.12)",borderRadius:14,padding:16}}>
+              <div style={{fontFamily:"Georgia,serif",fontSize:14,fontWeight:700,marginBottom:12,color:G}}>
+                📋 Estrategia de contenido durante el Mundial
+              </div>
+              {[
+                ["Fase de grupos (Jun 11–Jul 1)","Publicar picks de todos los partidos del día. Mínimo 6 partidos/día. Máximo tráfico del torneo.","#22c55e"],
+                ["Octavos y cuartos (Jul 2–5)","Análisis más profundos. Cada partido vale doble en atención. Subir precio plan a $39.900.","#C9A84C"],
+                ["Semis y Final (Jul 7–19)","Pack especial semifinal + final. Análisis con toda la IA. Máxima monetización del año.","#c8102e"],
+              ].map(([fase,desc,c])=>(
+                <div key={fase} style={{display:"flex",gap:10,padding:"10px 0",borderBottom:"1px solid rgba(255,255,255,0.04)"}}>
+                  <div style={{width:4,borderRadius:2,background:c,flexShrink:0,minHeight:40}}/>
+                  <div>
+                    <div style={{fontSize:12,fontWeight:600,marginBottom:3}}>{fase}</div>
+                    <div style={{fontSize:11,color:"rgba(255,255,255,0.45)",lineHeight:1.5}}>{desc}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── PICKS MUNDIAL ── */}
+        {seccion==="partidos" && (
+          <div style={{padding:isMobile?"16px":"20px"}}>
+            <div style={{fontFamily:"Georgia,serif",fontSize:16,fontWeight:800,marginBottom:4}}>⚽ Picks del Mundial 2026</div>
+            <div style={{fontSize:12,color:"rgba(255,255,255,0.4)",marginBottom:16}}>Predicciones IA para los primeros partidos de la fase de grupos</div>
+            {PARTIDOS_MUNDIAL.map((p,i)=>{
+              const pColor = p.pred==="LOCAL"?"#22c55e":p.pred==="VISITANTE"?"#ef4444":G;
+              return (
+                <div key={i} style={{background:"#111",border:"1px solid rgba(200,16,46,0.15)",borderRadius:14,padding:14,marginBottom:10}}>
+                  <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:10}}>
+                    <span style={{fontSize:9,color:"rgba(200,16,46,0.7)",letterSpacing:1,textTransform:"uppercase",fontWeight:600}}>{p.fase}</span>
+                    <span style={{fontSize:10,color:"rgba(255,255,255,0.35)"}}>{p.fecha}</span>
+                  </div>
+                  <div style={{display:"grid",gridTemplateColumns:"1fr auto 1fr",alignItems:"center",gap:10,marginBottom:10}}>
+                    <div style={{fontSize:isMobile?12:13,fontWeight:700}}>{p.local}</div>
+                    <div style={{fontSize:11,fontWeight:700,color:"#c8102e",background:"rgba(200,16,46,0.08)",borderRadius:6,padding:"3px 8px"}}>VS</div>
+                    <div style={{fontSize:isMobile?12:13,fontWeight:700,textAlign:"right"}}>{p.visita}</div>
+                  </div>
+                  <div style={{display:"flex",alignItems:"center",justifyContent:"space-between"}}>
+                    <span style={{fontSize:11,color:"rgba(255,255,255,0.4)"}}>🤖 Predicción IA:</span>
+                    <div style={{display:"flex",alignItems:"center",gap:8}}>
+                      <span style={{fontSize:9,color:"rgba(255,255,255,0.35)"}}>{p.conf}% conf.</span>
+                      <span style={{fontSize:11,fontWeight:700,padding:"3px 12px",borderRadius:20,
+                        background:pColor==="#22c55e"?"rgba(34,197,94,0.14)":pColor==="#ef4444"?"rgba(239,68,68,0.14)":"rgba(201,168,76,0.14)",
+                        color:pColor}}>{p.pred}</span>
+                    </div>
+                  </div>
+                </div>
+              );
+            })}
+            <div style={{background:"rgba(201,168,76,0.07)",border:"1px solid rgba(201,168,76,0.2)",borderRadius:12,padding:14,textAlign:"center",marginTop:4}}>
+              <div style={{fontSize:12,color:"rgba(255,255,255,0.5)",marginBottom:8}}>👑 Desbloquea todos los picks del Mundial</div>
+              <button onClick={()=>setSeccion("planes")} style={{padding:"10px 24px",background:`linear-gradient(135deg,${GD},${G})`,border:"none",borderRadius:20,color:"#000",fontFamily:"inherit",fontSize:12,fontWeight:700,cursor:"pointer"}}>
+                Ver planes Premium Mundial →
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* ── GRUPOS ── */}
+        {seccion==="grupos" && (
+          <div style={{padding:isMobile?"16px":"20px"}}>
+            <div style={{fontFamily:"Georgia,serif",fontSize:16,fontWeight:800,marginBottom:4}}>🗺️ Grupos del Mundial 2026</div>
+            <div style={{fontSize:12,color:"rgba(255,255,255,0.4)",marginBottom:16}}>8 grupos · 4 selecciones por grupo · 48 partidos en fase de grupos</div>
+            <div style={{display:"grid",gridTemplateColumns:`repeat(${isMobile?1:2},1fr)`,gap:10}}>
+              {GRUPOS.map((g)=>(
+                <div key={g.grupo} style={{background:"#111",border:"1px solid rgba(200,16,46,0.15)",borderRadius:14,padding:14}}>
+                  <div style={{display:"flex",alignItems:"center",gap:8,marginBottom:10}}>
+                    <div style={{width:28,height:28,borderRadius:8,background:"linear-gradient(135deg,#c8102e,#003087)",display:"flex",alignItems:"center",justifyContent:"center",fontFamily:"Georgia,serif",fontSize:13,fontWeight:900,color:"#fff"}}>{g.grupo}</div>
+                    <span style={{fontSize:12,fontWeight:600,color:"rgba(255,255,255,0.6)"}}>Grupo {g.grupo}</span>
+                  </div>
+                  {g.paises.map((p,i)=>(
+                    <div key={i} style={{fontSize:12,padding:"5px 0",borderBottom:i<3?"1px solid rgba(255,255,255,0.04)":"none",color:p.includes("TBD")?"rgba(255,255,255,0.2)":"rgba(255,255,255,0.8)"}}>{p}</div>
+                  ))}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* ── FAVORITOS ── */}
+        {seccion==="favoritos" && (
+          <div style={{padding:isMobile?"16px":"20px"}}>
+            <div style={{fontFamily:"Georgia,serif",fontSize:16,fontWeight:800,marginBottom:4}}>⭐ Favoritos al título — Análisis IA</div>
+            <div style={{fontSize:12,color:"rgba(255,255,255,0.4)",marginBottom:16}}>Probabilidades calculadas por el modelo de Machine Learning</div>
+            {FAVORITOS.map((f,i)=>(
+              <div key={i} style={{background:"#111",border:"1px solid rgba(255,255,255,0.07)",borderRadius:14,padding:14,marginBottom:10}}>
+                <div style={{display:"flex",alignItems:"center",justifyContent:"space-between",marginBottom:8}}>
+                  <div style={{display:"flex",alignItems:"center",gap:10}}>
+                    <div style={{width:24,height:24,borderRadius:6,background:`linear-gradient(135deg,${GD},${G})`,display:"flex",alignItems:"center",justifyContent:"center",fontSize:11,fontWeight:800,color:"#000"}}>{i+1}</div>
+                    <span style={{fontSize:14,fontWeight:700}}>{f.pais}</span>
+                  </div>
+                  <div style={{textAlign:"right"}}>
+                    <div style={{fontSize:13,fontWeight:700,color:G}}>Cuota {f.cuota}</div>
+                    <div style={{fontSize:9,color:"rgba(255,255,255,0.35)"}}>estimada</div>
+                  </div>
+                </div>
+                <div style={{display:"flex",alignItems:"center",gap:8}}>
+                  <div style={{flex:1,height:6,background:"#1e1e1e",borderRadius:3,overflow:"hidden"}}>
+                    <div style={{height:"100%",width:`${f.prob*3}%`,background:"linear-gradient(90deg,#c8102e,#003087)",borderRadius:3}}/>
+                  </div>
+                  <span style={{fontSize:11,fontWeight:700,color:"#fff",minWidth:35}}>{f.prob}%</span>
+                </div>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* ── PLANES ── */}
+        {seccion==="planes" && (
+          <div style={{padding:isMobile?"16px":"20px"}}>
+            <div style={{textAlign:"center",marginBottom:20}}>
+              <div style={{fontFamily:"Georgia,serif",fontSize:isMobile?18:22,fontWeight:800,marginBottom:6}}>💳 Planes Mundial 2026</div>
+              <div style={{fontSize:12,color:"rgba(255,255,255,0.4)"}}>Monetiza el evento deportivo más grande del planeta</div>
+            </div>
+            <div style={{display:"flex",flexDirection:"column",gap:14}}>
+              {PLANES_MUNDIAL.map((plan,i)=>(
+                <div key={i} style={{
+                  background:plan.color, border:`1px solid ${plan.border}`,
+                  borderRadius:16, padding:20, position:"relative", overflow:"hidden",
+                }}>
+                  {plan.highlight && (
+                    <div style={{position:"absolute",top:0,left:0,right:0,height:3,background:`linear-gradient(90deg,${GD},${G},${GL})`}}/>
+                  )}
+                  {plan.highlight && (
+                    <div style={{position:"absolute",top:12,right:14,background:`linear-gradient(135deg,${GD},${G})`,borderRadius:20,padding:"2px 10px",fontSize:9,fontWeight:700,color:"#000"}}>⭐ MÁS POPULAR</div>
+                  )}
+                  <div style={{marginBottom:8}}>
+                    <div style={{fontSize:14,fontWeight:700,marginBottom:4}}>{plan.nombre}</div>
+                    <div style={{fontFamily:"Georgia,serif",fontSize:24,fontWeight:900,color:G}}>{plan.precio}<span style={{fontSize:11,fontWeight:400,color:"rgba(255,255,255,0.4)"}}>/mes</span></div>
+                  </div>
+                  <div style={{marginBottom:16}}>
+                    {plan.features.map((f,j)=>(
+                      <div key={j} style={{display:"flex",alignItems:"center",gap:8,padding:"5px 0",fontSize:12,color:"rgba(255,255,255,0.7)"}}>
+                        <span style={{color:"#22c55e",fontSize:13}}>✓</span>{f}
+                      </div>
+                    ))}
+                  </div>
+                  <button style={{width:"100%",padding:13,...plan.ctaStyle,fontFamily:"inherit",fontSize:13,fontWeight:700,cursor:"pointer",borderRadius:10}}>
+                    {plan.cta}
+                  </button>
+                </div>
+              ))}
+            </div>
+            <div style={{background:"#111",border:"1px solid rgba(255,255,255,0.06)",borderRadius:14,padding:16,marginTop:14,textAlign:"center"}}>
+              <div style={{fontSize:12,fontWeight:600,marginBottom:4}}>🎯 Proyección de ingresos — Mundial 2026</div>
+              <div style={{fontSize:11,color:"rgba(255,255,255,0.4)",lineHeight:1.7}}>
+                Con 100 suscriptores Plan Mundial ($29.900) = <strong style={{color:G}}>$2.99M COP/mes</strong><br/>
+                Con 50 packs Final ($9.900 × 50) = <strong style={{color:G}}>$495.000 COP adicionales</strong><br/>
+                Afiliados Betplay en picks del Mundial = <strong style={{color:"#22c55e"}}>$20-50 USD por referido</strong>
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* BOTTOM NAV MUNDIAL mobile */}
+        {isMobile && <div style={{height:70}}/>}
+      </div>
+    );
+  };
+
   // ─── TRANSPARENCIA TAB ───────────────────────────────────────
   const TransparenciaTab = () => {
 
@@ -894,6 +1245,9 @@ Genera un comentario en español que:
       <style>{`
         *{box-sizing:border-box;margin:0;padding:0}
         @keyframes spin{to{transform:rotate(360deg)}}
+        @keyframes mundialPulse{0%,100%{box-shadow:0 0 8px rgba(200,16,46,0.4)}50%{box-shadow:0 0 20px rgba(200,16,46,0.8),0 0 30px rgba(0,48,135,0.5)}}
+        @keyframes pulse{0%,100%{opacity:.4}50%{opacity:.9}}
+        @keyframes flagWave{0%,100%{transform:skewX(0deg)}25%{transform:skewX(-2deg)}75%{transform:skewX(2deg)}}
         ::-webkit-scrollbar{width:4px}
         ::-webkit-scrollbar-track{background:#0a0a0a}
         ::-webkit-scrollbar-thumb{background:rgba(201,168,76,0.3);border-radius:2px}
@@ -909,6 +1263,17 @@ Genera un comentario en español que:
           </div>
         </div>
         <div style={{display:"flex",alignItems:"center",gap:isMobile?8:14}}>
+          {/* BOTÓN MUNDIAL EN HEADER */}
+          <button onClick={() => setTab("mundial")} style={{
+            display:"flex", alignItems:"center", gap:6,
+            background:"linear-gradient(135deg,#c8102e,#003087)",
+            border:"none", borderRadius:20, padding:"5px 12px",
+            cursor:"pointer", animation:"mundialPulse 2s ease-in-out infinite",
+          }}>
+            <span style={{fontSize:14}}>🏆</span>
+            {!isMobile && <span style={{fontSize:10,fontWeight:700,color:"#fff",letterSpacing:.5}}>MUNDIAL 2026</span>}
+            <span style={{fontSize:9,background:"rgba(255,255,255,0.25)",borderRadius:10,padding:"1px 6px",color:"#fff",fontWeight:700}}>🔥</span>
+          </button>
           <div style={{display:"flex",alignItems:"center",gap:5,background:"rgba(34,197,94,0.08)",border:"1px solid rgba(34,197,94,0.25)",borderRadius:20,padding:"4px 10px",fontSize:10,color:"#22c55e"}}>
             <div style={{width:6,height:6,borderRadius:"50%",background:"#22c55e"}}/>
             {apiOk===null?"Conectando…":apiOk?"IA Online":"Demo"}
@@ -920,24 +1285,37 @@ Genera un comentario en español que:
       {/* NAV */}
       <nav style={{background:"#111",borderBottom:`1px solid rgba(201,168,76,0.1)`,padding:`0 ${isMobile?"4px":"20px"}`,display:"flex",gap:0,overflowX:"auto"}}>
         {[
-          ["partidos","🗓️","Partidos hoy",false],
-          ["combina","🎯","Combina del día",false],
-          ["premium","👑","Pronóstico Premium",true],
-          ["transparencia","📊","Transparencia",false],
-          ["swipe","👆","¿Quién gana?",false],
-          ["ranking","🏆","Ranking",false],
-        ].map(([id,icon,lbl,isPremium]) => (
+          ["partidos","🗓️","Partidos hoy",false,false],
+          ["combina","🎯","Combina del día",false,false],
+          ["mundial","🏆","Mundial 2026",false,true],
+          ["premium","👑","Pronóstico Premium",true,false],
+          ["transparencia","📊","Transparencia",false,false],
+          ["swipe","👆","¿Quién gana?",false,false],
+          ["ranking","🏆","Ranking",false,false],
+        ].map(([id,icon,lbl,isPremium,isMundial]) => (
           <button key={id} onClick={() => setTab(id)} style={{
             padding:isMobile?"8px 10px":"10px 16px",
-            fontSize:isMobile?10:12, fontWeight:500,
-            color: tab===id ? (isPremium?"#000":G) : "rgba(255,255,255,0.35)",
-            background: tab===id && isPremium ? `linear-gradient(135deg,${GD},${G})` : "none",
-            border:"none",
-            borderBottom: tab===id && !isPremium ? `2px solid ${G}` : "2px solid transparent",
-            borderRadius: isPremium ? (tab===id?"8px 8px 0 0":"0") : "0",
+            fontSize:isMobile?10:12, fontWeight:isMundial?700:500,
+            color: tab===id
+              ? (isPremium?"#000": isMundial?"#000" : G)
+              : isMundial?"#fff":"rgba(255,255,255,0.35)",
+            background: isMundial
+              ? (tab===id
+                  ? "linear-gradient(135deg,#c8102e,#003087,#c8102e)"
+                  : "linear-gradient(135deg,rgba(200,16,46,0.85),rgba(0,48,135,0.85))")
+              : tab===id && isPremium
+                ? `linear-gradient(135deg,${GD},${G})`
+                : "none",
+            border: isMundial ? "none" : "none",
+            borderBottom: tab===id && !isPremium && !isMundial ? `2px solid ${G}` : "2px solid transparent",
+            borderRadius: (isPremium||isMundial) ? (tab===id?"8px 8px 0 0":"6px") : "0",
             cursor:"pointer", transition:"all .2s", whiteSpace:"nowrap", flexShrink:0,
+            margin: isMundial ? "4px 4px 0" : "0",
+            animation: isMundial && tab!==id ? "mundialPulse 2s ease-in-out infinite" : "none",
+            boxShadow: isMundial ? "0 0 12px rgba(200,16,46,0.4)" : "none",
           }}>
             {icon} {!isMobile && lbl}
+            {!isMobile && isMundial && <span style={{fontSize:9,marginLeft:4,background:"rgba(255,255,255,0.25)",borderRadius:10,padding:"1px 5px"}}>NUEVO</span>}
             {isMobile && <div style={{fontSize:8,marginTop:2,color:"inherit"}}>{lbl}</div>}
           </button>
         ))}
@@ -1211,6 +1589,9 @@ Genera un comentario en español que:
         </div>
       )}
 
+      {/* ── MUNDIAL 2026 ── */}
+      {tab==="mundial" && <MundialTab />}
+
       {/* ── TRANSPARENCIA ── */}
       {tab==="transparencia" && <TransparenciaTab />}
 
@@ -1226,13 +1607,17 @@ Genera un comentario en español que:
           {[
             ["partidos","🗓️","Hoy"],
             ["combina","🎯","Combina"],
+            ["mundial","🏆","Mundial"],
             ["premium","👑","Premium"],
             ["transparencia","📊","Stats"],
-            ["swipe","👆","Votar"],
             ["ranking","🏆","Ranking"],
           ].map(([id,icon,lbl]) => (
             <button key={id} onClick={() => { setTab(id); if(id!=="partidos") setShowAnalysis(false); }}
-              style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:1,background:"none",border:"none",color:tab===id?G:"rgba(255,255,255,0.35)",cursor:"pointer",transition:"color .2s",fontSize:16,minWidth:48}}>
+              style={{flex:1,display:"flex",flexDirection:"column",alignItems:"center",justifyContent:"center",gap:1,
+                background: id==="mundial" && tab!==id ? "linear-gradient(135deg,rgba(200,16,46,0.3),rgba(0,48,135,0.3))" : "none",
+                border:"none",
+                color: id==="mundial" ? (tab===id?"#c8102e":"#fff") : tab===id?G:"rgba(255,255,255,0.35)",
+                cursor:"pointer",transition:"color .2s",fontSize:14,minWidth:48}}>
               {icon}
               <span style={{fontSize:8,fontWeight:tab===id?600:400}}>{lbl}</span>
             </button>
