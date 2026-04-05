@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Sitemap: https://lifehackia-futbol.netlify.app/sitemap.xml
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10

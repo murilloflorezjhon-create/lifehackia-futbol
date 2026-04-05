@@ -1,0 +1,25 @@
+{
+  "name": "LifeHackIA — Pronósticos de Fútbol con IA",
+  "short_name": "LifeHackIA",
+  "description": "Pronósticos de fútbol con Inteligencia Artificial. 68.6% de precisión verificada.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#C9A84C",
+  "orientation": "portrait-primary",
+  "lang": "es",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any maskable" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any maskable" }
+  ],
+  "screenshots": [
+    { "src": "/screenshot-mobile.png", "sizes": "390x844", "type": "image/png", "form_factor": "narrow" },
+    { "src": "/screenshot-desktop.png", "sizes": "1280x720", "type": "image/png", "form_factor": "wide" }
+  ],
+  "categories": ["sports", "entertainment"],
+  "shortcuts": [
+    { "name": "Partidos hoy", "url": "/#partidos", "description": "Ver picks del día" },
+    { "name": "Combina del día", "url": "/#combina", "description": "Mejor combinada del día" },
+    { "name": "Mundial 2026", "url": "/#mundial", "description": "Pronósticos Mundial FIFA 2026" }
+  ]
+}
