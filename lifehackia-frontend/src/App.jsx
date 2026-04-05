@@ -3,6 +3,12 @@ import { useState, useEffect, useCallback } from "react";
 const API_BASE = "https://lifehackia-futbol-production.up.railway.app";
 const G = "#C9A84C", GL = "#E8C96B", GD = "#8B6914";
 
+// ─── WOMPI — Links de pago ────────────────────────────────────
+// Cambia test_ por el link real cuando Wompi apruebe tu cuenta
+const WOMPI_PREMIUM = "https://checkout.wompi.co/l/test_QZ7Tz2";
+const WOMPI_MUNDIAL = "https://checkout.wompi.co/l/test_QZ7Tz2"; // ← crea link aparte para $29.900
+const TELEGRAM_CANAL = "https://t.me/LifeHackIAPronosticos";
+
 const MATCHES = [
   {
     id:1, tipo:"COL", league:"Liga BetPlay", flag:"🇨🇴",
@@ -879,7 +885,10 @@ Genera un comentario en español que:
                       </div>
                     ))}
                   </div>
-                  <button style={{width:"100%",padding:13,...plan.ctaStyle,fontFamily:"inherit",fontSize:13,fontWeight:700,cursor:"pointer",borderRadius:10}}>
+                  <button onClick={() => {
+                    if(plan.cta.includes("gratis") || plan.cta === "Gratis") window.open(TELEGRAM_CANAL, "_blank");
+                    else window.open(WOMPI_MUNDIAL, "_blank");
+                  }} style={{width:"100%",padding:13,...plan.ctaStyle,fontFamily:"inherit",fontSize:13,fontWeight:700,cursor:"pointer",borderRadius:10}}>
                     {plan.cta}
                   </button>
                 </div>
@@ -1561,10 +1570,10 @@ Genera un comentario en español que:
               <div style={{fontFamily:"Georgia,serif",fontSize:32,fontWeight:900,color:G}}>$19.900</div>
               <div style={{fontSize:12,color:"rgba(255,255,255,0.4)"}}>COP / mes · Cancela cuando quieras</div>
             </div>
-            <button style={{width:"100%",padding:15,background:`linear-gradient(135deg,${GD},${G},${GL})`,border:"none",borderRadius:12,color:"#000",fontFamily:"inherit",fontSize:14,fontWeight:800,cursor:"pointer",marginBottom:10}}>
-              👑 Suscribirme ahora
+            <button onClick={() => window.open(WOMPI_PREMIUM, "_blank")} style={{width:"100%",padding:15,background:`linear-gradient(135deg,${GD},${G},${GL})`,border:"none",borderRadius:12,color:"#000",fontFamily:"inherit",fontSize:14,fontWeight:800,cursor:"pointer",marginBottom:10}}>
+              👑 Suscribirme ahora — $19.900 COP/mes
             </button>
-            <button style={{width:"100%",padding:12,background:"transparent",border:`1px solid rgba(201,168,76,0.25)`,borderRadius:12,color:G,fontFamily:"inherit",fontSize:13,fontWeight:600,cursor:"pointer"}}>
+            <button onClick={() => window.open(TELEGRAM_CANAL, "_blank")} style={{width:"100%",padding:12,background:"transparent",border:`1px solid rgba(201,168,76,0.25)`,borderRadius:12,color:G,fontFamily:"inherit",fontSize:13,fontWeight:600,cursor:"pointer"}}>
               💬 Unirme al canal Telegram gratis
             </button>
           </div>
